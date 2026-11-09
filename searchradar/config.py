@@ -12,6 +12,8 @@ DEFAULT_SETTINGS = {
     "max_detail_checks_per_run": 25,
     "request_delay_seconds": [3, 7],
     "alerts_thread_id": None,   # Telegram topic for warnings (None = General)
+    "max_rechecks_per_run": 40, # stored matches re-visited per run (still online? price?)
+    "notify_price_drops": True, # Telegram message when a stored match gets cheaper
 }
 
 

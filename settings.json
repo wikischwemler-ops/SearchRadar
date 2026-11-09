@@ -3,6 +3,11 @@
   "notify_on_first_run": false,
   "max_notifications_per_run": 30,
   "max_detail_checks_per_run": 25,
-  "request_delay_seconds": [3, 7],
-  "alerts_thread_id": null
+  "request_delay_seconds": [
+    3,
+    7
+  ],
+  "alerts_thread_id": null,
+  "max_rechecks_per_run": 40,
+  "notify_price_drops": true
 }

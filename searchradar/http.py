@@ -57,6 +57,20 @@ class Fetcher:
                 time.sleep(remaining)
         self._last = time.time()
 
+    def fetch(self, url: str) -> tuple[int, str, str]:
+        """Like get(), but returns (status, final_url, html) for 4xx instead of raising.
+        Still raises BlockedError for 403/429/captcha so a block is never mistaken for 'gone'."""
+        self._wait()
+        r = self.session.get(url, headers=self.headers, timeout=self.timeout, allow_redirects=True)
+        if r.status_code in (403, 429):
+            raise BlockedError(f"HTTP {r.status_code} for {url}")
+        if r.status_code >= 500:
+            raise RuntimeError(f"HTTP {r.status_code} for {url}")
+        html = r.text
+        if r.status_code == 200 and len(html) < 20000 and any(m in html[:5000].lower() for m in _BLOCK_MARKERS):
+            raise BlockedError(f"Captcha/block page for {url}")
+        return r.status_code, str(r.url), html
+
     def get(self, url: str, retries: int = 1) -> str:
         last_exc: Exception | None = None
         for _ in range(retries + 1):

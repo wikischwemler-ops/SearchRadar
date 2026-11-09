@@ -13,7 +13,9 @@ on:
     paths: ["searches/**", "settings.json", "searchradar/**", "tests/**"]
 
 permissions:
-  contents: write           # needed to commit state/seen.json
+  contents: write           # commit state/*.json and RESULTS.md
+  pages: write              # deploy the web overview
+  id-token: write
 
 concurrency:
   group: searchradar
@@ -22,7 +24,7 @@ concurrency:
 jobs:
   search:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
 
@@ -52,16 +54,37 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
 
-      - name: Save seen listings
+      - name: Build overview (site/ + RESULTS.md)
+        if: ${{ !inputs.test_telegram }}
+        run: python -m searchradar.site
+
+      - name: Save state and RESULTS.md
         if: ${{ github.event_name != 'push' && !inputs.test_telegram }}
         run: |
           git config user.name "searchradar-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add state/seen.json
+          git add state/seen.json state/matches.json RESULTS.md
           if git diff --cached --quiet; then
             echo "No changes."
           else
-            git commit -m "state: update seen listings"
+            git commit -m "state: update listings and results"
             git pull --rebase --autostash || true
             git push
           fi
+
+      - name: Upload overview for GitHub Pages
+        if: ${{ vars.PAGES_ENABLED == 'true' && !inputs.test_telegram }}
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  pages:
+    needs: search
+    if: ${{ vars.PAGES_ENABLED == 'true' && !inputs.test_telegram }}
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - id: deploy
+        uses: actions/deploy-pages@v4

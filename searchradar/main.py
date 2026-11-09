@@ -13,7 +13,9 @@ from . import filters
 from .config import Search, Topic, load_settings, load_topics
 from .http import Fetcher
 from .models import Listing
-from .portals import detect_portal, newest_first
+from .portals import check_detail, detect_portal, newest_first
+from .results import Results, now_iso
+from .utils import fmt_int
 from .state import State
 from .telegram import Telegram, format_listing
 
@@ -21,10 +23,27 @@ ERROR_ALERT_AFTER = 3     # warn after N consecutive failures
 ERROR_REPEAT_EVERY = 24   # then at most about once a day
 
 
-def page_text(html: str) -> str:
+_NOISE = ("similar", "recommend", "related", "carousel", "teaser", "promo", "other-ads", "weitere",
+          "cookie", "consent", "footer", "header", "breadcrumb", "banner")
+
+
+def page_text(html: str, selectors: tuple = ()) -> str:
+    """Text of a detail page – only the listing's own content, not recommendations."""
     soup = BeautifulSoup(html, "html.parser")
-    for t in soup(["script", "style", "noscript"]):
+    for t in soup(["script", "style", "noscript", "nav", "footer", "header", "aside", "svg", "form"]):
         t.decompose()
+    if selectors:
+        parts = []
+        for sel in selectors:
+            parts += [el.get_text(" ", strip=True) for el in soup.select(sel)]
+        if parts:
+            return " ".join(parts)
+    for el in soup.find_all(True):
+        if el.decomposed:
+            continue
+        marker = " ".join([el.get("id") or "", *(el.get("class") or []), el.get("data-testid") or ""]).lower()
+        if marker and any(n in marker for n in _NOISE):
+            el.decompose()
     return soup.get_text(" ", strip=True)
 
 
@@ -33,6 +52,9 @@ class Runner:
         self.args = args
         self.s = settings
         self.state = State(args.state)
+        self.results = Results(args.matches)
+        self.run_start = now_iso()
+        self.topics_by_file: dict[str, Topic] = {}
         self.tg = Telegram(dry_run=args.dry_run)
         self.fetcher = Fetcher(delay=tuple(settings["request_delay_seconds"]))  # type: ignore[arg-type]
         self.detail_budget = int(settings["max_detail_checks_per_run"])
@@ -79,6 +101,9 @@ class Runner:
             found += len(listings)
             print(f"[{sid}] {portal.label}: {len(listings)} listings on page")
             for l in listings:
+                m = self.results.get(sid, l.key)
+                if m is not None:  # known match still listed -> alive, track its price
+                    self.price_changed(m, self.results.update_price(m, l.price))
                 if self.state.is_seen(sid, l.key):
                     continue
                 new += 1
@@ -113,7 +138,7 @@ class Runner:
                 return False  # not marked -> re-evaluated next run
             self.detail_budget -= 1
             try:
-                text += " " + page_text(self.fetcher.get(l.url))
+                text += " " + page_text(self.fetcher.get(l.url), detect_portal(l.url).detail_selectors)
             except Exception as exc:  # noqa: BLE001
                 print(f"   ! detail page failed ({exc}) – retry next run")
                 return False
@@ -129,17 +154,60 @@ class Runner:
             return False
 
         print(f"   ✅ {l.title[:70]} – {l.url}")
+        keywords = filters.found_keywords(text, f)
+        self.results.add(topic.file, topic.topic, topic.emoji, sid, search.name, l, keywords)
         if self.sent >= self.notify_budget:
             print("   … notification limit reached, rest follows next run")
             return True
-        msg = format_listing(topic.topic, search.name, l, filters.found_keywords(text, f), topic.emoji)
+        msg = format_listing(topic.topic, search.name, l, keywords, topic.emoji)
         if self.tg.send(msg, thread_id=topic.telegram_thread_id, chat_id=topic.telegram_chat_id):
             self.sent += 1
             self.state.mark(sid, l.key, True)
         return True  # on send failure: not marked -> retried next run
 
+    # ---- price changes & re-checks of stored matches ---------------------------
+    def price_changed(self, m: dict, change: tuple[int, int] | None) -> None:
+        if not change:
+            return
+        old, new = change
+        print(f"   💶 price change {fmt_int(old)} → {fmt_int(new)} €: {m['title'][:50]}")
+        if not self.s.get("notify_price_drops", True) or new >= old:
+            return
+        t = self.topics_by_file.get(m["topic_file"])
+        pct = round((old - new) / old * 100) if old else 0
+        import html as _h
+        msg = (f"📉 <b>Price drop</b> – {_h.escape(m['search'])}\n<b>{_h.escape(m['title'])}</b>\n"
+               f"<s>{fmt_int(old)} €</s> → <b>{fmt_int(new)} €</b> (−{pct} %)\n"
+               f'🔗 <a href="{_h.escape(m["url"], quote=True)}">Open on {_h.escape(m["portal"])}</a>')
+        if t:
+            self.tg.send(msg, thread_id=t.telegram_thread_id, chat_id=t.telegram_chat_id)
+
+    def recheck(self) -> None:
+        """Visit stored matches that weren't on a result page this run: still online? price?"""
+        budget = int(self.s.get("max_rechecks_per_run", 40))
+        due = [m for m in self.results.due_for_check(self.run_start) if m["topic_file"] in self.topics_by_file]
+        checked = removed = 0
+        for m in due[:budget]:
+            try:
+                portal = detect_portal(m["url"])
+                status, final_url, html = self.fetcher.fetch(m["url"])
+                gone, price = check_detail(status, final_url, html, portal, m.get("listing_id", ""))
+            except Exception as exc:  # noqa: BLE001 – blocked/network: never treat as gone
+                self.log(f"   ? re-check failed for {m['title'][:40]}: {exc}")
+                continue
+            checked += 1
+            if gone:
+                if self.results.mark_gone(m):
+                    removed += 1
+                    print(f"   🗑 removed (no longer online): {m['title'][:60]}")
+            else:
+                self.price_changed(m, self.results.update_price(m, price))
+        if due:
+            print(f"Re-checked {checked}/{len(due)} stored matches, removed {removed}.")
+
     # ---- whole run --------------------------------------------------------
     def run(self, topics: list[Topic]) -> None:
+        self.topics_by_file = {t.file: t for t in topics if t.enabled}
         for t in topics:
             if not t.enabled or (self.args.topic and self.args.topic not in (t.file, t.topic)):
                 continue
@@ -147,8 +215,11 @@ class Runner:
                 if self.args.search and self.args.search != s.name:
                     continue
                 self.run_search(t, s)
+        if not self.args.search and not self.args.topic:
+            self.recheck()
         if not self.args.dry_run or self.args.save_state:
             self.state.save()
+            self.results.save()
         md = ("| Topic | Search | Listings | New | Matches |\n|---|---|---|---|---|\n"
               + "\n".join(self.summary))
         print("\n" + md)
@@ -188,6 +259,7 @@ def main() -> None:
     p.add_argument("--settings", default="settings.json")
     p.add_argument("--searches", default="searches", help="directory with topic files (*.json)")
     p.add_argument("--state", default="state/seen.json")
+    p.add_argument("--matches", default="state/matches.json", help="all matches (source of the web overview)")
     p.add_argument("--dry-run", action="store_true", help="don't send to Telegram, don't save state")
     p.add_argument("--save-state", action="store_true", help="save state even in dry-run")
     p.add_argument("--topic", help="only this topic (file name or topic name)")

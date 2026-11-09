@@ -20,6 +20,9 @@ the language of the listings (German for German portals).
 | `searchradar/filters.py` | minimum-criteria logic |
 | `searchradar/main.py` | run loop, CLI |
 | `state/seen.json` | handled listings, committed back by the workflow – never edit by hand except to reset |
+| `state/matches.json` | active matches with price `history` – source of the overview |
+| `searchradar/results.py` | match store: add, price updates, gone detection (2 confirmations) |
+| `searchradar/site.py` | builds `site/index.html` (GitHub Pages) and `RESULTS.md` |
 | `.github/workflows/searchradar.yml` | hourly schedule (minute 17, UTC) |
 
 ## 1. Add a new search topic
@@ -85,12 +88,24 @@ Put shared rules in the file's `defaults`; per-search `filters` override keys fr
    ```
    Rules: stable unique `id` per listing, absolute `url`, `text` = whole card text, dedupe ids, never raise on a
    single broken card. Prefer data attributes or embedded JSON over CSS class names.
-3. Register in `searchradar/portals/__init__.py → PORTALS` with `label`, `domain` and, if the portal supports it,
-   the newest-first sort parameter.
+3. Register in `searchradar/portals/__init__.py → PORTALS` with `label`, `domain`, if supported the newest-first
+   sort parameter, and `detail_selectors` (CSS selectors of the listing's own title/attributes/description on
+   the detail page – keeps "similar listings" out of keyword checks and gone detection).
+   Add price selectors for the detail page to `PRICE_SELECTORS` (JSON-LD `offers.price` is tried first).
 4. Add tests in `tests/` (parse result, numbers, `detect_portal`). Run `python -m pytest -q`.
 5. Mention the portal in the README table.
 
-## 5. Debug a run
+## 5. Overview page and price history
+
+- Matches stay in `state/matches.json` while online; `history` holds `[timestamp, price]` on every change.
+- Removal needs `GONE_CONFIRMATIONS` (2) consecutive gone checks; `BlockedError` is never treated as gone.
+- Gone signals: HTTP 404/410, redirect to a URL without the listing id, gone text when the listing's own content
+  is missing, or "gelöscht/verkauft" in the title. Never use the whole page text when the listing content is
+  present – sellers write things like "OVP nicht mehr verfügbar" in descriptions.
+- Pages deploy only runs when the repo variable `PAGES_ENABLED` is `true`; `RESULTS.md` is always committed.
+- Preview locally: `python -m searchradar.site && open site/index.html`.
+
+## 6. Debug a run
 
 - GitHub → Actions → run → step *Search* shows per-search counts and, with `-v`, why listings were rejected.
 - `0 listings recognised` → layout changed or block page; save the HTML and fix the parser.

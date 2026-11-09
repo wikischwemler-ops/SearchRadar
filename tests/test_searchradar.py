@@ -121,3 +121,57 @@ def test_regex_terms_for_clothing_size():
         assert filters.missing_keywords(text, f) != [], text
     assert filters.found_keywords("Terrex Jacke Größe S", f) == ["größe s"]
     assert filters.excluded_by("Adidas Terrex Kinderjacke Größe S", f) == "Kinder"
+
+
+# ---- re-checks, price history, overview ------------------------------------------------
+
+from searchradar.portals import check_detail
+from searchradar.results import Results
+from searchradar import site
+
+
+def test_check_detail_gone_and_price():
+    ka = PORTALS["kleinanzeigen"]
+    alive = ('<h1 id="viewad-title">Adidas Terrex Jacke Größe S</h1><h2 id="viewad-price">55 € VB</h2>'
+             '<p id="viewad-description-text">Originalkarton nicht mehr verfügbar.</p>'
+             '<section class="similar">Andere Anzeige wurde gelöscht</section>')
+    url = "https://www.kleinanzeigen.de/s-anzeige/x/777-160-1"
+    assert check_detail(200, url, alive, ka, "777") == (False, 55)          # description text must not count
+    sold = alive.replace("Adidas Terrex", "Gelöscht • Adidas Terrex")
+    assert check_detail(200, url, sold, ka, "777")[0] is True
+    assert check_detail(404, url, "", ka, "777")[0] is True
+    assert check_detail(200, "https://www.kleinanzeigen.de/s-terrex/k0", "<p>Suche</p>", ka, "777")[0] is True
+    gone_page = "<h1>Ups</h1><p>Die Anzeige ist nicht mehr verfügbar.</p>"
+    assert check_detail(200, url, gone_page, ka, "777")[0] is True
+    ld = '<script type="application/ld+json">{"@type":"Car","offers":{"price":"31490.00"}}</script><h1>x</h1>'
+    assert check_detail(200, "https://www.autoscout24.de/angebote/abc-123", ld, PORTALS["autoscout24"], "abc-123") == (False, 31490)
+
+
+def test_results_history_and_removal(tmp_path):
+    (l,) = kleinanzeigen.parse(KA_CAR)
+    r = Results(str(tmp_path / "m.json"))
+    r.add("cars", "Cars", "🚗", "cars/Golf", "Golf", l, ["DSG"])
+    m = r.get("cars/Golf", l.key)
+    assert m["history"] == [[m["found"], 29900]]
+    assert r.update_price(m, 29900) is None
+    assert r.update_price(m, 28500) == (29900, 28500) and len(m["history"]) == 2
+    assert r.mark_gone(m) is False            # first "gone" may be a hiccup
+    r.update_price(m, None)                   # seen again -> counter reset
+    assert m["gone_count"] == 0
+    assert r.mark_gone(m) is False and r.mark_gone(m) is True
+    assert r.get("cars/Golf", l.key) is None
+    r.save()
+    assert json.load(open(tmp_path / "m.json"))["matches"] == []
+
+
+def test_site_build(tmp_path):
+    (l,) = kleinanzeigen.parse(KA_CAR)
+    r = Results(str(tmp_path / "m.json"))
+    r.add("cars", "Cars", "🚗", "cars/Golf", "Golf", l, ["DSG"])
+    r.update_price(r.get("cars/Golf", l.key), 27900)
+    r.save()
+    data = site.load(str(tmp_path / "m.json"))
+    html = site.build_html(data)
+    assert "VW Golf 8 GTI DSG Pano" in html and "</script><" not in html.split('id="data"')[1].split("</script>")[0]
+    md = site.build_markdown(data)
+    assert "27.900 € ▼ (was 29.900 €)" in md and "(https://www.kleinanzeigen.de/s-anzeige/" in md

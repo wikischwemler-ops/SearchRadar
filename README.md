@@ -18,6 +18,12 @@ Browsing classifieds by hand takes forever. SearchRadar checks your saved search
 (price range, mileage, year, required equipment, red-flag words), and sends a Telegram message
 only for listings that pass **all** of them. Each topic lands in its own Telegram forum topic.
 
+In parallel, a **web overview** lists every match that is **still online** – with link, details and a
+**price-history chart**. Listings that were sold or deleted disappear automatically, price drops are
+announced on Telegram.
+
+<p align="center"><img src="assets/screenshot.png" width="320" alt="Web overview on a phone"></p>
+
 ## How it works
 
 ```
@@ -25,13 +31,23 @@ searches/cars.json ─┐                         ┌─► Telegram topic "Cars
 searches/bikes.json ├─► GitHub Action (hourly) ├─► Telegram topic "Bikes"
 searches/….json    ─┘   fetch → parse → filter └─► Telegram topic "…"
                               │
-                        state/seen.json  (no duplicate alerts)
+                  state/seen.json     (no duplicate alerts)
+                  state/matches.json  (active matches + price history)
+                              │
+                              ├─► site/index.html  → GitHub Pages (optional)
+                              └─► RESULTS.md       → readable in the repo / GitHub app
 ```
 
 1. You set up a search on the portal (category, keywords, **postcode + radius**, e.g. 100 km), sort by **newest first** and copy the URL.
 2. Every hour the action loads the first result page, detects **new** listings and checks them against your filters.
 3. If required keywords aren't on the result card, the **detail page** is loaded and searched too (equipment is often listed only there).
 4. Matches are sent to the Telegram topic of that file. `state/seen.json` remembers what was already handled.
+
+5. Every stored match is **re-checked**: if it is still on a result page its price is updated right there,
+   otherwise its detail page is visited (up to `max_rechecks_per_run` per run, oldest check first).
+   Every price change is added to its history; a lower price triggers a 📉 Telegram message.
+   A listing that is **gone** (404, redirect, "nicht mehr verfügbar", title "Gelöscht/Verkauft") in two
+   consecutive checks is removed. A blocked request never counts as gone.
 
 On the **first run** of a search all current listings are marked as seen silently, so you aren't flooded with old stock.
 
@@ -62,7 +78,20 @@ GitHub → repo → **Settings → Secrets and variables → Actions → New rep
 ### 3. Configure searches
 Edit the files in `searches/`: put your search URLs in, set `telegram_thread_id`, and set `"enabled": true`.
 
-### 4. Test
+### 4. Web overview (optional)
+`RESULTS.md` in the repo is always updated – open it in the GitHub app for a quick list with links.
+
+For the full page with filters and price charts, use **GitHub Pages**:
+1. **Settings → Pages → Build and deployment → Source: GitHub Actions**
+2. **Settings → Secrets and variables → Actions → Variables → New repository variable**: `PAGES_ENABLED` = `true`
+3. After the next run the page is at `https://<user>.github.io/SearchRadar/`
+
+> Pages for a **private** repo needs a paid GitHub plan (Pro/Team). The published page itself is publicly
+> reachable for anyone who knows the URL (it is marked `noindex`, but not password-protected).
+> It only contains public listing data, but it reveals what you are looking for. Without Pages,
+> use `RESULTS.md` – it stays private with the repo.
+
+### 5. Test
 **Actions → SearchRadar → Run workflow** with *Send Telegram test message* ticked → every enabled topic gets a test message.
 Then run it once without the tick. From then on it runs hourly by itself.
 
@@ -78,6 +107,8 @@ Then run it once without the tick. From then on it runs hourly by itself.
 | `max_detail_checks_per_run` | `25` | detail pages loaded per run (rest follows next run) |
 | `request_delay_seconds` | `[3, 7]` | random pause between requests |
 | `alerts_thread_id` | `null` | Telegram topic for warnings (null = General) |
+| `max_rechecks_per_run` | `40` | stored matches re-visited per run (still online? current price?) |
+| `notify_price_drops` | `true` | Telegram message when a stored match gets cheaper |
 
 ### `searches/<topic>.json` (one file per topic)
 ```jsonc
@@ -158,6 +189,7 @@ python -m searchradar --dry-run --topic cars      # only one topic file
 python -m searchradar --search "VW Golf 8 GTI"    # only one search
 python -m searchradar --test-telegram             # test message to every topic
 python -m searchradar --telegram-ids              # list chat / topic ids
+python -m searchradar.site                        # build site/index.html + RESULTS.md
 python -m pytest -q                               # tests
 ```
 
