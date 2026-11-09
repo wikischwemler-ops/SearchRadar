@@ -1,0 +1,8 @@
+{
+  "_help": "Global settings. See README.md for every option.",
+  "notify_on_first_run": false,
+  "max_notifications_per_run": 30,
+  "max_detail_checks_per_run": 25,
+  "request_delay_seconds": [3, 7],
+  "alerts_thread_id": null
+}

@@ -1,0 +1,67 @@
+name: SearchRadar
+
+on:
+  schedule:
+    - cron: "17 * * * *"   # hourly at minute 17 (UTC); full hours are often delayed on GitHub
+  workflow_dispatch:
+    inputs:
+      test_telegram:
+        description: "Send Telegram test message only"
+        type: boolean
+        default: false
+  push:
+    paths: ["searches/**", "settings.json", "searchradar/**", "tests/**"]
+
+permissions:
+  contents: write           # needed to commit state/seen.json
+
+concurrency:
+  group: searchradar
+  cancel-in-progress: false
+
+jobs:
+  search:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt pytest
+
+      - name: Validate config and run tests
+        run: |
+          python -m searchradar --validate
+          python -m pytest -q
+
+      - name: Telegram test
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.test_telegram }}
+        run: python -m searchradar --test-telegram
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+
+      - name: Search
+        if: ${{ github.event_name != 'push' && !inputs.test_telegram }}
+        run: python -m searchradar --verbose
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+
+      - name: Save seen listings
+        if: ${{ github.event_name != 'push' && !inputs.test_telegram }}
+        run: |
+          git config user.name "searchradar-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add state/seen.json
+          if git diff --cached --quiet; then
+            echo "No changes."
+          else
+            git commit -m "state: update seen listings"
+            git pull --rebase --autostash || true
+            git push
+          fi

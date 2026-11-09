@@ -1,0 +1,55 @@
+{
+  "_help": "Example: 4K monitors on Kleinanzeigen. Replace 10115 with your postcode.",
+  "topic": "Monitors",
+  "emoji": "🖥️",
+  "telegram_thread_id": null,
+  "enabled": false,
+  "defaults": {
+    "must_not_contain": [
+      "Suche",
+      "defekt",
+      "Pixelfehler",
+      "Displaybruch",
+      "Ersatzteil"
+    ],
+    "require_known": [
+      "price"
+    ],
+    "check_details": true
+  },
+  "searches": [
+    {
+      "name": "27-32 inch 4K monitor with USB-C",
+      "urls": [
+        "https://www.kleinanzeigen.de/s-pc-zubehoer-software/10115/monitor-4k/k0c225l3331r100"
+      ],
+      "filters": {
+        "min_price": 80,
+        "max_price": 350,
+        "must_contain": [
+          [
+            "4K",
+            "UHD",
+            "3840"
+          ],
+          [
+            "27 Zoll",
+            "27\"",
+            "27''",
+            "28 Zoll",
+            "28\"",
+            "32 Zoll",
+            "32\"",
+            "32''"
+          ],
+          [
+            "USB-C",
+            "USB C",
+            "Typ-C",
+            "Type-C"
+          ]
+        ]
+      }
+    }
+  ]
+}

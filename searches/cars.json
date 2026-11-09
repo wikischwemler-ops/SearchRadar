@@ -1,0 +1,34 @@
+{
+  "_help": "One file per topic. Replace 10115 with your postcode, set telegram_thread_id, then set enabled to true.",
+  "topic": "Cars",
+  "emoji": "🚗",
+  "telegram_thread_id": null,
+  "enabled": false,
+  "defaults": {
+    "must_not_contain": ["Unfall", "Unfallwagen", "defekt", "Motorschaden", "Getriebeschaden", "Export", "Bastler", "ohne TÜV"],
+    "require_known": ["price"],
+    "check_details": true
+  },
+  "searches": [
+    {
+      "name": "VW Golf 8 GTI",
+      "urls": [
+        "https://www.autoscout24.de/lst/volkswagen/golf?atype=C&cy=D&zip=10115&zipr=100&fregfrom=2020&priceto=40000&sort=age&desc=1",
+        "https://www.kleinanzeigen.de/s-autos/volkswagen/golf/10115/k0c216l3331r100",
+        "https://suchen.mobile.de/fahrzeuge/search.html?isSearchRequest=true&ms=25200%3B11%3B%3B&zip=10115&zipr=100&fr=2020%3A&p=%3A40000&sb=doc&od=down"
+      ],
+      "filters": {
+        "min_price": 15000,
+        "max_price": 40000,
+        "max_mileage": 80000,
+        "min_year": 2020,
+        "title_must_contain": ["GTI"],
+        "must_contain": [
+          "DSG",
+          ["Pano", "Panorama", "Schiebedach"],
+          ["AHK", "Anhängerkupplung"]
+        ]
+      }
+    }
+  ]
+}

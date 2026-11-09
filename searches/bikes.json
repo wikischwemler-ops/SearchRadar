@@ -1,0 +1,60 @@
+{
+  "_help": "Example: road bikes on Kleinanzeigen. Replace 10115 with your postcode.",
+  "topic": "Bikes",
+  "emoji": "🚲",
+  "telegram_thread_id": null,
+  "enabled": false,
+  "defaults": {
+    "must_not_contain": [
+      "Suche",
+      "Gesuch",
+      "defekt",
+      "Bastler",
+      "Kinderfahrrad",
+      "Rahmenbruch"
+    ],
+    "require_known": [
+      "price"
+    ],
+    "check_details": true
+  },
+  "searches": [
+    {
+      "name": "Road bike, carbon, Shimano 105 or better, RH 56",
+      "urls": [
+        "https://www.kleinanzeigen.de/s-fahrraeder/10115/rennrad-carbon/k0c217l3331r100"
+      ],
+      "filters": {
+        "min_price": 500,
+        "max_price": 2000,
+        "title_must_contain": [
+          [
+            "Rennrad",
+            "Road",
+            "Gravel"
+          ]
+        ],
+        "must_contain": [
+          [
+            "Carbon"
+          ],
+          [
+            "105",
+            "Ultegra",
+            "Dura-Ace",
+            "Rival",
+            "Force"
+          ],
+          [
+            "RH 56",
+            "RH56",
+            "56 cm",
+            "56cm",
+            "Größe M",
+            "Gr. M"
+          ]
+        ]
+      }
+    }
+  ]
+}
