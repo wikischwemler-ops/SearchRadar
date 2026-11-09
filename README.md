@@ -5,7 +5,7 @@
 <h1 align="center">SearchRadar</h1>
 
 <p align="center">
-  Hourly marketplace search for <b>anything</b> – cars, bikes, monitors, … –<br>
+  Hourly marketplace search for <b>anything</b> – cars, bikes, monitors, clothing, … –<br>
   that only pings you on Telegram when a listing really meets your criteria.
 </p>
 
@@ -123,6 +123,8 @@ Then run it once without the tick. From then on it runs hourly by itself.
 
 **Keyword rules:** case-insensitive, matched at the **start of a word** – `Pano` matches *Panoramadach*, `suche` does not match *versuche*.
 An entry that is a **list** means "one of these": `["AHK", "Anhängerkupplung"]`.
+For exact patterns use a regular expression with the prefix `re:` (applied to the lower-cased text) –
+e.g. clothing size S without matching *XS* or *Schwarz*: see `searches/clothing.json`.
 Keywords must be written in the language of the listings (German for German portals).
 
 Tips for realistic minimum criteria:

@@ -110,3 +110,14 @@ def test_shipped_config_is_valid():
             assert search.filters.get("must_not_contain"), "defaults must be merged into filters"
             for u in search.urls:
                 detect_portal(u)
+
+
+def test_regex_terms_for_clothing_size():
+    topics = {t.file: t for t in load_topics(os.path.join(ROOT, "searches"))}
+    f = topics["clothing"].searches[0].filters
+    for text in ["Adidas Terrex Jacke Größe S", "Terrex Hose Gr. S", "Terrex Softshell S/M", "size small"]:
+        assert filters.missing_keywords(text, f) == [], text
+    for text in ["Terrex Jacke Größe XS", "Terrex Größe Schwarz M", "Terrex Jacke Gr. M", "Terrex Größe S-M"]:
+        assert filters.missing_keywords(text, f) != [], text
+    assert filters.found_keywords("Terrex Jacke Größe S", f) == ["größe s"]
+    assert filters.excluded_by("Adidas Terrex Kinderjacke Größe S", f) == "Kinder"

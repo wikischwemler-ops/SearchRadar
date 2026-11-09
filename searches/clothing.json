@@ -1,0 +1,42 @@
+{
+  "_help": "Adidas Terrex clothing in size S. Nationwide on Kleinanzeigen (clothing is usually shipped). Set telegram_thread_id, then enabled: true.",
+  "topic": "Clothing",
+  "emoji": "👕",
+  "telegram_thread_id": null,
+  "enabled": false,
+  "defaults": {
+    "must_not_contain": [
+      "Suche",
+      "Gesuch",
+      "Tausch",
+      "defekt",
+      "Fake",
+      "Replika",
+      "Kinder",
+      "Jungen",
+      "Mädchen"
+    ],
+    "require_known": [
+      "price"
+    ],
+    "check_details": true
+  },
+  "searches": [
+    {
+      "name": "Adidas Terrex – size S",
+      "urls": [
+        "https://www.kleinanzeigen.de/s-adidas-terrex/k0"
+      ],
+      "filters": {
+        "min_price": 10,
+        "max_price": 150,
+        "title_must_contain": [
+          "Terrex"
+        ],
+        "must_contain": [
+          "re:(?<!\\w)(gr\\.?|größe|grösse|groesse|size)\\s*:?\\s*(s|small)(?![\\w-])|(?<![\\w/])s\\s*/\\s*m(?![\\w/])"
+        ]
+      }
+    }
+  ]
+}

@@ -26,7 +26,11 @@ def _norm(s: str) -> str:
 
 @lru_cache(maxsize=2048)
 def _pattern(term: str) -> re.Pattern:
-    # match at the START of a word: "Pano" hits "Panoramadach", "suche" does not hit "versuche"
+    # "re:<regex>" -> regular expression on the lower-cased, whitespace-collapsed text,
+    #                 e.g. "re:\\bgröße s\\b" matches "Größe S" but not "Größe XS" or "Größe Schwarz"
+    if term.startswith("re:"):
+        return re.compile(term[3:], re.IGNORECASE)
+    # otherwise match at the START of a word: "Pano" hits "Panoramadach", "suche" does not hit "versuche"
     return re.compile(r"(?<!\w)" + re.escape(_norm(term)))
 
 
@@ -79,7 +83,9 @@ def found_keywords(text: str, f: dict) -> list[str]:
     t = _norm(text)
     out = []
     for r in f.get("must_contain", []):
-        hit = next((a for a in _alts(r) if has(t, a)), None)
-        if hit:
-            out.append(hit)
+        for a in _alts(r):
+            m = _pattern(a).search(t)
+            if m:
+                out.append(m.group(0).strip() if a.startswith("re:") else a)
+                break
     return out

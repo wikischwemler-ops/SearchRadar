@@ -49,6 +49,11 @@ The goal is few, precise alerts. A good filter set:
 
 Matching is case-insensitive and anchored at the **start of a word** (`Pano` → *Panoramadach*; `suche` ✗ *versuche*).
 Avoid bare numbers like `"27"` or `"56"` – they also match prices (`270 €`, `560 €`). Write `"27 Zoll"`, `"RH 56"`.
+For exact matches use a regex entry `"re:<pattern>"` (runs on lower-cased text, whitespace collapsed). Typical case:
+clothing sizes, where a plain `"Größe S"` would also hit *Größe Schwarz*. See `searches/clothing.json` and its test.
+Always add a test with positive and negative sample texts for every new regex.
+- Clothing/shoes: search nationwide (`/s-<keywords>/k0` on Kleinanzeigen) since items are shipped; exclude
+  `Kinder`, `Fake`, `Replika`; put the brand/line into `title_must_contain` and the size into `must_contain`.
 
 Put shared rules in the file's `defaults`; per-search `filters` override keys from `defaults` (no list merging).
 
