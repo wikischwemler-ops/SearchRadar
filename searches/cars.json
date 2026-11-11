@@ -1,5 +1,5 @@
 {
-  "_help": "VW Golf 7, petrol, max 10.000 EUR, from 2016, max 160.000 km, 100 km around 73207 Plochingen. URLs verified 2026-11-11.",
+  "_help": "VW Golf 7, petrol, max 10.000 EUR, from 2016, max 160.000 km, 100 km around 73207 Plochingen. URLs verified 2026-11-11. mobile.de removed: it blocks GitHub runners (HTTP 403) - use the saved-search alert in the mobile.de app instead.",
   "topic": "Cars",
   "emoji": "🚗",
   "telegram_thread_id": 3,
@@ -15,7 +15,11 @@
       "nur Export",
       "Gesuch"
     ],
-    "require_known": ["price", "mileage", "year"],
+    "require_known": [
+      "price",
+      "mileage",
+      "year"
+    ],
     "check_details": true
   },
   "searches": [
@@ -23,8 +27,7 @@
       "name": "VW Golf 7 – petrol, ≤ 10k €",
       "urls": [
         "https://www.autoscout24.de/lst/volkswagen/golf?atype=C&cy=D&zip=73207&zipr=100&priceto=10000&fregfrom=2016&kmto=160000&fuel=B&sort=age&desc=1",
-        "https://www.kleinanzeigen.de/s-autos/plochingen/preis::10000/c216l8389r100+autos.ez_i:2016%2C+autos.fuel_s:benzin+autos.km_i:%2C160000+autos.marke_s:volkswagen+autos.model_s:golf",
-        "https://suchen.mobile.de/fahrzeuge/search.html?isSearchRequest=true&s=Car&vc=Car&ms=25200%3B14%3B%3B&ft=PETROL&fr=2016%3A&ml=%3A160000&p=%3A10000&ll=48.7118%2C9.4194&rd=100&sb=doc&od=down&dam=false"
+        "https://www.kleinanzeigen.de/s-autos/plochingen/preis::10000/c216l8389r100+autos.ez_i:2016%2C+autos.fuel_s:benzin+autos.km_i:%2C160000+autos.marke_s:volkswagen+autos.model_s:golf"
       ],
       "filters": {
         "min_price": 3000,
@@ -32,7 +35,9 @@
         "max_mileage": 160000,
         "min_year": 2016,
         "max_year": 2020,
-        "title_must_contain": ["Golf"],
+        "title_must_contain": [
+          "Golf"
+        ],
         "must_not_contain": [
           "Variant",
           "Sportsvan",

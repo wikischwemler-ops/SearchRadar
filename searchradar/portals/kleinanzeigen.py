@@ -51,7 +51,12 @@ def parse(html: str) -> list[Listing]:
     out: list[Listing] = []
     seen: set[str] = set()
 
-    for art in soup.select("article[data-adid]"):
+    # Only the real result list: "#srchrslt-adtable-altads" holds nationwide "alternative" ads
+    # that ignore the location/radius and filters of the search.
+    main = soup.select_one("#srchrslt-adtable") or soup
+    for art in main.select("article[data-adid]"):
+        if art.find_parent(id="srchrslt-adtable-altads"):
+            continue
         adid = art.get("data-adid")
         if not adid or adid in seen:
             continue

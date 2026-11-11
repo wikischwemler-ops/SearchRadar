@@ -188,7 +188,9 @@ def _fixture(name):
 
 
 def test_kleinanzeigen_new_layout():
-    golf, facelift, wanted = kleinanzeigen.parse(_fixture("kleinanzeigen.html"))
+    parsed = kleinanzeigen.parse(_fixture("kleinanzeigen.html"))
+    assert [l.id for l in parsed] == ["3562284248", "3554963525", "3521667313"]   # no nationwide "altads"
+    golf, facelift, wanted = parsed
     assert (golf.id, golf.title, golf.price, golf.mileage, golf.year, golf.location) == \
         ("3562284248", "VW Golf 7 1.2 TSI", 9490, 90000, 2016, "73061 Ebersbach an der Fils")
     assert golf.url == "https://www.kleinanzeigen.de/s-anzeige/vw-golf-7-1-2-tsi/3562284248-216-8871"

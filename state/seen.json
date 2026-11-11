@@ -153,9 +153,7 @@
    "m": false
   }
  },
- "errors": {
-  "https://suchen.mobile.de/fahrzeuge/search.html?isSearchRequest=true&s=Car&vc=Car&ms=25200%3B14%3B%3B&ft=PETROL&fr=2016%3A&ml=%3A160000&p=%3A10000&ll=48.7118%2C9.4194&rd=100&sb=doc&od=down&dam=false": 1
- },
+ "errors": {},
  "initialized_searches": [
   "cars/VW Golf 7 – petrol, ≤ 10k €"
  ]
