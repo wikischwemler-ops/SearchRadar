@@ -2,7 +2,7 @@
   "_help": "VW Golf 7, petrol, max 10.000 EUR, from 2016, max 160.000 km, 100 km around 73207 Plochingen. URLs verified 2026-11-11.",
   "topic": "Cars",
   "emoji": "🚗",
-  "telegram_thread_id": null,
+  "telegram_thread_id": 3,
   "enabled": true,
   "defaults": {
     "must_not_contain": [
