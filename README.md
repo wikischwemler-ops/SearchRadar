@@ -60,7 +60,9 @@ On the **first run** of a search all current listings are marked as seen silentl
 3. Create a **group**, open its settings and turn on **Topics**. Add your bot as **admin**.
 4. Create one topic per search file, e.g. *Cars*, *Bikes*, *Monitors* (optionally *Alerts*).
 5. Write any message in **each** topic.
-6. Get the ids (on a computer):
+6. Get the ids – **no computer needed**: add the secret `TELEGRAM_BOT_TOKEN` (step 2) first, then
+   **Actions → SearchRadar → Run workflow** with *Setup: only show Telegram chat/topic ids* ticked and open
+   the step *Show Telegram ids* in the job log. Alternatively on a computer:
    ```bash
    pip install -r requirements.txt
    TELEGRAM_BOT_TOKEN=123:abc python -m searchradar --telegram-ids

@@ -9,6 +9,10 @@ on:
         description: "Send Telegram test message only"
         type: boolean
         default: false
+      telegram_ids:
+        description: "Setup: only show Telegram chat/topic ids (see job log)"
+        type: boolean
+        default: false
   push:
     paths: ["searches/**", "settings.json", "searchradar/**", "tests/**"]
 
@@ -40,26 +44,32 @@ jobs:
           python -m searchradar --validate
           python -m pytest -q
 
+      - name: Show Telegram ids
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.telegram_ids }}
+        run: python -m searchradar --telegram-ids
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+
       - name: Telegram test
-        if: ${{ github.event_name == 'workflow_dispatch' && inputs.test_telegram }}
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.test_telegram && !inputs.telegram_ids }}
         run: python -m searchradar --test-telegram
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
 
       - name: Search
-        if: ${{ github.event_name != 'push' && !inputs.test_telegram }}
+        if: ${{ github.event_name != 'push' && !inputs.test_telegram && !inputs.telegram_ids }}
         run: python -m searchradar --verbose
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
 
       - name: Build overview (site/ + RESULTS.md)
-        if: ${{ !inputs.test_telegram }}
+        if: ${{ !inputs.test_telegram && !inputs.telegram_ids }}
         run: python -m searchradar.site
 
       - name: Save state and RESULTS.md
-        if: ${{ github.event_name != 'push' && !inputs.test_telegram }}
+        if: ${{ github.event_name != 'push' && !inputs.test_telegram && !inputs.telegram_ids }}
         run: |
           git config user.name "searchradar-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -73,14 +83,14 @@ jobs:
           fi
 
       - name: Upload overview for GitHub Pages
-        if: ${{ vars.PAGES_ENABLED == 'true' && !inputs.test_telegram }}
+        if: ${{ vars.PAGES_ENABLED == 'true' && !inputs.test_telegram && !inputs.telegram_ids }}
         uses: actions/upload-pages-artifact@v3
         with:
           path: site
 
   pages:
     needs: search
-    if: ${{ vars.PAGES_ENABLED == 'true' && !inputs.test_telegram }}
+    if: ${{ vars.PAGES_ENABLED == 'true' && !inputs.test_telegram && !inputs.telegram_ids }}
     runs-on: ubuntu-latest
     environment:
       name: github-pages
