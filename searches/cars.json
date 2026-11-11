@@ -1,32 +1,46 @@
 {
-  "_help": "One file per topic. Replace 10115 with your postcode, set telegram_thread_id, then set enabled to true.",
+  "_help": "VW Golf 7, petrol, max 10.000 EUR, from 2016, max 160.000 km, 100 km around 73207 Plochingen. URLs verified 2026-11-11.",
   "topic": "Cars",
   "emoji": "🚗",
   "telegram_thread_id": null,
-  "enabled": false,
+  "enabled": true,
   "defaults": {
-    "must_not_contain": ["Unfall", "Unfallwagen", "defekt", "Motorschaden", "Getriebeschaden", "Export", "Bastler", "ohne TÜV"],
-    "require_known": ["price"],
+    "must_not_contain": [
+      "re:(?<!\\w)unfall(?!frei)",
+      "re:(?<!keine )(?<!kein )(?<!\\w)defekt",
+      "Motorschaden",
+      "Getriebeschaden",
+      "Bastler",
+      "ohne TÜV",
+      "nur Export",
+      "Gesuch"
+    ],
+    "require_known": ["price", "mileage", "year"],
     "check_details": true
   },
   "searches": [
     {
-      "name": "VW Golf 8 GTI",
+      "name": "VW Golf 7 – petrol, ≤ 10k €",
       "urls": [
-        "https://www.autoscout24.de/lst/volkswagen/golf?atype=C&cy=D&zip=10115&zipr=100&fregfrom=2020&priceto=40000&sort=age&desc=1",
-        "https://www.kleinanzeigen.de/s-autos/volkswagen/golf/10115/k0c216l3331r100",
-        "https://suchen.mobile.de/fahrzeuge/search.html?isSearchRequest=true&ms=25200%3B11%3B%3B&zip=10115&zipr=100&fr=2020%3A&p=%3A40000&sb=doc&od=down"
+        "https://www.autoscout24.de/lst/volkswagen/golf?atype=C&cy=D&zip=73207&zipr=100&priceto=10000&fregfrom=2016&kmto=160000&fuel=B&sort=age&desc=1",
+        "https://www.kleinanzeigen.de/s-autos/plochingen/preis::10000/c216l8389r100+autos.ez_i:2016%2C+autos.fuel_s:benzin+autos.km_i:%2C160000+autos.marke_s:volkswagen+autos.model_s:golf",
+        "https://suchen.mobile.de/fahrzeuge/search.html?isSearchRequest=true&s=Car&vc=Car&ms=25200%3B14%3B%3B&ft=PETROL&fr=2016%3A&ml=%3A160000&p=%3A10000&ll=48.7118%2C9.4194&rd=100&sb=doc&od=down&dam=false"
       ],
       "filters": {
-        "min_price": 15000,
-        "max_price": 40000,
-        "max_mileage": 80000,
-        "min_year": 2020,
-        "title_must_contain": ["GTI"],
-        "must_contain": [
-          "DSG",
-          ["Pano", "Panorama", "Schiebedach"],
-          ["AHK", "Anhängerkupplung"]
+        "min_price": 3000,
+        "max_price": 10000,
+        "max_mileage": 160000,
+        "min_year": 2016,
+        "max_year": 2020,
+        "title_must_contain": ["Golf"],
+        "must_not_contain": [
+          "Variant",
+          "Sportsvan",
+          "Alltrack",
+          "Kombi",
+          "Golf Plus",
+          "Cabrio",
+          "re:(?<!\\w)golf\\s*(i{1,3}|iv|v|vi|viii|[1-689])(?![\\w.])"
         ]
       }
     }

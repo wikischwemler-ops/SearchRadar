@@ -175,3 +175,50 @@ def test_site_build(tmp_path):
     assert "VW Golf 8 GTI DSG Pano" in html and "</script><" not in html.split('id="data"')[1].split("</script>")[0]
     md = site.build_markdown(data)
     assert "27.900 € ▼ (was 29.900 €)" in md and "(https://www.kleinanzeigen.de/s-anzeige/" in md
+
+
+# ---- real HTML samples (Nov 2026) and the Golf 7 search ----------------------------------
+
+FIX = os.path.join(os.path.dirname(__file__), "fixtures")
+
+
+def _fixture(name):
+    with open(os.path.join(FIX, name), encoding="utf-8") as fh:
+        return fh.read()
+
+
+def test_kleinanzeigen_new_layout():
+    golf, facelift, wanted = kleinanzeigen.parse(_fixture("kleinanzeigen.html"))
+    assert (golf.id, golf.title, golf.price, golf.mileage, golf.year, golf.location) == \
+        ("3562284248", "VW Golf 7 1.2 TSI", 9490, 90000, 2016, "73061 Ebersbach an der Fils")
+    assert golf.url == "https://www.kleinanzeigen.de/s-anzeige/vw-golf-7-1-2-tsi/3562284248-216-8871"
+    assert (facelift.price, facelift.mileage, facelift.year) == (7100, 142300, 2018)  # not the struck-through 7.300
+    assert wanted.extra["wanted"] is True
+
+
+def test_mobile_de_current_layout():
+    sportsvan, golf = mobile_de.parse(_fixture("mobile_de.html"))
+    assert (golf.id, golf.title, golf.price, golf.mileage, golf.year, golf.location) == \
+        ("446694686", "Volkswagen Golf VII Lim. Trendline BMT/Start-Stopp- I Hand", 8999, 147000, 2018, "70469 Stuttgart")
+    assert golf.url == "https://suchen.mobile.de/fahrzeuge/details.html?id=446694686"
+    assert sportsvan.title.startswith("Volkswagen Golf Sportsvan")   # "Gesponsert" badge stripped
+
+
+def test_golf7_search_criteria():
+    topics = {t.file: t for t in load_topics(os.path.join(ROOT, "searches"))}
+    f = topics["cars"].searches[0].filters
+    assert "Gesuch" in f["must_not_contain"] and "Variant" in f["must_not_contain"]   # lists merged
+    golf, facelift, wanted = kleinanzeigen.parse(_fixture("kleinanzeigen.html"))
+    sportsvan, golf_mobile = mobile_de.parse(_fixture("mobile_de.html"))
+
+    def ok(l):
+        return filters.check_basic(l, f)[0] and not filters.missing_title_keywords(l.title, f)
+
+    assert ok(golf) and ok(facelift) and ok(golf_mobile)           # "Unfallfrei" must not reject
+    assert not ok(wanted) and not ok(sportsvan)
+    for title in ["VW Golf 6 1.4", "Golf VI Comfortline", "Golf 8 Life", "Golf VIII", "VW Golf 4", "Golf Variant 1.0"]:
+        assert filters.excluded_by(title, f), title
+    for title in ["Golf VII Highline", "Golf 7.5 TSI", "VW Golf 7 1.0 TSI", "Golf 1.2 TSI BlueMotion"]:
+        assert not filters.excluded_by(title, f), title
+    assert filters.excluded_by("Golf 7 Unfallwagen", f) and not filters.excluded_by("Golf 7 unfallfrei", f)
+    assert filters.excluded_by("Motor defekt", f) and not filters.excluded_by("keine Defekte", f)

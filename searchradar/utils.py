@@ -3,8 +3,9 @@ from __future__ import annotations
 
 import re
 
-_KM_RE = re.compile(r"(\d{1,3}(?:[.  ]\d{3})+|\d{1,7})\s*km\b", re.IGNORECASE)
-_PRICE_RE = re.compile(r"(\d{1,3}(?:[.  ]\d{3})+|\d{3,7})\s*(?:,-|,00)?\s*€")
+# (?<![\d.,]): never start inside another number ("2026 142.300 km" -> 142300)
+_KM_RE = re.compile(r"(?<![\d.,])(\d{1,3}(?:[.  ]\d{3})+|\d{1,7})\s*km\b", re.IGNORECASE)
+_PRICE_RE = re.compile(r"(?<![\d.,])(\d{1,3}(?:[.  ]\d{3})+|\d{3,7})\s*(?:,-|,00)?\s*€")
 _EZ_RE = re.compile(r"\b(?:EZ\s*)?(?:0?[1-9]|1[0-2])\s*/\s*((?:19|20)\d{2})\b")
 _YEAR_ONLY_RE = re.compile(r"^\s*(?:EZ\s*)?((?:19|20)\d{2})\s*$", re.IGNORECASE)
 

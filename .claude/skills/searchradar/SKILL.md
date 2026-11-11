@@ -58,7 +58,8 @@ Always add a test with positive and negative sample texts for every new regex.
 - Clothing/shoes: search nationwide (`/s-<keywords>/k0` on Kleinanzeigen) since items are shipped; exclude
   `Kinder`, `Fake`, `Replika`; put the brand/line into `title_must_contain` and the size into `must_contain`.
 
-Put shared rules in the file's `defaults`; per-search `filters` override keys from `defaults` (no list merging).
+Put shared rules in the file's `defaults`; per-search `filters` override numeric keys, while keyword lists
+(`must_contain`, `must_not_contain`, `title_must_contain`, `require_known`) are combined with the defaults.
 
 ## 3. Telegram topics
 

@@ -37,6 +37,18 @@ class Topic:
     searches: list[Search] = field(default_factory=list)
 
 
+LIST_KEYS = ("must_contain", "must_not_contain", "title_must_contain", "require_known")
+
+
+def merge_filters(defaults: dict, own: dict) -> dict:
+    """Search filters override defaults; keyword lists are combined instead of replaced."""
+    merged = {**defaults, **own}
+    for key in LIST_KEYS:
+        if key in defaults and key in own:
+            merged[key] = list(defaults[key]) + [x for x in own[key] if x not in defaults[key]]
+    return merged
+
+
 def _load_json(path: str) -> dict:
     with open(path, encoding="utf-8") as fh:
         try:
@@ -71,7 +83,7 @@ def load_topics(directory: str) -> list[Topic]:
                 continue
             if "name" not in s or not s.get("urls"):
                 raise ValueError(f"{path}: every search needs 'name' and 'urls'")
-            filters = {**t.defaults, **s.get("filters", {})}
+            filters = merge_filters(t.defaults, s.get("filters", {}))
             t.searches.append(Search(id=f"{stem}/{s['name']}", name=s["name"],
                                      urls=s["urls"], filters=filters))
         topics.append(t)
