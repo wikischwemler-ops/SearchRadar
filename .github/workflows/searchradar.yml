@@ -18,8 +18,6 @@ on:
 
 permissions:
   contents: write           # commit state/*.json and RESULTS.md
-  pages: write              # deploy the web overview
-  id-token: write
 
 concurrency:
   group: searchradar
@@ -81,20 +79,3 @@ jobs:
             git pull --rebase --autostash || true
             git push
           fi
-
-      - name: Upload overview for GitHub Pages
-        if: ${{ vars.PAGES_ENABLED == 'true' && !inputs.test_telegram && !inputs.telegram_ids }}
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: site
-
-  pages:
-    needs: search
-    if: ${{ vars.PAGES_ENABLED == 'true' && !inputs.test_telegram && !inputs.telegram_ids }}
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deploy.outputs.page_url }}
-    steps:
-      - id: deploy
-        uses: actions/deploy-pages@v4
