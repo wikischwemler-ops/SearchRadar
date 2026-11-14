@@ -1,24 +1,128 @@
 {
-  "seen": {
-    "cars/VW Golf 7 – petrol, ≤ 10k €|autoscout24:25304292-7231-4438-a78d-591e9af9dbbe": {
-      "t": "2026-11-12T01:31:50+00:00",
-      "m": true
-    },
-    "cars/VW Golf 7 – petrol, ≤ 10k €|autoscout24:aca6938d-a083-48b3-9524-b277b58401c0": {
-      "t": "2026-11-13T16:18:54+00:00",
-      "m": true
-    },
-    "cars/VW Golf 7 – petrol, ≤ 10k €|autoscout24:b1bbdd58-fdaf-49aa-97d6-76e0f7cef42c": {
-      "t": "2026-11-12T18:17:39+00:00",
-      "m": true
-    },
-    "cars/VW Golf 7 – petrol, ≤ 10k €|kleinanzeigen:3570217243": {
-      "t": "2026-11-13T16:18:57+00:00",
-      "m": true
-    }
+ "seen": {
+  "cars/VW Golf 7 – petrol, ≤ 10k €|autoscout24:0b16c24e-059c-420b-ad76-231aae024506": {
+   "t": "2026-11-14T06:31:05+00:00",
+   "m": true
   },
-  "errors": {},
-  "initialized_searches": [
-    "cars/VW Golf 7 – petrol, ≤ 10k €"
-  ]
+  "cars/VW Golf 7 – petrol, ≤ 10k €|autoscout24:0f361c3b-0e8d-4f94-bab0-2879fb606fc6": {
+   "t": "2026-11-14T06:31:13+00:00",
+   "m": false
+  },
+  "cars/VW Golf 7 – petrol, ≤ 10k €|autoscout24:1b897a3c-df34-4556-887a-084010724f2a": {
+   "t": "2026-11-14T06:31:13+00:00",
+   "m": true
+  },
+  "cars/VW Golf 7 – petrol, ≤ 10k €|autoscout24:23c8b358-bb1a-4a9e-a986-6f2d6ef194a2": {
+   "t": "2026-11-14T06:31:29+00:00",
+   "m": true
+  },
+  "cars/VW Golf 7 – petrol, ≤ 10k €|autoscout24:25304292-7231-4438-a78d-591e9af9dbbe": {
+   "t": "2026-11-12T01:31:50+00:00",
+   "m": true
+  },
+  "cars/VW Golf 7 – petrol, ≤ 10k €|autoscout24:32b55f75-e520-4738-a73b-c2ad147fbf35": {
+   "t": "2026-11-14T06:31:33+00:00",
+   "m": true
+  },
+  "cars/VW Golf 7 – petrol, ≤ 10k €|autoscout24:40c9894a-1a4a-43ec-be39-56075c5aa086": {
+   "t": "2026-11-14T06:31:39+00:00",
+   "m": false
+  },
+  "cars/VW Golf 7 – petrol, ≤ 10k €|autoscout24:4ac6f05f-17c1-4d20-8afd-5e9a93dbebfc": {
+   "t": "2026-11-14T06:30:50+00:00",
+   "m": false
+  },
+  "cars/VW Golf 7 – petrol, ≤ 10k €|autoscout24:741806f1-df0f-4804-905b-27c68216160d": {
+   "t": "2026-11-14T06:30:50+00:00",
+   "m": false
+  },
+  "cars/VW Golf 7 – petrol, ≤ 10k €|autoscout24:75e98d8a-8f11-461e-8319-49ee20fb4a5b": {
+   "t": "2026-11-14T06:31:26+00:00",
+   "m": true
+  },
+  "cars/VW Golf 7 – petrol, ≤ 10k €|autoscout24:817af6b4-8e71-46c1-beae-6cacaab0b046": {
+   "t": "2026-11-14T06:31:00+00:00",
+   "m": false
+  },
+  "cars/VW Golf 7 – petrol, ≤ 10k €|autoscout24:8962a047-c806-4f27-839d-c48593df6843": {
+   "t": "2026-11-14T06:31:29+00:00",
+   "m": false
+  },
+  "cars/VW Golf 7 – petrol, ≤ 10k €|autoscout24:8bd639f6-946d-4b9b-8ca9-430237b5a87e": {
+   "t": "2026-11-14T06:30:53+00:00",
+   "m": false
+  },
+  "cars/VW Golf 7 – petrol, ≤ 10k €|autoscout24:aca6938d-a083-48b3-9524-b277b58401c0": {
+   "t": "2026-11-13T16:18:54+00:00",
+   "m": true
+  },
+  "cars/VW Golf 7 – petrol, ≤ 10k €|autoscout24:b1bbdd58-fdaf-49aa-97d6-76e0f7cef42c": {
+   "t": "2026-11-12T18:17:39+00:00",
+   "m": true
+  },
+  "cars/VW Golf 7 – petrol, ≤ 10k €|autoscout24:b4241bbb-6c3c-4ac4-8cfa-b807e8635930": {
+   "t": "2026-11-14T06:31:39+00:00",
+   "m": false
+  },
+  "cars/VW Golf 7 – petrol, ≤ 10k €|autoscout24:bce72cb2-f77b-4580-9850-f0b408e93770": {
+   "t": "2026-11-14T06:31:53+00:00",
+   "m": true
+  },
+  "cars/VW Golf 7 – petrol, ≤ 10k €|autoscout24:c73e47c4-82bf-416c-b4e5-fa199e4e17cd": {
+   "t": "2026-11-14T06:31:20+00:00",
+   "m": false
+  },
+  "cars/VW Golf 7 – petrol, ≤ 10k €|autoscout24:cb5f9cd8-165a-4aa1-ac58-e5c08ea8a7b1": {
+   "t": "2026-11-14T06:31:46+00:00",
+   "m": false
+  },
+  "cars/VW Golf 7 – petrol, ≤ 10k €|autoscout24:e44428bd-bcef-4117-a0a3-60e0be2e5f11": {
+   "t": "2026-11-14T06:31:20+00:00",
+   "m": true
+  },
+  "cars/VW Golf 7 – petrol, ≤ 10k €|autoscout24:e7ebb12f-223f-41f9-89bb-dcb28bf4bb09": {
+   "t": "2026-11-14T06:31:09+00:00",
+   "m": true
+  },
+  "cars/VW Golf 7 – petrol, ≤ 10k €|autoscout24:fae7cd75-3cd4-4141-970b-b8a8bacdbf3f": {
+   "t": "2026-11-14T06:31:46+00:00",
+   "m": true
+  },
+  "cars/VW Golf 7 – petrol, ≤ 10k €|kleinanzeigen:3509852565": {
+   "t": "2026-11-14T06:32:10+00:00",
+   "m": false
+  },
+  "cars/VW Golf 7 – petrol, ≤ 10k €|kleinanzeigen:3521667313": {
+   "t": "2026-11-14T06:32:10+00:00",
+   "m": false
+  },
+  "cars/VW Golf 7 – petrol, ≤ 10k €|kleinanzeigen:3544473214": {
+   "t": "2026-11-14T06:32:10+00:00",
+   "m": false
+  },
+  "cars/VW Golf 7 – petrol, ≤ 10k €|kleinanzeigen:3553680370": {
+   "t": "2026-11-14T06:32:10+00:00",
+   "m": false
+  },
+  "cars/VW Golf 7 – petrol, ≤ 10k €|kleinanzeigen:3554963525": {
+   "t": "2026-11-14T06:32:08+00:00",
+   "m": true
+  },
+  "cars/VW Golf 7 – petrol, ≤ 10k €|kleinanzeigen:3563543025": {
+   "t": "2026-11-14T06:32:02+00:00",
+   "m": false
+  },
+  "cars/VW Golf 7 – petrol, ≤ 10k €|kleinanzeigen:3563704581": {
+   "t": "2026-11-14T06:31:57+00:00",
+   "m": false
+  },
+  "cars/VW Golf 7 – petrol, ≤ 10k €|kleinanzeigen:3570217243": {
+   "t": "2026-11-13T16:18:57+00:00",
+   "m": true
+  }
+ },
+ "errors": {},
+ "initialized_searches": [
+  "cars/VW Golf 7 – petrol, ≤ 10k €"
+ ]
 }
