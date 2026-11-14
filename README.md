@@ -81,7 +81,9 @@ GitHub → repo → **Settings → Secrets and variables → Actions → New rep
 Edit the files in `searches/`: put your search URLs in, set `telegram_thread_id`, and set `"enabled": true`.
 
 ### 4. Web overview (optional)
-`RESULTS.md` in the repo is always updated – open it in the GitHub app for a quick list with links.
+`site/index.html` and `RESULTS.md` in the repo are always updated. Without Pages the HTML page can be opened via `https://htmlpreview.github.io/?https://github.com/<user>/SearchRadar/blob/main/site/index.html`; set that (or the Pages URL) as `overview_url` in `settings.json` to get the link in every Telegram message.
+
+`RESULTS.md` – open it in the GitHub app for a quick list with links.
 
 For the full page with filters and price charts, use **GitHub Pages**:
 1. **Settings → Pages → Build and deployment → Source: GitHub Actions**

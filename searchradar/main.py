@@ -160,7 +160,7 @@ class Runner:
         if self.sent >= self.notify_budget:
             print("   … notification limit reached, rest follows next run")
             return True
-        msg = format_listing(topic.topic, search.name, l, keywords, topic.emoji)
+        msg = format_listing(topic.topic, search.name, l, keywords, topic.emoji, self.s.get("overview_url") or "")
         if self.tg.send(msg, thread_id=topic.telegram_thread_id, chat_id=topic.telegram_chat_id):
             self.sent += 1
             self.state.mark(sid, l.key, True)
@@ -180,6 +180,8 @@ class Runner:
         msg = (f"📉 <b>Price drop</b> – {_h.escape(m['search'])}\n<b>{_h.escape(m['title'])}</b>\n"
                f"<s>{fmt_int(old)} €</s> → <b>{fmt_int(new)} €</b> (−{pct} %)\n"
                f'🔗 <a href="{_h.escape(m["url"], quote=True)}">Open on {_h.escape(m["portal"])}</a>')
+        if self.s.get("overview_url"):
+            msg += f'\n📊 <a href="{_h.escape(self.s["overview_url"], quote=True)}">All results &amp; price history</a>'
         if t:
             self.tg.send(msg, thread_id=t.telegram_thread_id, chat_id=t.telegram_chat_id)
 
@@ -301,7 +303,9 @@ def main() -> None:
                             thread_id=settings.get("alerts_thread_id"))
         for t in topics:
             if t.enabled:
-                ok &= runner.tg.send(f"{t.emoji} <b>SearchRadar</b>: test for topic “{t.topic}”.",
+                ov = settings.get("overview_url")
+                link = f'\n📊 <a href="{ov}">All results &amp; price history</a>' if ov else ""
+                ok &= runner.tg.send(f"{t.emoji} <b>SearchRadar</b>: test for topic “{t.topic}”.{link}",
                                      thread_id=t.telegram_thread_id, chat_id=t.telegram_chat_id)
         print("Telegram OK" if ok else "Telegram ERROR – check chat id / thread ids")
         sys.exit(0 if ok else 1)

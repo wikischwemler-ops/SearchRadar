@@ -51,7 +51,8 @@ class Telegram:
         return False
 
 
-def format_listing(topic: str, search_name: str, l: Listing, keywords: list[str], emoji: str = "📡") -> str:
+def format_listing(topic: str, search_name: str, l: Listing, keywords: list[str], emoji: str = "📡",
+                   overview_url: str = "") -> str:
     e = html.escape
     lines = [f"{emoji} <b>{e(search_name)}</b>", f"<b>{e(l.title or 'Listing')}</b>"]
     facts = []
@@ -68,5 +69,7 @@ def format_listing(topic: str, search_name: str, l: Listing, keywords: list[str]
     if keywords:
         lines.append(f"✅ {e(', '.join(keywords))}")
     lines.append(f'🔗 <a href="{e(l.url, quote=True)}">Open on {e(label(l.portal))}</a>')
+    if overview_url:
+        lines.append(f'📊 <a href="{e(overview_url, quote=True)}">All results &amp; price history</a>')
     lines.append(f"<i>#{e(topic.replace(' ', '_'))}</i>")
     return "\n".join(lines)

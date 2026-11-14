@@ -1,5 +1,5 @@
 {
-  "_help": "Global settings. See README.md for every option.",
+  "_help": "Global settings. See README.md for every option. overview_url: switch to https://wikischwemler-ops.github.io/SearchRadar/ once GitHub Pages is enabled.",
   "notify_on_first_run": false,
   "max_notifications_per_run": 30,
   "max_detail_checks_per_run": 25,
@@ -9,5 +9,6 @@
   ],
   "alerts_thread_id": null,
   "max_rechecks_per_run": 40,
-  "notify_price_drops": true
+  "notify_price_drops": true,
+  "overview_url": "https://htmlpreview.github.io/?https://github.com/wikischwemler-ops/SearchRadar/blob/main/site/index.html"
 }
