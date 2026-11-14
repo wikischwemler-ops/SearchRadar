@@ -113,8 +113,10 @@ def test_shipped_config_is_valid():
 
 
 def test_regex_terms_for_clothing_size():
-    topics = {t.file: t for t in load_topics(os.path.join(ROOT, "searches"))}
-    f = topics["clothing"].searches[0].filters
+    import json as _j
+    from searchradar.config import merge_filters
+    raw = _j.load(open(os.path.join(ROOT, "searches", "clothing.json"), encoding="utf-8"))
+    f = merge_filters(raw["defaults"], raw["searches"][1]["filters"])  # eBay search: size via keywords
     for text in ["Adidas Terrex Jacke Größe S", "Terrex Hose Gr. S", "Terrex Softshell S/M", "size small"]:
         assert filters.missing_keywords(text, f) == [], text
     for text in ["Terrex Jacke Größe XS", "Terrex Größe Schwarz M", "Terrex Jacke Gr. M", "Terrex Größe S-M"]:
@@ -258,11 +260,16 @@ def test_ebay_parser_and_clothing_filters():
     assert pants.price == 1 and pants.extra.get("auction")
     assert items[2].price == 1056
     assert pants.url == "https://www.ebay.de/itm/920141395112"
-    clothing = next(t for t in load_topics("searches") if t.file == "clothing")
-    f = clothing.searches[0].filters
+    import json as _j
+    raw = _j.loads(Path("searches/clothing.json").read_text(encoding="utf-8"))
+    from searchradar.config import merge_filters
+    f = merge_filters(raw["defaults"], raw["searches"][1]["filters"])  # eBay search (keyword size filter)
     shoe_ok, why = filters.check_basic(items[0], {**f, "max_price": None})
     assert not shoe_ok, why
     assert not filters.check_basic(items[2], {**f, "max_price": None})[0]
+    assert filters.check_basic(pants, f)[1] == "contains 'Damen'"   # men only
+    pants.title = pants.title.replace("Damen", "Herren")
+    pants.text = pants.text.replace("Damen", "Herren")
     assert filters.check_basic(pants, f)[0]
     assert not filters.missing_keywords(f"{pants.title} {pants.text}", f)
 

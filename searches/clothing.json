@@ -1,5 +1,5 @@
 {
-  "_help": "Adidas Terrex clothing (no shoes) in size S. Nationwide on Kleinanzeigen and eBay.de (clothing is shipped). The bot creates the Telegram topic 'Bekleidung' itself (telegram_thread_id: auto).",
+  "_help": "Adidas Terrex men's clothing (no shoes) in size S, nationwide (clothing is shipped). Kleinanzeigen URL already filters Herrenbekleidung + size S. eBay.de blocks GitHub runners (HTTP 403) - search disabled until the eBay API is set up. Telegram topic 'Bekleidung' is created by the bot (telegram_thread_id: auto).",
   "topic": "Clothing",
   "emoji": "👕",
   "telegram_thread_id": "auto",
@@ -22,7 +22,10 @@
       "re:(?<!\\w)boots?(?!\\w)",
       "Wanderschuh",
       "Trailrunning Schuh",
-      "re:(?<!\\w)(eur|eu|uk|us|gr\\.?|größe)\\s*\\d{2}(\\s*[12]/3)?(?![\\d,.])"
+      "re:(?<!\\w)(eur|eu|uk|us|gr\\.?|größe)\\s*\\d{2}(\\s*[12]/3)?(?![\\d,.])",
+      "Damen",
+      "Frauen",
+      "re:(?<!\\w)wom[ae]n"
     ],
     "require_known": [
       "price"
@@ -31,10 +34,24 @@
   },
   "searches": [
     {
-      "name": "Adidas Terrex – size S, no shoes",
+      "name": "Adidas Terrex – men, size S",
       "urls": [
-        "https://www.kleinanzeigen.de/s-adidas-terrex/k0",
-        "https://www.ebay.de/sch/i.html?_nkw=adidas+terrex+-schuhe+-schuh+-wanderschuhe+-sneaker&_sop=10&LH_PrefLoc=1"
+        "https://www.kleinanzeigen.de/s-kleidung-herren/adidas-terrex/k0c160+kleidung_herren.groesse_s:s"
+      ],
+      "filters": {
+        "min_price": 1,
+        "max_price": 150,
+        "title_must_contain": [
+          "Terrex"
+        ]
+      }
+    },
+    {
+      "name": "Adidas Terrex – men, size S (eBay)",
+      "enabled": false,
+      "_help": "eBay.de answers GitHub runners with HTTP 403. Re-enable once the eBay Browse API is connected.",
+      "urls": [
+        "https://www.ebay.de/sch/i.html?_nkw=adidas+terrex+herren+-schuhe+-schuh+-wanderschuhe+-sneaker+-damen&_sop=10&LH_PrefLoc=1"
       ],
       "filters": {
         "min_price": 1,
