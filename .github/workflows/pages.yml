@@ -27,31 +27,19 @@ jobs:
       name: github-pages
       url: ${{ steps.deploy.outputs.page_url }}
     steps:
-      - id: check
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          if gh api "repos/${{ github.repository }}/pages" --jq .build_type 2>/dev/null | grep -q workflow; then
-            echo "on=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "::notice::Pages not enabled - Settings -> Pages -> Source: GitHub Actions"
-          fi
-      - if: steps.check.outputs.on == 'true'
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
           ref: main
-      - if: steps.check.outputs.on == 'true'
-        uses: actions/setup-python@v5
+      - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - if: steps.check.outputs.on == 'true'
-        run: pip install -r requirements.txt
-      - if: steps.check.outputs.on == 'true'
-        run: python -m searchradar.site --md ""
-      - if: steps.check.outputs.on == 'true'
-        uses: actions/upload-pages-artifact@v3
+      - run: pip install -r requirements.txt
+      - run: python -m searchradar.site --md ""
+      - uses: actions/upload-pages-artifact@v3
         with:
           path: site
       - id: deploy
-        if: steps.check.outputs.on == 'true'
         uses: actions/deploy-pages@v4
+        continue-on-error: true   # Pages not enabled yet -> stay green
+      - if: steps.deploy.outcome != 'success'
+        run: echo "::notice::Pages deploy failed - is Settings -> Pages -> Source set to 'GitHub Actions'?"
