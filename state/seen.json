@@ -1,5 +1,9 @@
 {
  "seen": {
+  "cars/VW Golf 7 – petrol, ≤ 10k €|autoscout24:0145826b-9a6b-43ec-a460-c6a80234e263": {
+   "t": "2026-11-14T10:21:11+00:00",
+   "m": false
+  },
   "cars/VW Golf 7 – petrol, ≤ 10k €|autoscout24:0b16c24e-059c-420b-ad76-231aae024506": {
    "t": "2026-11-14T06:31:05+00:00",
    "m": true
@@ -122,6 +126,10 @@
   },
   "clothing/Adidas Terrex – men, size S|kleinanzeigen:3558061504": {
    "t": "2026-11-14T08:06:13+00:00",
+   "m": true
+  },
+  "clothing/Adidas Terrex – men, size S|kleinanzeigen:3559206388": {
+   "t": "2026-11-14T10:21:23+00:00",
    "m": true
   },
   "clothing/Adidas Terrex – men, size S|kleinanzeigen:3559860513": {
