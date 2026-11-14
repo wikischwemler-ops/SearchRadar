@@ -1,7 +1,7 @@
 name: SearchRadar Pages
 
-# Optional web overview. Only does something when the repository variable
-# PAGES_ENABLED is "true" and Pages is enabled (Settings -> Pages -> Source: GitHub Actions).
+# Web overview. Deploys only once Pages is enabled (Settings -> Pages -> Source: GitHub Actions);
+# until then the job just reports "Pages not enabled" and stays green.
 # Kept separate so the hourly search never depends on Pages/environments.
 
 on:
@@ -21,22 +21,37 @@ concurrency:
 
 jobs:
   deploy:
-    if: ${{ vars.PAGES_ENABLED == 'true' }}
+    if: ${{ vars.PAGES_ENABLED != 'false' }}
     runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deploy.outputs.page_url }}
     steps:
-      - uses: actions/checkout@v4
+      - id: check
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if gh api "repos/${{ github.repository }}/pages" --jq .build_type 2>/dev/null | grep -q workflow; then
+            echo "on=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "::notice::Pages not enabled - Settings -> Pages -> Source: GitHub Actions"
+          fi
+      - if: steps.check.outputs.on == 'true'
+        uses: actions/checkout@v4
         with:
           ref: main
-      - uses: actions/setup-python@v5
+      - if: steps.check.outputs.on == 'true'
+        uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: pip install -r requirements.txt
-      - run: python -m searchradar.site --md ""
-      - uses: actions/upload-pages-artifact@v3
+      - if: steps.check.outputs.on == 'true'
+        run: pip install -r requirements.txt
+      - if: steps.check.outputs.on == 'true'
+        run: python -m searchradar.site --md ""
+      - if: steps.check.outputs.on == 'true'
+        uses: actions/upload-pages-artifact@v3
         with:
           path: site
       - id: deploy
+        if: steps.check.outputs.on == 'true'
         uses: actions/deploy-pages@v4

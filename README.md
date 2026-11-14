@@ -85,8 +85,7 @@ Edit the files in `searches/`: put your search URLs in, set `telegram_thread_id`
 
 For the full page with filters and price charts, use **GitHub Pages**:
 1. **Settings → Pages → Build and deployment → Source: GitHub Actions**
-2. **Settings → Secrets and variables → Actions → Variables → New repository variable**: `PAGES_ENABLED` = `true`
-3. After the next run the page is at `https://<user>.github.io/SearchRadar/`
+2. After the next run the page is at `https://<user>.github.io/SearchRadar/` (set the repo variable `PAGES_ENABLED` = `false` to switch the deploy off)
 
 > Pages for a **private** repo needs a paid GitHub plan (Pro/Team). The published page itself is publicly
 > reachable for anyone who knows the URL (it is marked `noindex`, but not password-protected).

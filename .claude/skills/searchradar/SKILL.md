@@ -104,7 +104,7 @@ Put shared rules in the file's `defaults`; per-search `filters` override numeric
 - Gone signals: HTTP 404/410, redirect to a URL without the listing id, gone text when the listing's own content
   is missing, or "gelöscht/verkauft" in the title. Never use the whole page text when the listing content is
   present – sellers write things like "OVP nicht mehr verfügbar" in descriptions.
-- Pages deploy only runs when the repo variable `PAGES_ENABLED` is `true`; `RESULTS.md` is always committed.
+- Pages deploys automatically once Settings → Pages → Source is "GitHub Actions" (repo variable `PAGES_ENABLED=false` switches it off); `RESULTS.md` is always committed.
 - Preview locally: `python -m searchradar.site && open site/index.html`.
 
 ## 6. Debug a run
