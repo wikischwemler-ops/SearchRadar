@@ -119,10 +119,113 @@
   "cars/VW Golf 7 – petrol, ≤ 10k €|kleinanzeigen:3570217243": {
    "t": "2026-11-13T16:18:57+00:00",
    "m": true
+  },
+  "clothing/Adidas Terrex – size S, no shoes|kleinanzeigen:3570491117": {
+   "t": "2026-11-14T07:59:43+00:00",
+   "m": false
+  },
+  "clothing/Adidas Terrex – size S, no shoes|kleinanzeigen:3570495233": {
+   "t": "2026-11-14T07:59:43+00:00",
+   "m": false
+  },
+  "clothing/Adidas Terrex – size S, no shoes|kleinanzeigen:3570503041": {
+   "t": "2026-11-14T07:59:43+00:00",
+   "m": false
+  },
+  "clothing/Adidas Terrex – size S, no shoes|kleinanzeigen:3570504160": {
+   "t": "2026-11-14T07:59:43+00:00",
+   "m": false
+  },
+  "clothing/Adidas Terrex – size S, no shoes|kleinanzeigen:3570523003": {
+   "t": "2026-11-14T07:59:43+00:00",
+   "m": false
+  },
+  "clothing/Adidas Terrex – size S, no shoes|kleinanzeigen:3570551507": {
+   "t": "2026-11-14T07:59:43+00:00",
+   "m": false
+  },
+  "clothing/Adidas Terrex – size S, no shoes|kleinanzeigen:3570555746": {
+   "t": "2026-11-14T07:59:43+00:00",
+   "m": false
+  },
+  "clothing/Adidas Terrex – size S, no shoes|kleinanzeigen:3570562166": {
+   "t": "2026-11-14T07:59:43+00:00",
+   "m": false
+  },
+  "clothing/Adidas Terrex – size S, no shoes|kleinanzeigen:3570570589": {
+   "t": "2026-11-14T07:59:43+00:00",
+   "m": false
+  },
+  "clothing/Adidas Terrex – size S, no shoes|kleinanzeigen:3570571225": {
+   "t": "2026-11-14T07:59:43+00:00",
+   "m": false
+  },
+  "clothing/Adidas Terrex – size S, no shoes|kleinanzeigen:3570626085": {
+   "t": "2026-11-14T07:59:43+00:00",
+   "m": false
+  },
+  "clothing/Adidas Terrex – size S, no shoes|kleinanzeigen:3570646497": {
+   "t": "2026-11-14T07:59:43+00:00",
+   "m": false
+  },
+  "clothing/Adidas Terrex – size S, no shoes|kleinanzeigen:3570664458": {
+   "t": "2026-11-14T07:59:43+00:00",
+   "m": false
+  },
+  "clothing/Adidas Terrex – size S, no shoes|kleinanzeigen:3570666106": {
+   "t": "2026-11-14T07:59:43+00:00",
+   "m": false
+  },
+  "clothing/Adidas Terrex – size S, no shoes|kleinanzeigen:3570669654": {
+   "t": "2026-11-14T07:59:43+00:00",
+   "m": false
+  },
+  "clothing/Adidas Terrex – size S, no shoes|kleinanzeigen:3570672789": {
+   "t": "2026-11-14T07:59:43+00:00",
+   "m": false
+  },
+  "clothing/Adidas Terrex – size S, no shoes|kleinanzeigen:3570673158": {
+   "t": "2026-11-14T07:59:43+00:00",
+   "m": false
+  },
+  "clothing/Adidas Terrex – size S, no shoes|kleinanzeigen:3570674788": {
+   "t": "2026-11-14T07:59:43+00:00",
+   "m": false
+  },
+  "clothing/Adidas Terrex – size S, no shoes|kleinanzeigen:3570677484": {
+   "t": "2026-11-14T07:59:43+00:00",
+   "m": false
+  },
+  "clothing/Adidas Terrex – size S, no shoes|kleinanzeigen:3570703004": {
+   "t": "2026-11-14T07:59:43+00:00",
+   "m": false
+  },
+  "clothing/Adidas Terrex – size S, no shoes|kleinanzeigen:3570703532": {
+   "t": "2026-11-14T07:59:43+00:00",
+   "m": false
+  },
+  "clothing/Adidas Terrex – size S, no shoes|kleinanzeigen:3570705438": {
+   "t": "2026-11-14T07:59:43+00:00",
+   "m": false
+  },
+  "clothing/Adidas Terrex – size S, no shoes|kleinanzeigen:3570707352": {
+   "t": "2026-11-14T07:59:43+00:00",
+   "m": false
+  },
+  "clothing/Adidas Terrex – size S, no shoes|kleinanzeigen:3570708586": {
+   "t": "2026-11-14T07:59:43+00:00",
+   "m": false
+  },
+  "clothing/Adidas Terrex – size S, no shoes|kleinanzeigen:3570710467": {
+   "t": "2026-11-14T07:59:43+00:00",
+   "m": false
   }
  },
- "errors": {},
+ "errors": {
+  "https://www.ebay.de/sch/i.html?_nkw=adidas+terrex+-schuhe+-schuh+-wanderschuhe+-sneaker&_sop=10&LH_PrefLoc=1": 1
+ },
  "initialized_searches": [
-  "cars/VW Golf 7 – petrol, ≤ 10k €"
+  "cars/VW Golf 7 – petrol, ≤ 10k €",
+  "clothing/Adidas Terrex – size S, no shoes"
  ]
 }
