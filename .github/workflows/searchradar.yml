@@ -71,7 +71,7 @@ jobs:
         run: |
           git config user.name "searchradar-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add state/seen.json state/matches.json RESULTS.md
+          git add state/seen.json state/matches.json RESULTS.md site/
           if git diff --cached --quiet; then
             echo "No changes."
           else

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>SearchRadar – results</title>
+<link rel="icon" href="logo.svg" type="image/svg+xml">
+<style>
+  :root {
+    --bg: #071a2c; --bg2: #0b2740; --card: #0f2f4b; --card-hi: #133a5c;
+    --line: rgba(56,189,248,.18); --text: #e6f4ff; --muted: #8fb3cc;
+    --cyan: #38bdf8; --teal: #2dd4bf; --new: #facc15;
+    --r: 14px;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    font: 15px/1.45 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    color: var(--text);
+    background: radial-gradient(1200px 600px at 80% -10%, #0e3a5c 0%, transparent 60%), var(--bg);
+    min-height: 100vh;
+  }
+  header {
+    position: sticky; top: 0; z-index: 5;
+    background: rgba(7,26,44,.88); backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 16px; }
+  .brand { display: flex; align-items: center; gap: 12px; padding: 14px 0 10px; }
+  .brand img { width: 40px; height: 40px; }
+  .brand h1 { font-size: 20px; margin: 0; letter-spacing: .2px; }
+  .brand h1 span { color: var(--teal); }
+  .brand .upd { margin-left: auto; color: var(--muted); font-size: 12.5px; text-align: right; }
+  .controls { display: flex; flex-wrap: wrap; gap: 8px; padding-bottom: 12px; align-items: center; }
+  .chips { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; flex: 1 1 100%; padding-bottom: 2px; }
+  .chip {
+    flex: none; border: 1px solid var(--line); background: var(--bg2); color: var(--text);
+    padding: 6px 12px; border-radius: 999px; font: inherit; font-size: 13.5px; cursor: pointer;
+  }
+  .chip b { color: var(--muted); font-weight: 500; margin-left: 4px; }
+  .chip[aria-pressed="true"] { background: linear-gradient(135deg, var(--teal), var(--cyan)); color: #04202f; border-color: transparent; }
+  .chip[aria-pressed="true"] b { color: #04202f; }
+  input[type=search], select {
+    background: var(--bg2); color: var(--text); border: 1px solid var(--line);
+    border-radius: 10px; padding: 8px 12px; font: inherit; font-size: 14px;
+  }
+  input[type=search] { flex: 1 1 220px; min-width: 0; }
+  label.only-new { display: flex; gap: 6px; align-items: center; color: var(--muted); font-size: 13.5px; }
+  main { padding: 18px 0 40px; }
+  .stats { color: var(--muted); font-size: 13px; margin: 0 0 12px; }
+  .grid { display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); }
+  .card {
+    background: linear-gradient(180deg, var(--card), var(--bg2));
+    border: 1px solid var(--line); border-radius: var(--r);
+    padding: 14px 14px 12px; display: flex; flex-direction: column; gap: 8px;
+    transition: border-color .15s, transform .15s;
+  }
+  .card:hover { border-color: rgba(45,212,191,.55); transform: translateY(-1px); }
+  .meta { display: flex; gap: 8px; align-items: center; font-size: 12.5px; color: var(--muted); }
+  .meta .search { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .badge-new { background: var(--new); color: #2a2200; font-weight: 700; font-size: 11px; padding: 1px 7px; border-radius: 999px; }
+  .title { font-size: 15.5px; font-weight: 600; margin: 0; }
+  .title a { color: var(--text); text-decoration: none; }
+  .title a:hover { color: var(--teal); }
+  .price { font-size: 20px; font-weight: 700; color: var(--teal); }
+  .facts { color: var(--muted); font-size: 13.5px; }
+  .kw { display: flex; flex-wrap: wrap; gap: 5px; }
+  .kw span { font-size: 12px; padding: 2px 8px; border-radius: 999px; background: rgba(45,212,191,.12); color: var(--teal); border: 1px solid rgba(45,212,191,.25); }
+  .foot { margin-top: auto; display: flex; align-items: center; gap: 8px; padding-top: 6px; border-top: 1px dashed var(--line); font-size: 12.5px; color: var(--muted); }
+  .portal { padding: 2px 8px; border-radius: 6px; background: rgba(56,189,248,.12); color: var(--cyan); }
+  .open {
+    margin-left: auto; text-decoration: none; font-weight: 600; font-size: 13px;
+    color: #04202f; background: linear-gradient(135deg, var(--teal), var(--cyan));
+    padding: 6px 12px; border-radius: 8px;
+  }
+  .pricerow { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+  .delta { font-size: 13px; font-weight: 600; padding: 1px 8px; border-radius: 999px; }
+  .delta.down { color: #4ade80; background: rgba(74,222,128,.12); }
+  .delta.up { color: #f87171; background: rgba(248,113,113,.12); }
+  .was { color: var(--muted); text-decoration: line-through; font-size: 13px; }
+  .chart { width: 100%; height: 64px; display: block; }
+  .chart .axis { fill: var(--muted); font-size: 10px; }
+  .charthead { display: flex; justify-content: space-between; font-size: 11.5px; color: var(--muted); margin-bottom: 2px; }
+  .empty { text-align: center; padding: 60px 16px; color: var(--muted); }
+  .empty img { width: 90px; opacity: .8; }
+  footer { margin-top: -12px; color: var(--muted); font-size: 12px; text-align: center; padding: 0 0 28px; }
+  @media (max-width: 520px) {
+    .brand .upd { font-size: 11.5px; }
+    .grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="brand">
+      <img src="logo.svg" alt="">
+      <h1>Search<span>Radar</span></h1>
+      <div class="upd" id="upd"></div>
+    </div>
+    <div class="controls">
+      <div class="chips" id="chips" role="toolbar" aria-label="Topics"></div>
+      <input type="search" id="q" placeholder="Filter: title, place, keyword…" aria-label="Filter">
+      <select id="sort" aria-label="Sort">
+        <option value="new">Newest first</option>
+        <option value="price-asc">Price ↑</option>
+        <option value="price-desc">Price ↓</option>
+      </select>
+      <label class="only-new"><input type="checkbox" id="onlyNew"> last 24 h</label>
+    </div>
+  </div>
+</header>
+<main class="wrap">
+  <p class="stats" id="stats"></p>
+  <div class="grid" id="grid"></div>
+</main>
+<footer>Only listings that are still online · price checked every hour · built by GitHub Actions</footer>
+
+<script id="data" type="application/json">{"updated": "2026-11-14T06:32:14+00:00", "matches": [{"id": "cars/VW Golf 7 – petrol, ≤ 10k €|kleinanzeigen:3554963525", "listing_id": "3554963525", "found": "2026-11-14T06:32:07+00:00", "last_seen": "2026-11-14T06:32:07+00:00", "last_checked": "2026-11-14T06:32:07+00:00", "gone_count": 0, "topic_file": "cars", "topic": "Cars", "emoji": "🚗", "search": "VW Golf 7 – petrol, ≤ 10k €", "portal": "Kleinanzeigen", "title": "Volkswagen Golf VII Facelift 1.0 TSI BLUETOOTH", "url": "https://www.kleinanzeigen.de/s-anzeige/volkswagen-golf-vii-facelift-1-0-tsi-bluetooth/3554963525-216-7983", "price": 7100, "mileage": 142300, "year": 2018, "location": "68161 Mannheim", "keywords": [], "history": [["2026-11-14T06:32:07+00:00", 7100]]}, {"id": "cars/VW Golf 7 – petrol, ≤ 10k €|autoscout24:bce72cb2-f77b-4580-9850-f0b408e93770", "listing_id": "bce72cb2-f77b-4580-9850-f0b408e93770", "found": "2026-11-14T06:31:51+00:00", "last_seen": "2026-11-14T06:31:51+00:00", "last_checked": "2026-11-14T06:31:51+00:00", "gone_count": 0, "topic_file": "cars", "topic": "Cars", "emoji": "🚗", "search": "VW Golf 7 – petrol, ≤ 10k €", "portal": "AutoScout24", "title": "Volkswagen Golf VII 1.0 TSI Join NAVI LED ACC RFK SHzg. Tempomat", "url": "https://www.autoscout24.de/angebote/bce72cb2-f77b-4580-9850-f0b408e93770", "price": 9990, "mileage": 145100, "year": 2018, "location": "88436", "keywords": [], "history": [["2026-11-14T06:31:51+00:00", 9990]]}, {"id": "cars/VW Golf 7 – petrol, ≤ 10k €|autoscout24:fae7cd75-3cd4-4141-970b-b8a8bacdbf3f", "listing_id": "fae7cd75-3cd4-4141-970b-b8a8bacdbf3f", "found": "2026-11-14T06:31:44+00:00", "last_seen": "2026-11-14T06:31:44+00:00", "last_checked": "2026-11-14T06:31:44+00:00", "gone_count": 0, "topic_file": "cars", "topic": "Cars", "emoji": "🚗", "search": "VW Golf 7 – petrol, ≤ 10k €", "portal": "AutoScout24", "title": "Volkswagen Golf VII DSG 1.4 TSI Comfort Navi ACC RFK PDC LM", "url": "https://www.autoscout24.de/angebote/fae7cd75-3cd4-4141-970b-b8a8bacdbf3f", "price": 9685, "mileage": 140111, "year": 2017, "location": "77855", "keywords": [], "history": [["2026-11-14T06:31:44+00:00", 9685]]}, {"id": "cars/VW Golf 7 – petrol, ≤ 10k €|autoscout24:32b55f75-e520-4738-a73b-c2ad147fbf35", "listing_id": "32b55f75-e520-4738-a73b-c2ad147fbf35", "found": "2026-11-14T06:31:32+00:00", "last_seen": "2026-11-14T06:31:32+00:00", "last_checked": "2026-11-14T06:31:32+00:00", "gone_count": 0, "topic_file": "cars", "topic": "Cars", "emoji": "🚗", "search": "VW Golf 7 – petrol, ≤ 10k €", "portal": "AutoScout24", "title": "Volkswagen Golf VW Golf 7 1.0 TSI Sondermodell Sound, AHK,ACC, APP connect", "url": "https://www.autoscout24.de/angebote/32b55f75-e520-4738-a73b-c2ad147fbf35", "price": 9900, "mileage": 77000, "year": 2017, "location": "73095", "keywords": [], "history": [["2026-11-14T06:31:32+00:00", 9900]]}, {"id": "cars/VW Golf 7 – petrol, ≤ 10k €|autoscout24:23c8b358-bb1a-4a9e-a986-6f2d6ef194a2", "listing_id": "23c8b358-bb1a-4a9e-a986-6f2d6ef194a2", "found": "2026-11-14T06:31:27+00:00", "last_seen": "2026-11-14T06:31:27+00:00", "last_checked": "2026-11-14T06:31:27+00:00", "gone_count": 0, "topic_file": "cars", "topic": "Cars", "emoji": "🚗", "search": "VW Golf 7 – petrol, ≤ 10k €", "portal": "AutoScout24", "title": "Volkswagen Golf Trendline BMT", "url": "https://www.autoscout24.de/angebote/23c8b358-bb1a-4a9e-a986-6f2d6ef194a2", "price": 7500, "mileage": 148000, "year": 2016, "location": "76646", "keywords": [], "history": [["2026-11-14T06:31:27+00:00", 7500]]}, {"id": "cars/VW Golf 7 – petrol, ≤ 10k €|autoscout24:75e98d8a-8f11-461e-8319-49ee20fb4a5b", "listing_id": "75e98d8a-8f11-461e-8319-49ee20fb4a5b", "found": "2026-11-14T06:31:24+00:00", "last_seen": "2026-11-14T06:31:24+00:00", "last_checked": "2026-11-14T06:31:24+00:00", "gone_count": 0, "topic_file": "cars", "topic": "Cars", "emoji": "🚗", "search": "VW Golf 7 – petrol, ≤ 10k €", "portal": "AutoScout24", "title": "Volkswagen Golf Golf 1.0 TSI (BlueMotion Technology)Trendline", "url": "https://www.autoscout24.de/angebote/75e98d8a-8f11-461e-8319-49ee20fb4a5b", "price": 7999, "mileage": 142000, "year": 2017, "location": "89075", "keywords": [], "history": [["2026-11-14T06:31:24+00:00", 7999]]}, {"id": "cars/VW Golf 7 – petrol, ≤ 10k €|autoscout24:e44428bd-bcef-4117-a0a3-60e0be2e5f11", "listing_id": "e44428bd-bcef-4117-a0a3-60e0be2e5f11", "found": "2026-11-14T06:31:18+00:00", "last_seen": "2026-11-14T06:31:18+00:00", "last_checked": "2026-11-14T06:31:18+00:00", "gone_count": 0, "topic_file": "cars", "topic": "Cars", "emoji": "🚗", "search": "VW Golf 7 – petrol, ≤ 10k €", "portal": "AutoScout24", "title": "Volkswagen Golf 1.2 TSI BlueMotion Technology Allstar", "url": "https://www.autoscout24.de/angebote/e44428bd-bcef-4117-a0a3-60e0be2e5f11", "price": 9750, "mileage": 124000, "year": 2016, "location": "74072", "keywords": [], "history": [["2026-11-14T06:31:18+00:00", 9750]]}, {"id": "cars/VW Golf 7 – petrol, ≤ 10k €|autoscout24:1b897a3c-df34-4556-887a-084010724f2a", "listing_id": "1b897a3c-df34-4556-887a-084010724f2a", "found": "2026-11-14T06:31:12+00:00", "last_seen": "2026-11-14T06:31:12+00:00", "last_checked": "2026-11-14T06:31:12+00:00", "gone_count": 0, "topic_file": "cars", "topic": "Cars", "emoji": "🚗", "search": "VW Golf 7 – petrol, ≤ 10k €", "portal": "AutoScout24", "title": "Volkswagen Golf VII Lounge/VOLLSHEFT/KLIMA/PDC/BT/RADIO/", "url": "https://www.autoscout24.de/angebote/1b897a3c-df34-4556-887a-084010724f2a", "price": 8950, "mileage": 149990, "year": 2016, "location": "68526", "keywords": [], "history": [["2026-11-14T06:31:12+00:00", 8950]]}, {"id": "cars/VW Golf 7 – petrol, ≤ 10k €|autoscout24:e7ebb12f-223f-41f9-89bb-dcb28bf4bb09", "listing_id": "e7ebb12f-223f-41f9-89bb-dcb28bf4bb09", "found": "2026-11-14T06:31:07+00:00", "last_seen": "2026-11-14T06:31:07+00:00", "last_checked": "2026-11-14T06:31:07+00:00", "gone_count": 0, "topic_file": "cars", "topic": "Cars", "emoji": "🚗", "search": "VW Golf 7 – petrol, ≤ 10k €", "portal": "AutoScout24", "title": "Volkswagen Golf VII Facelift 1.0 TSI *BLUETOOTH* *8-FACH* *KLIMA*", "url": "https://www.autoscout24.de/angebote/e7ebb12f-223f-41f9-89bb-dcb28bf4bb09", "price": 7100, "mileage": 142300, "year": 2018, "location": "68229", "keywords": [], "history": [["2026-11-14T06:31:07+00:00", 7100]]}, {"id": "cars/VW Golf 7 – petrol, ≤ 10k €|autoscout24:0b16c24e-059c-420b-ad76-231aae024506", "listing_id": "0b16c24e-059c-420b-ad76-231aae024506", "found": "2026-11-14T06:31:03+00:00", "last_seen": "2026-11-14T06:31:03+00:00", "last_checked": "2026-11-14T06:31:03+00:00", "gone_count": 0, "topic_file": "cars", "topic": "Cars", "emoji": "🚗", "search": "VW Golf 7 – petrol, ≤ 10k €", "portal": "AutoScout24", "title": "Volkswagen Golf VII BMT Trendline", "url": "https://www.autoscout24.de/angebote/0b16c24e-059c-420b-ad76-231aae024506", "price": 8490, "mileage": 115400, "year": 2019, "location": "72622", "keywords": [], "history": [["2026-11-14T06:31:03+00:00", 8490]]}, {"id": "cars/VW Golf 7 – petrol, ≤ 10k €|kleinanzeigen:3570217243", "listing_id": "3570217243", "found": "2026-11-13T16:18:56+00:00", "last_seen": "2026-11-14T06:31:57+00:00", "last_checked": "2026-11-14T06:31:57+00:00", "gone_count": 0, "topic_file": "cars", "topic": "Cars", "emoji": "🚗", "search": "VW Golf 7 – petrol, ≤ 10k €", "portal": "Kleinanzeigen", "title": "Golf 7 (CL 1.2 TSI)", "url": "https://www.kleinanzeigen.de/s-anzeige/golf-7-cl-1-2-tsi-/3570217243-216-6687", "price": 7500, "mileage": 127000, "year": 2016, "location": "89269 Vöhringen", "keywords": [], "history": [["2026-11-13T16:18:56+00:00", 7500]]}, {"id": "cars/VW Golf 7 – petrol, ≤ 10k €|autoscout24:aca6938d-a083-48b3-9524-b277b58401c0", "listing_id": "aca6938d-a083-48b3-9524-b277b58401c0", "found": "2026-11-13T16:18:52+00:00", "last_seen": "2026-11-14T06:30:50+00:00", "last_checked": "2026-11-14T06:30:50+00:00", "gone_count": 0, "topic_file": "cars", "topic": "Cars", "emoji": "🚗", "search": "VW Golf 7 – petrol, ≤ 10k €", "portal": "AutoScout24", "title": "Volkswagen Golf 1.2 TSI Comfortline BlueMotion Tech *PDC*ALU*KLIMA", "url": "https://www.autoscout24.de/angebote/aca6938d-a083-48b3-9524-b277b58401c0", "price": 9990, "mileage": 91889, "year": 2016, "location": "70195", "keywords": [], "history": [["2026-11-13T16:18:52+00:00", 9990]]}, {"id": "cars/VW Golf 7 – petrol, ≤ 10k €|autoscout24:25304292-7231-4438-a78d-591e9af9dbbe", "listing_id": "25304292-7231-4438-a78d-591e9af9dbbe", "found": "2026-11-12T01:31:48+00:00", "last_seen": "2026-11-14T06:32:14+00:00", "last_checked": "2026-11-14T06:32:14+00:00", "gone_count": 0, "topic_file": "cars", "topic": "Cars", "emoji": "🚗", "search": "VW Golf 7 – petrol, ≤ 10k €", "portal": "AutoScout24", "title": "Volkswagen Golf VII 1.2 TSI Lim. Comfortline BMT", "url": "https://www.autoscout24.de/angebote/25304292-7231-4438-a78d-591e9af9dbbe", "price": 9990, "mileage": 103000, "year": 2016, "location": "88630", "keywords": [], "history": [["2026-11-12T01:31:48+00:00", 9990]]}], "built": "2026-11-14T07:05:53+00:00"}</script>
+<script>
+(() => {
+  const data = JSON.parse(document.getElementById("data").textContent);
+  const all = data.matches || [];
+  const $ = id => document.getElementById(id);
+  const store = {
+    get(k, d) { try { return localStorage.getItem("sr." + k) ?? d; } catch { return d; } },
+    set(k, v) { try { localStorage.setItem("sr." + k, v); } catch {} }
+  };
+  const nf = new Intl.NumberFormat("de-DE");
+  const DAY = 864e5;
+  const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+  const ago = iso => {
+    const d = (Date.now() - new Date(iso)) / 1000;
+    if (d < 3600) return Math.max(1, Math.round(d / 60)) + " min ago";
+    if (d < 86400) return Math.round(d / 3600) + " h ago";
+    return Math.round(d / 86400) + " d ago";
+  };
+
+  let topic = store.get("topic", "all");
+  const topics = [];
+  for (const m of all) if (!topics.some(t => t.file === m.topic_file))
+    topics.push({file: m.topic_file, name: m.topic, emoji: m.emoji || ""});
+  if (topic !== "all" && !topics.some(t => t.file === topic)) topic = "all";
+  $("sort").value = store.get("sort", "new");
+
+  $("upd").innerHTML = data.updated
+    ? "Updated<br>" + esc(new Date(data.updated).toLocaleString("de-DE", {dateStyle: "medium", timeStyle: "short"}))
+    : "No run yet";
+
+  function hist(m) {
+    return (m.history || []).filter(h => h[1] != null).map(h => [new Date(h[0]).getTime(), h[1]]);
+  }
+
+  function priceBlock(m) {
+    if (m.price == null) return "";
+    const h = hist(m);
+    let extra = "";
+    if (h.length > 1 && h[0][1] !== m.price) {
+      const first = h[0][1], diff = m.price - first, pct = Math.round(diff / first * 100);
+      extra = `<span class="was">${nf.format(first)} €</span>
+        <span class="delta ${diff < 0 ? "down" : "up"}">${diff < 0 ? "▼" : "▲"} ${nf.format(Math.abs(diff))} € (${pct > 0 ? "+" : ""}${pct} %)</span>`;
+    }
+    return `<div class="pricerow"><span class="price">${nf.format(m.price)} €</span>${extra}</div>`;
+  }
+
+  // step-line chart of the price history, extended to the last check
+  function chart(m) {
+    const h = hist(m);
+    if (!h.length) return "";
+    const end = Math.max(new Date(m.last_checked || m.found).getTime(), h[h.length - 1][0]);
+    const pts = h.concat([[end, h[h.length - 1][1]]]);
+    const W = 300, H = 64, P = 4, L = 34;
+    const t0 = pts[0][0], t1 = Math.max(pts[pts.length - 1][0], t0 + 1);
+    const prices = pts.map(p => p[1]);
+    let lo = Math.min(...prices), hi = Math.max(...prices);
+    const flat = lo === hi;
+    if (flat) { lo -= Math.max(1, lo * 0.05); hi += Math.max(1, hi * 0.05); }
+    const x = t => L + (t - t0) / (t1 - t0) * (W - L - P);
+    const y = v => P + (hi - v) / (hi - lo) * (H - 2 * P - 10);
+    let d = `M${x(pts[0][0]).toFixed(1)},${y(pts[0][1]).toFixed(1)}`;
+    for (let i = 1; i < pts.length; i++)
+      d += ` H${x(pts[i][0]).toFixed(1)} V${y(pts[i][1]).toFixed(1)}`;
+    const area = d + ` V${H - 10} H${x(pts[0][0]).toFixed(1)} Z`;
+    const dots = h.map(p => `<circle cx="${x(p[0]).toFixed(1)}" cy="${y(p[1]).toFixed(1)}" r="2.6" fill="var(--teal)">
+        <title>${new Date(p[0]).toLocaleString("de-DE", {dateStyle: "short", timeStyle: "short"})}: ${nf.format(p[1])} €</title></circle>`).join("");
+    const days = Math.max(0, Math.round((t1 - t0) / DAY));
+    const k = v => v >= 10000 ? nf.format(Math.round(v / 100) / 10) + "k" : nf.format(Math.round(v));
+    return `<div><div class="charthead"><span>Price history</span><span>${h.length > 1 ? (h.length - 1) + " price change" + (h.length > 2 ? "s" : "") : "price stable"} · ${days} d</span></div>
+      <svg class="chart" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" role="img" aria-label="Price history">
+        <line x1="${L}" x2="${W - P}" y1="${H - 10}" y2="${H - 10}" stroke="var(--line)"/>
+        ${flat ? `<text class="axis" x="0" y="${y(prices[0]) + 4}">${k(prices[0])}</text>`
+               : `<text class="axis" x="0" y="${y(hi) + 4}">${k(hi)}</text><text class="axis" x="0" y="${y(lo) + 4}">${k(lo)}</text>`}
+        <path d="${area}" fill="rgba(45,212,191,.10)"/>
+        <path d="${d}" fill="none" stroke="var(--teal)" stroke-width="2" vector-effect="non-scaling-stroke"/>
+        ${dots}
+      </svg></div>`;
+  }
+
+  function chips() {
+    const btn = (key, label, n) =>
+      `<button class="chip" data-t="${esc(key)}" aria-pressed="${topic === key}">${label}<b>${n}</b></button>`;
+    $("chips").innerHTML = btn("all", "All", all.length) +
+      topics.map(t => btn(t.file, esc(t.emoji + " " + t.name), all.filter(m => m.topic_file === t.file).length)).join("");
+  }
+
+  function render() {
+    const q = $("q").value.trim().toLowerCase();
+    const onlyNew = $("onlyNew").checked;
+    const sort = $("sort").value;
+    let list = all.filter(m =>
+      (topic === "all" || m.topic_file === topic) &&
+      (!onlyNew || Date.now() - new Date(m.found) < DAY) &&
+      (!q || [m.title, m.location, m.search, m.portal, ...(m.keywords || [])].join(" ").toLowerCase().includes(q)));
+    if (sort !== "new") {
+      const dir = sort === "price-asc" ? 1 : -1;
+      list = list.slice().sort((a, b) => {
+        if (a.price == null) return b.price == null ? 0 : 1;   // listings without price last
+        if (b.price == null) return -1;
+        return dir * (a.price - b.price);
+      });
+    }
+    $("stats").textContent = `${list.length} of ${all.length} matches`;
+    if (!list.length) {
+      $("grid").innerHTML = `<div class="empty" style="grid-column:1/-1"><img src="logo.svg" alt=""><p>${
+        all.length ? "Nothing matches this filter." : "No matches yet – the radar is still scanning."}</p></div>`;
+      return;
+    }
+    $("grid").innerHTML = list.map(m => {
+      const fresh = Date.now() - new Date(m.found) < DAY;
+      const facts = [m.mileage != null ? nf.format(m.mileage) + " km" : "", m.year || "", m.location || ""].filter(Boolean).join(" · ");
+      return `<article class="card">
+        <div class="meta">${fresh ? '<span class="badge-new">NEW</span>' : ""}<span>${esc(m.emoji || "")}</span><span class="search">${esc(m.search)}</span></div>
+        <h2 class="title"><a href="${esc(m.url)}" target="_blank" rel="noopener noreferrer">${esc(m.title || "Listing")}</a></h2>
+        ${priceBlock(m)}
+        ${chart(m)}
+        ${facts ? `<div class="facts">${esc(facts)}</div>` : ""}
+        ${(m.keywords || []).length ? `<div class="kw">${m.keywords.map(k => `<span>${esc(k)}</span>`).join("")}</div>` : ""}
+        <div class="foot"><span class="portal">${esc(m.portal)}</span><span title="found ${esc(m.found)} · last checked ${esc(m.last_checked || m.found)}">found ${ago(m.found)}</span>
+          <a class="open" href="${esc(m.url)}" target="_blank" rel="noopener noreferrer">Open ↗</a></div>
+      </article>`;
+    }).join("");
+  }
+
+  $("chips").addEventListener("click", e => {
+    const b = e.target.closest(".chip"); if (!b) return;
+    topic = b.dataset.t; store.set("topic", topic); chips(); render();
+  });
+  $("q").addEventListener("input", render);
+  $("onlyNew").addEventListener("change", render);
+  $("sort").addEventListener("change", () => { store.set("sort", $("sort").value); render(); });
+  chips(); render();
+})();
+</script>
+</body>
+</html>
