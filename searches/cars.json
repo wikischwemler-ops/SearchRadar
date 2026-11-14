@@ -45,10 +45,12 @@
           "Kombi",
           "Golf Plus",
           "Cabrio",
-          "re:(?<!\\w)golf\\s*(i{1,3}|iv|v|vi|viii|[1-689])(?![\\w.])"
+          "re:(?<!\\w)golf\\s*(i{1,3}|iv|v|vi|viii|[1-689])(?![\\w.])",
+          "re:(?<!\\w)([23]|drei|zwei)[- ]?türer"
         ],
         "detail_must_not_contain": [
-          "re:außenfarbe\\W*schwarz"
+          "re:außenfarbe\\W*schwarz",
+          "re:(?<!\\w)türen\\W*(2/3|[23])(?![\\d/])"
         ]
       }
     }

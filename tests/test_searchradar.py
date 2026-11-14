@@ -232,3 +232,12 @@ def test_detail_color_exclusion():
     assert filters.detail_excluded_by("Außenfarbe Schwarz Lackierung Metallisch", f)
     assert filters.detail_excluded_by("Außenfarbe: Schwarz", f)
     assert not filters.detail_excluded_by("Außenfarbe Grau Farbe der Innenausstattung Schwarz", f)
+
+
+def test_doors_exclusion():
+    from searchradar import filters
+    f = {"detail_must_not_contain": ["re:(?<!\\w)türen\\W*(2/3|[23])(?![\\d/])"]}
+    assert filters.detail_excluded_by("Anzahl Türen 2/3 HU bis", f)
+    assert filters.detail_excluded_by("Sitzplätze 5 Türen 3 Angebotsnummer", f)
+    assert not filters.detail_excluded_by("Anzahl Türen 4/5", f)
+    assert not filters.detail_excluded_by("Türen 4 Angebotsnummer", f)
