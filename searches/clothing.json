@@ -1,12 +1,12 @@
 {
-  "_help": "Adidas Terrex clothing in size S. Nationwide on Kleinanzeigen (clothing is usually shipped). Set telegram_thread_id, then enabled: true.",
+  "_help": "Adidas Terrex clothing (no shoes) in size S. Nationwide on Kleinanzeigen and eBay.de (clothing is shipped). The bot creates the Telegram topic 'Bekleidung' itself (telegram_thread_id: auto).",
   "topic": "Clothing",
   "emoji": "👕",
-  "telegram_thread_id": null,
-  "enabled": false,
+  "telegram_thread_id": "auto",
+  "enabled": true,
   "defaults": {
     "must_not_contain": [
-      "Suche",
+      "re:(?<!\\w)suche(?!\\w)",
       "Gesuch",
       "Tausch",
       "defekt",
@@ -14,7 +14,15 @@
       "Replika",
       "Kinder",
       "Jungen",
-      "Mädchen"
+      "Mädchen",
+      "re:(?<!hand)schuh",
+      "Sneaker",
+      "Stiefel",
+      "Sandale",
+      "re:(?<!\\w)boots?(?!\\w)",
+      "Wanderschuh",
+      "Trailrunning Schuh",
+      "re:(?<!\\w)(eur|eu|uk|us|gr\\.?|größe)\\s*\\d{2}(\\s*[12]/3)?(?![\\d,.])"
     ],
     "require_known": [
       "price"
@@ -23,12 +31,13 @@
   },
   "searches": [
     {
-      "name": "Adidas Terrex – size S",
+      "name": "Adidas Terrex – size S, no shoes",
       "urls": [
-        "https://www.kleinanzeigen.de/s-adidas-terrex/k0"
+        "https://www.kleinanzeigen.de/s-adidas-terrex/k0",
+        "https://www.ebay.de/sch/i.html?_nkw=adidas+terrex+-schuhe+-schuh+-wanderschuhe+-sneaker&_sop=10&LH_PrefLoc=1"
       ],
       "filters": {
-        "min_price": 10,
+        "min_price": 1,
         "max_price": 150,
         "title_must_contain": [
           "Terrex"
@@ -38,5 +47,6 @@
         ]
       }
     }
-  ]
+  ],
+  "telegram_topic_name": "Bekleidung"
 }

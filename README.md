@@ -14,7 +14,7 @@
 ## Why
 
 Browsing classifieds by hand takes forever. SearchRadar checks your saved searches on
-**AutoScout24**, **mobile.de** and **Kleinanzeigen** every hour, applies realistic **minimum criteria**
+**AutoScout24**, **Kleinanzeigen**, **eBay.de** and **mobile.de** every hour, applies realistic **minimum criteria**
 (price range, mileage, year, required equipment, red-flag words), and sends a Telegram message
 only for listings that pass **all** of them. Each topic lands in its own Telegram forum topic.
 
@@ -78,7 +78,7 @@ GitHub → repo → **Settings → Secrets and variables → Actions → New rep
 | `TELEGRAM_CHAT_ID` | the group id, e.g. `-1001234567890` |
 
 ### 3. Configure searches
-Edit the files in `searches/`: put your search URLs in, set `telegram_thread_id`, and set `"enabled": true`.
+Edit the files in `searches/`: put your search URLs in, set `telegram_thread_id` (or `"auto"`: the bot creates the topic itself if it is admin with *Manage topics*; the id is kept in `state/topics.json`), and set `"enabled": true`.
 
 ### 4. Web overview (optional)
 `site/index.html` and `RESULTS.md` in the repo are always updated. Without Pages the HTML page can be opened via `https://htmlpreview.github.io/?https://github.com/<user>/SearchRadar/blob/main/site/index.html`; set that (or the Pages URL) as `overview_url` in `settings.json` to get the link in every Telegram message.
@@ -118,7 +118,8 @@ Then run it once without the tick. From then on it runs hourly by itself.
 {
   "topic": "Cars",                 // shown as #Cars in messages
   "emoji": "🚗",
-  "telegram_thread_id": 11,        // forum topic id (null = General)
+  "telegram_thread_id": 11,        // forum topic id (null = General, "auto" = bot creates the topic)
+  "telegram_topic_name": "Bekleidung", // name for an auto-created topic (optional)
   "telegram_chat_id": null,        // optional: other chat than TELEGRAM_CHAT_ID
   "enabled": true,                 // switch the whole topic on/off
   "defaults": {                    // merged into every search of this file
@@ -173,6 +174,7 @@ Tips for realistic minimum criteria:
 | AutoScout24 | set filters, postcode + radius, sort by *newest first*, copy URL (`zip=…&zipr=100&sort=age&desc=1`) |
 | mobile.de | detailed search, postcode + radius, sort by *newest listings first*, copy URL |
 | Kleinanzeigen | any category, keywords, postcode + "+ 100 km", filters, copy URL (ends e.g. in `…r100`) |
+| eBay.de | search, filters, copy URL; `-word` excludes words, `LH_PrefLoc=1` = items in Germany, `_sop=10` (newest) is added automatically |
 
 If an AutoScout24 or mobile.de URL has no sort order, *newest first* is added automatically.
 

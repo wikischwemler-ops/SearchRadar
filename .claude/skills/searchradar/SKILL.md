@@ -65,7 +65,7 @@ Put shared rules in the file's `defaults`; per-search `filters` override numeric
 ## 3. Telegram topics
 
 - One bot, one group with **Topics** enabled, one topic per search file.
-- `TELEGRAM_CHAT_ID` secret = group id (`-100…`); per file `telegram_thread_id` = topic id.
+- `TELEGRAM_CHAT_ID` secret = group id (`-100…`); per file `telegram_thread_id` = topic id, or `"auto"` + `telegram_topic_name` so the bot creates the topic on the next real run (needs admin right *Manage topics*; id stored in `state/topics.json`, never created by `--test-telegram`).
 - Optional per-file `telegram_chat_id` to send a topic to another chat.
 - Warnings (portal failed 3× in a row, recovered) go to `settings.json → alerts_thread_id`.
 - Test: workflow *Run workflow* with "Send Telegram test message", or `python -m searchradar --test-telegram`.

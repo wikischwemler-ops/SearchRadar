@@ -1,6 +1,6 @@
 # SearchRadar
 
-Hourly marketplace search (AutoScout24, mobile.de, Kleinanzeigen) with Telegram forum-topic alerts, run by GitHub Actions.
+Hourly marketplace search (AutoScout24, Kleinanzeigen, eBay.de; mobile.de blocks GitHub runners) with Telegram forum-topic alerts, run by GitHub Actions.
 
 - Read `.claude/skills/searchradar/SKILL.md` before adding searches, filters, Telegram topics or portals.
 - Code, docs and messages are in English; filter keywords use the listings' language (German).

@@ -12,7 +12,7 @@ from typing import Callable
 from urllib.parse import parse_qs, urlencode, urlparse, urlunparse
 
 from ..models import Listing
-from . import autoscout24, kleinanzeigen, mobile_de
+from . import autoscout24, ebay, kleinanzeigen, mobile_de
 
 
 @dataclass(frozen=True)
@@ -44,6 +44,10 @@ PORTALS: dict[str, Portal] = {
         Portal("kleinanzeigen", "Kleinanzeigen", "kleinanzeigen.de", kleinanzeigen.parse,
                detail_selectors=("#viewad-title", "#viewad-price", "#viewad-details", "#viewad-configuration",
                                  "#viewad-description-text", ".addetailslist", ".checktaglist")),
+        Portal("ebay", "eBay", "ebay.de", ebay.parse,
+               "_sop", {"_sop": "10"},
+               ("h1", ".x-price-primary", "[data-testid='ux-layout-section-evo']", ".ux-layout-section-evo",
+                "#viewItemSpecifics", "[data-testid='x-about-this-item']")),
     ]
 }
 
@@ -91,9 +95,26 @@ GONE_MARKERS = (
 
 TITLE_GONE_MARKERS = ("gelöscht", "verkauft", "sold", "deaktiviert")
 
+# status banners on a detail page whose text says the listing ended (e.g. eBay "Dieses Angebot wurde beendet")
+STATUS_SELECTORS = {
+    "ebay": ("[class*='statusmessage']", "[class*='status-message']", "[data-testid*='statusmessage']"),
+}
+STATUS_GONE_MARKERS = ("beendet", "verkauft", "nicht mehr verfügbar", "ended", "no longer available")
+_GONE_AVAILABILITY = ("outofstock", "soldout", "discontinued")
+
+
+def _jsonld_gone(soup) -> bool:
+    for tag in soup.find_all("script", type="application/ld+json"):
+        txt = (tag.string or "").lower()
+        if '"availability"' in txt and any(f"schema.org/{a}" in txt for a in _GONE_AVAILABILITY):
+            return True
+    return False
+
+
 PRICE_SELECTORS = {
     "kleinanzeigen": ("#viewad-price", "[itemprop='price']"),
     "autoscout24": ("[data-testid='price-label']", "[class*='PriceInfo_price']", "[class*='Price_price']"),
+    "ebay": (".x-price-primary",),
     "mobile_de": ("[data-testid='prime-price']", "[data-testid*='price'] span", ".price-block"),
 }
 
@@ -134,6 +155,11 @@ def check_detail(status: int, final_url: str, html: str, portal: Portal, listing
         title_el = soup.find("h1") or own[0]
         title = title_el.get_text(" ", strip=True).lower()
         if any(m in title for m in TITLE_GONE_MARKERS):
+            return True, None
+        for sel in STATUS_SELECTORS.get(portal.key, ()):
+            if any(m in el.get_text(" ", strip=True).lower() for el in soup.select(sel) for m in STATUS_GONE_MARKERS):
+                return True, None
+        if _jsonld_gone(soup):
             return True, None
     else:
         text = " ".join(soup.get_text(" ", strip=True).lower().split())[:20000]

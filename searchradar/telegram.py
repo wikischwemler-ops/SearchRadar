@@ -20,6 +20,25 @@ class Telegram:
         self.configured = bool(self.token and self.chat_id)
         self.dry_run = dry_run or not self.configured
 
+    def create_topic(self, name: str, chat_id: str | None = None) -> int | None:
+        """Creates a forum topic (bot must be admin with 'Manage topics'). Returns its thread id."""
+        if self.dry_run:
+            print(f"---- Telegram (dry-run): would create topic '{name}' ----")
+            return None
+        req = urllib.request.Request(
+            f"https://api.telegram.org/bot{self.token}/createForumTopic",
+            data=json.dumps({"chat_id": chat_id or self.chat_id, "name": name[:128]}).encode(),
+            headers={"Content-Type": "application/json"})
+        try:
+            with urllib.request.urlopen(req, timeout=20) as r:
+                res = json.load(r)
+            return int(res["result"]["message_thread_id"]) if res.get("ok") else None
+        except urllib.error.HTTPError as exc:
+            print(f"Telegram createForumTopic error: {exc} {exc.read().decode(errors='replace')[:300]}")
+        except Exception as exc:  # noqa: BLE001
+            print(f"Telegram createForumTopic error: {exc}")
+        return None
+
     def send(self, text: str, thread_id: int | None = None, chat_id: str | None = None) -> bool:
         if self.dry_run:
             where = f" -> topic {thread_id}" if thread_id else ""

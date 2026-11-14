@@ -31,7 +31,8 @@ class Topic:
     file: str
     topic: str
     emoji: str = "📡"
-    telegram_thread_id: int | None = None
+    telegram_thread_id: int | str | None = None   # int, None (= General) or "auto" (bot creates the topic)
+    telegram_topic_name: str = ""                 # name of the auto-created topic (default: topic)
     telegram_chat_id: str | None = None
     enabled: bool = True
     defaults: dict = field(default_factory=dict)
@@ -75,10 +76,14 @@ def load_topics(directory: str) -> list[Topic]:
             topic=raw.get("topic", stem),
             emoji=raw.get("emoji", "📡"),
             telegram_thread_id=raw.get("telegram_thread_id"),
+            telegram_topic_name=raw.get("telegram_topic_name", ""),
             telegram_chat_id=raw.get("telegram_chat_id"),
             enabled=raw.get("enabled", True),
             defaults=raw.get("defaults", {}),
         )
+        th = t.telegram_thread_id
+        if not (th is None or th == "auto" or isinstance(th, int)):
+            raise ValueError(f"{path}: telegram_thread_id must be a number, null or \"auto\"")
         for s in raw.get("searches", []):
             if not s.get("enabled", True):
                 continue

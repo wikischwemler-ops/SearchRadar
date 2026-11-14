@@ -241,3 +241,48 @@ def test_doors_exclusion():
     assert filters.detail_excluded_by("Sitzplätze 5 Türen 3 Angebotsnummer", f)
     assert not filters.detail_excluded_by("Anzahl Türen 4/5", f)
     assert not filters.detail_excluded_by("Türen 4 Angebotsnummer", f)
+
+
+def test_ebay_parser_and_clothing_filters():
+    import json
+    from pathlib import Path
+    from searchradar import filters
+    from searchradar.config import load_topics
+    from searchradar.portals import detect_portal
+    html = (Path(__file__).parent / "fixtures" / "ebay.html").read_text(encoding="utf-8")
+    portal = detect_portal("https://www.ebay.de/sch/i.html?_nkw=x")
+    items = portal.parse(html)
+    assert [i.id for i in items] == ["800915005919", "920141395112", "800914478652"]  # placeholder skipped
+    pants = items[1]
+    assert pants.title == "adidas Terrex AXP Damen Multifunktionshose Schwarz Größe s Outdoor"
+    assert pants.price == 1 and pants.extra.get("auction")
+    assert items[2].price == 1056
+    assert pants.url == "https://www.ebay.de/itm/920141395112"
+    clothing = next(t for t in load_topics("searches") if t.file == "clothing")
+    f = clothing.searches[0].filters
+    shoe_ok, why = filters.check_basic(items[0], {**f, "max_price": None})
+    assert not shoe_ok, why
+    assert not filters.check_basic(items[2], {**f, "max_price": None})[0]
+    assert filters.check_basic(pants, f)[0]
+    assert not filters.missing_keywords(f"{pants.title} {pants.text}", f)
+
+
+def test_auto_topic_resolution(tmp_path):
+    from searchradar.config import Topic
+    from searchradar.main import resolve_auto_topics
+
+    class FakeTg:
+        calls = []
+        def create_topic(self, name, chat_id=None):
+            self.calls.append(name)
+            return 42
+
+    path = tmp_path / "topics.json"
+    t = Topic(file="clothing", topic="Clothing", emoji="👕", telegram_thread_id="auto",
+              telegram_topic_name="Bekleidung")
+    tg = FakeTg()
+    resolve_auto_topics(tg, [t], str(path), dry_run=False)
+    assert t.telegram_thread_id == 42 and tg.calls == ["👕 Bekleidung"]
+    t2 = Topic(file="clothing", topic="Clothing", telegram_thread_id="auto")
+    resolve_auto_topics(tg, [t2], str(path), dry_run=False)
+    assert t2.telegram_thread_id == 42 and len(tg.calls) == 1  # created only once

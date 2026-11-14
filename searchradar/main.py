@@ -231,6 +231,39 @@ class Runner:
                 fh.write(f"## 📡 SearchRadar\n\n{md}\n\nTelegram messages sent: {self.sent}\n")
 
 
+def resolve_auto_topics(tg: Telegram, topics: list[Topic], path: str, dry_run: bool) -> None:
+    """telegram_thread_id "auto": create the forum topic once and remember its id in state/topics.json."""
+    try:
+        with open(path, encoding="utf-8") as fh:
+            known = json.load(fh)
+    except (OSError, ValueError):
+        known = {}
+    changed = False
+    for t in topics:
+        if t.telegram_thread_id != "auto":
+            continue
+        if t.file in known:
+            t.telegram_thread_id = int(known[t.file])
+            continue
+        if not t.enabled or dry_run:
+            t.telegram_thread_id = None
+            continue
+        name = t.telegram_topic_name or t.topic
+        tid = tg.create_topic(f"{t.emoji} {name}", chat_id=t.telegram_chat_id)
+        if tid:
+            print(f"✓ created Telegram topic '{name}' (thread {tid}) for {t.file}")
+            known[t.file] = tid
+            changed = True
+        else:
+            print(f"! could not create Telegram topic '{name}' – is the bot admin with 'Manage topics'? "
+                  "Messages go to General for now.")
+        t.telegram_thread_id = tid
+    if changed:
+        with open(path, "w", encoding="utf-8") as fh:
+            json.dump(known, fh, ensure_ascii=False, indent=2)
+            fh.write("\n")
+
+
 def telegram_ids() -> int:
     """Prints chat ids and forum topic ids the bot has seen (setup helper)."""
     token = os.getenv("TELEGRAM_BOT_TOKEN")
@@ -262,6 +295,7 @@ def main() -> None:
     p.add_argument("--settings", default="settings.json")
     p.add_argument("--searches", default="searches", help="directory with topic files (*.json)")
     p.add_argument("--state", default="state/seen.json")
+    p.add_argument("--topics-state", default="state/topics.json", help="ids of auto-created Telegram topics")
     p.add_argument("--matches", default="state/matches.json", help="all matches (source of the web overview)")
     p.add_argument("--dry-run", action="store_true", help="don't send to Telegram, don't save state")
     p.add_argument("--save-state", action="store_true", help="save state even in dry-run")
@@ -297,6 +331,9 @@ def main() -> None:
         print("❌ TELEGRAM_BOT_TOKEN / TELEGRAM_CHAT_ID missing. Add them as repository secrets "
               "or use --dry-run.")
         sys.exit(1)
+
+    # a test run is not committed, so it must not create topics (they would be created again)
+    resolve_auto_topics(runner.tg, topics, args.topics_state, args.dry_run or args.test_telegram)
 
     if args.test_telegram:
         ok = runner.tg.send("✅ <b>SearchRadar</b>: connection works (General / alerts).",
