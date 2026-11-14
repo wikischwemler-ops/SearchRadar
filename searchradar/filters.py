@@ -89,3 +89,9 @@ def found_keywords(text: str, f: dict) -> list[str]:
                 out.append(m.group(0).strip() if a.startswith("re:") else a)
                 break
     return out
+
+
+def detail_excluded_by(text: str, f: dict) -> str | None:
+    """`detail_must_not_contain`: checked only on the detail page (e.g. "re:außenfarbe\\W*schwarz")."""
+    t = _norm(text)
+    return next((w for w in f.get("detail_must_not_contain", []) if has(t, w)), None)

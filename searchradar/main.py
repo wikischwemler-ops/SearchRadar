@@ -132,7 +132,8 @@ class Runner:
 
         text = f"{l.title} {l.text}"
         missing = filters.missing_keywords(text, f)
-        if missing and f.get("check_details", True):
+        need_detail = bool(missing or f.get("detail_must_not_contain"))
+        if need_detail and f.get("check_details", True):
             if self.detail_budget <= 0:
                 print(f"   … detail check limit reached, '{l.title[:40]}' follows next run")
                 return False  # not marked -> re-evaluated next run
@@ -142,7 +143,7 @@ class Runner:
             except Exception as exc:  # noqa: BLE001
                 print(f"   ! detail page failed ({exc}) – retry next run")
                 return False
-            bad = filters.excluded_by(text, f)
+            bad = filters.excluded_by(text, f) or filters.detail_excluded_by(text, f)
             if bad:
                 self.log(f"   ✗ {l.title[:60]} – detail page contains '{bad}'")
                 self.state.mark(sid, l.key, False)

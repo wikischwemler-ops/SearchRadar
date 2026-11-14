@@ -224,3 +224,11 @@ def test_golf7_search_criteria():
         assert not filters.excluded_by(title, f), title
     assert filters.excluded_by("Golf 7 Unfallwagen", f) and not filters.excluded_by("Golf 7 unfallfrei", f)
     assert filters.excluded_by("Motor defekt", f) and not filters.excluded_by("keine Defekte", f)
+
+
+def test_detail_color_exclusion():
+    from searchradar import filters
+    f = {"detail_must_not_contain": ["re:außenfarbe\\W*schwarz"]}
+    assert filters.detail_excluded_by("Außenfarbe Schwarz Lackierung Metallisch", f)
+    assert filters.detail_excluded_by("Außenfarbe: Schwarz", f)
+    assert not filters.detail_excluded_by("Außenfarbe Grau Farbe der Innenausstattung Schwarz", f)

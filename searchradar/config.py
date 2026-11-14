@@ -37,7 +37,7 @@ class Topic:
     searches: list[Search] = field(default_factory=list)
 
 
-LIST_KEYS = ("must_contain", "must_not_contain", "title_must_contain", "require_known")
+LIST_KEYS = ("must_contain", "must_not_contain", "title_must_contain", "require_known", "detail_must_not_contain")
 
 
 def merge_filters(defaults: dict, own: dict) -> dict:

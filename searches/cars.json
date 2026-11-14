@@ -46,6 +46,9 @@
           "Golf Plus",
           "Cabrio",
           "re:(?<!\\w)golf\\s*(i{1,3}|iv|v|vi|viii|[1-689])(?![\\w.])"
+        ],
+        "detail_must_not_contain": [
+          "re:außenfarbe\\W*schwarz"
         ]
       }
     }

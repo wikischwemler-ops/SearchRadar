@@ -47,6 +47,7 @@ The goal is few, precise alerts. A good filter set:
 - **`must_contain`** for equipment/specs; group synonyms and abbreviations as one list entry:
   `["AHK", "Anhängerkupplung"]`, `["4K", "UHD", "3840"]`, `["RH 56", "56 cm", "Größe M"]`.
 - **`must_not_contain`** red flags: `Unfall`, `defekt`, `Bastler`, `Export`, `Motorschaden`, on Kleinanzeigen also `Suche`, `Gesuch`, `Tausch`.
+- **`detail_must_not_contain`** for spec fields that only the detail page shows, e.g. exterior colour `re:außenfarbe\W*schwarz` (a plain `schwarz` would also drop cars with black seats). Forces a detail-page load per new listing, so it counts against `max_detail_checks_per_run`.
 - **`require_known: ["price"]`** (+ `mileage`/`year` for vehicles) when unknown values should not pass.
 - Vehicles: `max_mileage`, `min_year`. Non-vehicles: don't use mileage/year filters.
 
@@ -59,7 +60,7 @@ Always add a test with positive and negative sample texts for every new regex.
   `Kinder`, `Fake`, `Replika`; put the brand/line into `title_must_contain` and the size into `must_contain`.
 
 Put shared rules in the file's `defaults`; per-search `filters` override numeric keys, while keyword lists
-(`must_contain`, `must_not_contain`, `title_must_contain`, `require_known`) are combined with the defaults.
+(`must_contain`, `must_not_contain`, `title_must_contain`, `require_known`, `detail_must_not_contain`) are combined with the defaults.
 
 ## 3. Telegram topics
 

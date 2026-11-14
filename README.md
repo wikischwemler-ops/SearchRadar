@@ -152,6 +152,7 @@ Then run it once without the tick. From then on it runs hourly by itself.
 | `title_must_contain` | every entry must appear in the **title** |
 | `must_contain` | every entry must appear in title, card text **or detail page** |
 | `must_not_contain` | reject if any word appears (card or detail page) |
+| `detail_must_not_contain` | always loads the detail page and rejects on a hit there – for spec fields like colour: `"re:außenfarbe\\W*schwarz"` (not black, black seats still OK) |
 | `check_details` | load the detail page when required keywords are missing on the card |
 
 **Keyword rules:** case-insensitive, matched at the **start of a word** – `Pano` matches *Panoramadach*, `suche` does not match *versuche*.
