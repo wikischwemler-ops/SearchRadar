@@ -2,13 +2,14 @@
 
 # SearchRadar – results
 
-Updated: 2026-11-14T10:21:32+00:00 (UTC) · 31 active listings
+Updated: 2026-11-14T17:04:39+00:00 (UTC) · 33 active listings
 
 
-## 👕 Clothing (22)
+## 👕 Clothing (23)
 
 | Found | Listing | Price | Details | Search | Portal |
 |---|---|---:|---|---|---|
+| 2026-11-14 17:04 | [Adidas Terrex National Geographic Hoodie Our Future Is Nature S](https://www.kleinanzeigen.de/s-anzeige/adidas-terrex-national-geographic-hoodie-our-future-is-nature-s/3558042047-160-1858) | 50 € | 40723 Hilden | Adidas Terrex – men, size S | Kleinanzeigen |
 | 2026-11-14 08:06 | [Adidas Terrex MyShelter Daunenjacke Herren Gr. S GQ4251](https://www.kleinanzeigen.de/s-anzeige/adidas-terrex-myshelter-daunenjacke-herren-gr-s-gq4251/3558061504-160-6681) | 100 € | 89231 Neu Ulm | Adidas Terrex – men, size S | Kleinanzeigen |
 | 2026-11-14 08:05 | [Adidas Terrex Xperior 2L GORE-TEX Performance Laufjacke](https://www.kleinanzeigen.de/s-anzeige/adidas-terrex-xperior-2l-gore-tex-performance-laufjacke/3559206388-160-1686) | 130 € | 53639 Königswinter | Adidas Terrex – men, size S | Kleinanzeigen |
 | 2026-11-14 08:05 | [Adidas Terrex Spitzhacke S Herrenjacke S Übergangsjacke S](https://www.kleinanzeigen.de/s-anzeige/adidas-terrex-spitzhacke-s-herrenjacke-s-uebergangsjacke-s/3559860513-160-702) | 25 € | 24143 Gaarden | Adidas Terrex – men, size S | Kleinanzeigen |
@@ -32,11 +33,12 @@ Updated: 2026-11-14T10:21:32+00:00 (UTC) · 31 active listings
 | 2026-11-14 08:05 | [ADIDAS Terrex Techrock Stretch PRIMALOFT Weste S](https://www.kleinanzeigen.de/s-anzeige/adidas-terrex-techrock-stretch-primaloft-weste-s/3569891819-160-7257) | 55 € | 86825 Bad Wörishofen | Adidas Terrex – men, size S | Kleinanzeigen |
 | 2026-11-14 08:05 | [Adidas Terrex My Shelter GoreTex Jacke](https://www.kleinanzeigen.de/s-anzeige/adidas-terrex-my-shelter-goretex-jacke/3570253418-160-5538) | 100 € | 87509 Immenstadt | Adidas Terrex – men, size S | Kleinanzeigen |
 
-## 🚗 Cars (9)
+## 🚗 Cars (10)
 
 | Found | Listing | Price | Details | Search | Portal |
 |---|---|---:|---|---|---|
-| 2026-11-14 06:31 | [Volkswagen Golf VII 1.0 TSI Join NAVI LED ACC RFK SHzg. Tempomat](https://www.autoscout24.de/angebote/bce72cb2-f77b-4580-9850-f0b408e93770) | 9.990 € | 145.100 km · 2018 · 88436 | VW Golf 7 – petrol, ≤ 10k € | AutoScout24 |
+| 2026-11-14 17:04 | [Volkswagen Golf VII 1.0 TSI * DYNAUDIO * * 1. Hand * * ACC *](https://www.kleinanzeigen.de/s-anzeige/volkswagen-golf-vii-1-0-tsi-dynaudio-1-hand-acc-/3571168880-216-7977) | 9.300 € | 141.300 km · 2018 · 68229 Mannheim | VW Golf 7 – petrol, ≤ 10k € | Kleinanzeigen |
+| 2026-11-14 17:04 | [Volkswagen Golf Trendline BMT/Start-Stop\| 1.Hand \| Top gepflegt \| VW-Scheckheft \| PDC \| Bluetooth \| Winter-Paket \| Front Assist](https://www.autoscout24.de/haendler/automobile-schelling-ellenberg) | 9.990 € | 118.600 km · 2018 · 73488 | VW Golf 7 – petrol, ≤ 10k € | AutoScout24 |
 | 2026-11-14 06:31 | [Volkswagen Golf VII DSG 1.4 TSI Comfort Navi ACC RFK PDC LM](https://www.autoscout24.de/angebote/fae7cd75-3cd4-4141-970b-b8a8bacdbf3f) | 9.685 € | 140.111 km · 2017 · 77855 | VW Golf 7 – petrol, ≤ 10k € | AutoScout24 |
 | 2026-11-14 06:31 | [Volkswagen Golf VW Golf 7 1.0 TSI Sondermodell Sound, AHK,ACC, APP connect](https://www.autoscout24.de/angebote/32b55f75-e520-4738-a73b-c2ad147fbf35) | 9.900 € | 77.000 km · 2017 · 73095 | VW Golf 7 – petrol, ≤ 10k € | AutoScout24 |
 | 2026-11-14 06:31 | [Volkswagen Golf Trendline BMT](https://www.autoscout24.de/angebote/23c8b358-bb1a-4a9e-a986-6f2d6ef194a2) | 7.500 € | 148.000 km · 2016 · 76646 | VW Golf 7 – petrol, ≤ 10k € | AutoScout24 |
