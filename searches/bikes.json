@@ -1,17 +1,20 @@
 {
-  "_help": "Example: road bikes on Kleinanzeigen. Replace 10115 with your postcode.",
+  "_help": "Cycling gear. Garmin Rally RS210 power-meter pedals nationwide (shipped; new ~650-700 EUR), Zwift Ride with Wahoo KICKR CORE within 100 km of 73207 (bulky, pickup). Telegram topic 'Fahrrad' is created by the bot (telegram_thread_id: auto).",
   "topic": "Bikes",
   "emoji": "🚲",
-  "telegram_thread_id": null,
-  "enabled": false,
+  "telegram_thread_id": "auto",
+  "enabled": true,
   "defaults": {
     "must_not_contain": [
-      "Suche",
+      "re:(?<!\\w)suche(?!\\w)",
       "Gesuch",
       "defekt",
       "Bastler",
       "Kinderfahrrad",
-      "Rahmenbruch"
+      "Rahmenbruch",
+      "mieten",
+      "Miete",
+      "Verleih"
     ],
     "require_known": [
       "price"
@@ -19,6 +22,52 @@
     "check_details": true
   },
   "searches": [
+    {
+      "name": "Garmin Rally RS210 power-meter pedals",
+      "urls": [
+        "https://www.kleinanzeigen.de/s-garmin-rally/k0"
+      ],
+      "filters": {
+        "min_price": 250,
+        "max_price": 620,
+        "title_must_contain": [
+          "re:rs\\s*-?\\s*210"
+        ],
+        "must_not_contain": [
+          "Pedalkörper",
+          "Conversion Kit",
+          "Rebuild",
+          "nur links",
+          "nur rechts",
+          "einseitig"
+        ]
+      }
+    },
+    {
+      "name": "Zwift Ride + Wahoo KICKR CORE",
+      "urls": [
+        "https://www.kleinanzeigen.de/s-plochingen/zwift-ride/k0l8389r100"
+      ],
+      "filters": {
+        "min_price": 500,
+        "max_price": 1200,
+        "title_must_contain": [
+          "re:zwift\\s*ride"
+        ],
+        "must_contain": [
+          "re:k\\w*ckr|core"
+        ],
+        "must_not_contain": [
+          "ohne Kickr",
+          "ohne Core",
+          "nur Rahmen",
+          "Tablet",
+          "Halter",
+          "Sattel",
+          "Kurbel"
+        ]
+      }
+    },
     {
       "name": "Road bike, carbon, Shimano 105 or better, RH 56",
       "urls": [
@@ -54,7 +103,10 @@
             "Gr. M"
           ]
         ]
-      }
+      },
+      "enabled": false,
+      "_help": "Example template, replace 10115 with your postcode and enable."
     }
-  ]
+  ],
+  "telegram_topic_name": "Fahrrad"
 }
