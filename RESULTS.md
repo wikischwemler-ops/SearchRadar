@@ -2,7 +2,7 @@
 
 # SearchRadar – results
 
-Updated: 2026-11-15T17:07:04+00:00 (UTC) · 42 active listings
+Updated: 2026-11-15T21:47:15+00:00 (UTC) · 42 active listings
 
 
 ## 👕 Clothing (26)
@@ -45,7 +45,7 @@ Updated: 2026-11-15T17:07:04+00:00 (UTC) · 42 active listings
 | 2026-11-15 07:40 | [Zwift Ride inklusive Wahoo KICKR CORE 2](https://www.kleinanzeigen.de/s-anzeige/zwift-ride-inklusive-wahoo-kickr-core-2/3540984818-217-8939) | 1.040 € | 73329 Kuchen | Zwift Ride + Wahoo KICKR CORE | Kleinanzeigen |
 | 2026-11-15 07:40 | [Zwift Ride + Wahoo KICKR CORE 2 – wie neu](https://www.kleinanzeigen.de/s-anzeige/zwift-ride-wahoo-kickr-core-2-wie-neu/3570245993-230-9197) | 999 € | 76227 Karlsruhe | Zwift Ride + Wahoo KICKR CORE | Kleinanzeigen |
 | 2026-11-15 07:40 | [Garmin Rally RS210](https://www.kleinanzeigen.de/s-anzeige/garmin-rally-rs210/3567888226-217-5126) | 599 € | 55218 Ingelheim am Rhein | Garmin Rally RS210 power-meter pedals | Kleinanzeigen |
-| 2026-11-15 07:40 | [GARMIN Rally RS210 Wattmess-System beidseitige Messung Shimano](https://www.kleinanzeigen.de/s-anzeige/garmin-rally-rs210-wattmess-system-beidseitige-messung-shimano/3571191285-217-4506) | 600 € | 64521 Groß-Gerau | Garmin Rally RS210 power-meter pedals | Kleinanzeigen |
+| 2026-11-15 07:40 | [GARMIN Rally RS210 Wattmess-System beidseitige Messung Shimano](https://www.kleinanzeigen.de/s-anzeige/garmin-rally-rs210-wattmess-system-beidseitige-messung-shimano/3571191285-217-4506) | 590 € ▼ (was 600 €) | 64521 Groß-Gerau | Garmin Rally RS210 power-meter pedals | Kleinanzeigen |
 
 ## 🚗 Cars (10)
 
