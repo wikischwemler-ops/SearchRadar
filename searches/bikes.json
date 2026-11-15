@@ -29,7 +29,7 @@
       ],
       "filters": {
         "min_price": 250,
-        "max_price": 620,
+        "max_price": 600,
         "title_must_contain": [
           "re:rs\\s*-?\\s*210"
         ],
