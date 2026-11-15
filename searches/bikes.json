@@ -55,7 +55,11 @@
           "re:zwift\\s*ride"
         ],
         "must_contain": [
-          "re:k\\w*ckr|core"
+          [
+            "re:k\\w{0,2}ckr",
+            "Wahoo"
+          ],
+          "re:(?<!\\w)core(?!\\w)"
         ],
         "must_not_contain": [
           "ohne Kickr",
