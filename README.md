@@ -174,6 +174,7 @@ Tips for realistic minimum criteria:
 | AutoScout24 | set filters, postcode + radius, sort by *newest first*, copy URL (`zip=…&zipr=100&sort=age&desc=1`) |
 | mobile.de | detailed search, postcode + radius, sort by *newest listings first*, copy URL |
 | Kleinanzeigen | any category, keywords, postcode + "+ 100 km", filters, copy URL (ends e.g. in `…r100`) |
+| idealo.de | a product's offer page (`…/OffersOfProduct/<id>_….html`): tracks the lowest NEW price, price drops go to Telegram |
 | eBay.de | search, filters, copy URL; `-word` excludes words, `LH_PrefLoc=1` = items in Germany, `_sop=10` (newest) is added automatically |
 
 If an AutoScout24 or mobile.de URL has no sort order, *newest first* is added automatically.

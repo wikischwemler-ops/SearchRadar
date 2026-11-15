@@ -12,7 +12,7 @@ from typing import Callable
 from urllib.parse import parse_qs, urlencode, urlparse, urlunparse
 
 from ..models import Listing
-from . import autoscout24, ebay, kleinanzeigen, mobile_de
+from . import autoscout24, ebay, idealo, kleinanzeigen, mobile_de
 
 
 @dataclass(frozen=True)
@@ -44,6 +44,7 @@ PORTALS: dict[str, Portal] = {
         Portal("kleinanzeigen", "Kleinanzeigen", "kleinanzeigen.de", kleinanzeigen.parse,
                detail_selectors=("#viewad-title", "#viewad-price", "#viewad-details", "#viewad-configuration",
                                  "#viewad-description-text", ".addetailslist", ".checktaglist")),
+        Portal("idealo", "idealo", "idealo.de", idealo.parse, detail_selectors=("h1",)),
         Portal("ebay", "eBay", "ebay.de", ebay.parse,
                "_sop", {"_sop": "10"},
                ("h1", ".x-price-primary", "[data-testid='ux-layout-section-evo']", ".ux-layout-section-evo",
@@ -130,8 +131,10 @@ def _jsonld_price(soup) -> int | None:
             node = stack.pop()
             if isinstance(node, dict):
                 offers = node.get("offers")
-                if isinstance(offers, dict) and offers.get("price") not in (None, ""):
-                    return _to_int(str(offers["price"]).split(".")[0])
+                if isinstance(offers, dict):
+                    for k in ("price", "lowPrice"):
+                        if offers.get(k) not in (None, ""):
+                            return _to_int(str(offers[k]).split(".")[0])
                 stack.extend(node.values())
             elif isinstance(node, list):
                 stack.extend(node)

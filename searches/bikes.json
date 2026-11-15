@@ -1,5 +1,5 @@
 {
-  "_help": "Cycling gear. Garmin Rally RS210 power-meter pedals nationwide (shipped; new ~650-700 EUR), Zwift Ride with Wahoo KICKR CORE within 100 km of 73207 (bulky, pickup). Telegram topic 'Fahrrad' is created by the bot (telegram_thread_id: auto).",
+  "_help": "Cycling gear. Garmin Rally RS210 power-meter pedals: used nationwide on Kleinanzeigen + new price on idealo (shipped; new ~650-700 EUR), Zwift Ride with Wahoo KICKR CORE within 100 km of 73207 (bulky, pickup). Telegram topic 'Fahrrad' is created by the bot (telegram_thread_id: auto).",
   "topic": "Bikes",
   "emoji": "🚲",
   "telegram_thread_id": "auto",
@@ -41,6 +41,20 @@
           "nur rechts",
           "einseitig"
         ]
+      }
+    },
+    {
+      "name": "Garmin Rally RS210 – new price (idealo)",
+      "_help": "Tracks idealo's lowest new price: reported once, then every price drop is sent to Telegram and drawn in the price chart.",
+      "urls": [
+        "https://www.idealo.de/preisvergleich/OffersOfProduct/209644835_-rally-rs210-powermeter-pedale-garmin.html"
+      ],
+      "filters": {
+        "max_price": 1200,
+        "title_must_contain": [
+          "re:rs\\s*-?\\s*210"
+        ],
+        "check_details": false
       }
     },
     {

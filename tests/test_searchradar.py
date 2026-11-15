@@ -293,3 +293,14 @@ def test_auto_topic_resolution(tmp_path):
     t2 = Topic(file="clothing", topic="Clothing", telegram_thread_id="auto")
     resolve_auto_topics(tg, [t2], str(path), dry_run=False)
     assert t2.telegram_thread_id == 42 and len(tg.calls) == 1  # created only once
+
+
+def test_idealo_product_page():
+    from pathlib import Path
+    from searchradar.portals import detect_portal
+    html = (Path(__file__).parent / "fixtures" / "idealo.html").read_text(encoding="utf-8")
+    items = detect_portal("https://www.idealo.de/preisvergleich/OffersOfProduct/1_x.html").parse(html)
+    assert len(items) == 1
+    it = items[0]
+    assert it.id == "209644835" and it.price == 689 and it.title == "Garmin Rally RS210 Powermeter Pedale"
+    assert it.url.endswith("209644835_-rally-rs210-powermeter-pedale-garmin.html")
