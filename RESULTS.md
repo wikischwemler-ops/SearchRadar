@@ -2,13 +2,14 @@
 
 # SearchRadar – results
 
-Updated: 2026-11-15T07:41:16+00:00 (UTC) · 38 active listings
+Updated: 2026-11-15T08:28:47+00:00 (UTC) · 39 active listings
 
 
-## 🚲 Bikes (4)
+## 🚲 Bikes (5)
 
 | Found | Listing | Price | Details | Search | Portal |
 |---|---|---:|---|---|---|
+| 2026-11-15 08:28 | [Garmin Rally RS210 Powermeter Pedale](https://www.idealo.de/preisvergleich/OffersOfProduct/209644835_-rally-rs210-powermeter-pedale-garmin.html) | 689 € |  | Garmin Rally RS210 – new price (idealo) | idealo |
 | 2026-11-15 07:40 | [Zwift Ride inklusive Wahoo KICKR CORE 2](https://www.kleinanzeigen.de/s-anzeige/zwift-ride-inklusive-wahoo-kickr-core-2/3540984818-217-8939) | 1.040 € | 73329 Kuchen | Zwift Ride + Wahoo KICKR CORE | Kleinanzeigen |
 | 2026-11-15 07:40 | [Zwift Ride + Wahoo KICKR CORE 2 – wie neu](https://www.kleinanzeigen.de/s-anzeige/zwift-ride-wahoo-kickr-core-2-wie-neu/3570245993-230-9197) | 999 € | 76227 Karlsruhe | Zwift Ride + Wahoo KICKR CORE | Kleinanzeigen |
 | 2026-11-15 07:40 | [Garmin Rally RS210](https://www.kleinanzeigen.de/s-anzeige/garmin-rally-rs210/3567888226-217-5126) | 599 € | 55218 Ingelheim am Rhein | Garmin Rally RS210 power-meter pedals | Kleinanzeigen |
