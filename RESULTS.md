@@ -2,15 +2,14 @@
 
 # SearchRadar – results
 
-Updated: 2026-11-15T21:47:15+00:00 (UTC) · 42 active listings
+Updated: 2026-11-16T02:03:18+00:00 (UTC) · 41 active listings
 
 
-## 👕 Clothing (26)
+## 👕 Clothing (25)
 
 | Found | Listing | Price | Details | Search | Portal |
 |---|---|---:|---|---|---|
 | 2026-11-15 17:06 | [Herren Adidas Terrex DSV Biathlon Gore-Tex Hardshell Regenjacke](https://www.kleinanzeigen.de/s-anzeige/herren-adidas-terrex-dsv-biathlon-gore-tex-hardshell-regenjacke/3572205536-160-3714) | 150 € | 99817 Eisenach | Adidas Terrex – men, size S | Kleinanzeigen |
-| 2026-11-15 17:06 | [Adidas Terrex Funktionsjacke Herren](https://www.kleinanzeigen.de/s-anzeige/adidas-terrex-funktionsjacke-herren/3572340172-160-225) | 18 € | 23972 Dorf Mecklenburg | Adidas Terrex – men, size S | Kleinanzeigen |
 | 2026-11-14 21:28 | [Adidas Terrex Fleecejacke mit Kapuze und Windstopper, grau Gr S](https://www.kleinanzeigen.de/s-anzeige/adidas-terrex-fleecejacke-mit-kapuze-und-windstopper-grau-gr-s/3571639270-160-2091) | 35 € | 40219 Hafen | Adidas Terrex – men, size S | Kleinanzeigen |
 | 2026-11-14 17:04 | [Adidas Terrex National Geographic Hoodie Our Future Is Nature S](https://www.kleinanzeigen.de/s-anzeige/adidas-terrex-national-geographic-hoodie-our-future-is-nature-s/3558042047-160-1858) | 45 € ▼ (was 50 €) | 40723 Hilden | Adidas Terrex – men, size S | Kleinanzeigen |
 | 2026-11-14 08:06 | [Adidas Terrex MyShelter Daunenjacke Herren Gr. S GQ4251](https://www.kleinanzeigen.de/s-anzeige/adidas-terrex-myshelter-daunenjacke-herren-gr-s-gq4251/3558061504-160-6681) | 100 € | 89231 Neu Ulm | Adidas Terrex – men, size S | Kleinanzeigen |
