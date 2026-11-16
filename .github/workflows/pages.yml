@@ -1,7 +1,7 @@
 name: SearchRadar Pages
 
 # Web overview. Deploys only once Pages is enabled (Settings -> Pages -> Source: GitHub Actions);
-# until then the job just reports "Pages not enabled" and stays green.
+# until then the check job finds Pages disabled and build/deploy are skipped (no errors).
 # Kept separate so the hourly search never depends on Pages/environments.
 
 on:
@@ -12,6 +12,7 @@ on:
 
 permissions:
   contents: read
+  actions: read
   pages: write
   id-token: write
 
@@ -20,14 +21,32 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  build:
+  check:
     if: ${{ vars.PAGES_ENABLED != 'false' }}
     runs-on: ubuntu-latest
+    outputs:
+      enabled: ${{ steps.pages.outputs.enabled }}
     steps:
-      - uses: actions/checkout@v4
+      - id: pages
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if gh api "repos/${{ github.repository }}/pages" >/dev/null 2>&1; then
+            echo "enabled=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "enabled=false" >> "$GITHUB_OUTPUT"
+            echo "GitHub Pages is not enabled (Settings -> Pages -> Source: GitHub Actions) - nothing to deploy." >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+  build:
+    needs: check
+    if: needs.check.outputs.enabled == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
         with:
           ref: main
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
       - run: pip install -r requirements.txt
@@ -45,6 +64,3 @@ jobs:
     steps:
       - id: deploy
         uses: actions/deploy-pages@v4
-        continue-on-error: true   # Pages not enabled yet -> stay green
-      - if: steps.deploy.outcome != 'success'
-        run: echo "::notice::Pages deploy failed - is Settings -> Pages -> Source set to 'GitHub Actions'?"
