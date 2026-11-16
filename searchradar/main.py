@@ -17,7 +17,8 @@ from .portals import check_detail, detect_portal, newest_first
 from .results import Results, now_iso
 from .utils import fmt_int
 from .state import State
-from .telegram import Telegram, format_listing
+from .hidden import REPLY_WORDS, Hidden, links_in
+from .telegram import HIDE_PREFIX, hide_button, Telegram, format_listing
 
 ERROR_ALERT_AFTER = 3     # warn after N consecutive failures
 ERROR_REPEAT_EVERY = 24   # then at most about once a day
@@ -53,6 +54,7 @@ class Runner:
         self.s = settings
         self.state = State(args.state)
         self.results = Results(args.matches)
+        self.hidden = Hidden(args.hidden)
         self.run_start = now_iso()
         self.topics_by_file: dict[str, Topic] = {}
         self.tg = Telegram(dry_run=args.dry_run)
@@ -101,6 +103,8 @@ class Runner:
             found += len(listings)
             print(f"[{sid}] {portal.label}: {len(listings)} listings on page")
             for l in listings:
+                if l.key in self.hidden:
+                    continue
                 m = self.results.get(sid, l.key)
                 if m is not None:  # known match still listed -> alive, track its price
                     self.price_changed(m, self.results.update_price(m, l.price))
@@ -161,7 +165,8 @@ class Runner:
             print("   … notification limit reached, rest follows next run")
             return True
         msg = format_listing(topic.topic, search.name, l, keywords, topic.emoji, self.s.get("overview_url") or "")
-        if self.tg.send(msg, thread_id=topic.telegram_thread_id, chat_id=topic.telegram_chat_id):
+        if self.tg.send(msg, thread_id=topic.telegram_thread_id, chat_id=topic.telegram_chat_id,
+                        buttons=hide_button(l.key)):
             self.sent += 1
             self.state.mark(sid, l.key, True)
         return True  # on send failure: not marked -> retried next run
@@ -184,6 +189,47 @@ class Runner:
             msg += f'\n📊 <a href="{_h.escape(self.s["overview_url"], quote=True)}">All results &amp; price history</a>'
         if t:
             self.tg.send(msg, thread_id=t.telegram_thread_id, chat_id=t.telegram_chat_id)
+
+    # ---- "🚫 Hide" button / reply "x" in Telegram --------------------------------
+    def hide(self, key: str, title: str = "", url: str = "") -> str:
+        removed = self.results.remove_listing(key)
+        if removed:
+            title, url = title or removed[0]["title"], url or removed[0]["url"]
+        self.hidden.add(key, title, url)
+        print(f"   🚫 hidden: {title[:60] or key}")
+        return title
+
+    def process_telegram(self) -> None:
+        """Reads button presses and replies since the last run (getUpdates) and hides those listings."""
+        updates = self.tg.api("getUpdates", offset=self.hidden.offset + 1 if self.hidden.offset else 0,
+                              timeout=0, allowed_updates=["callback_query", "message"])
+        if not updates:
+            return
+        for u in updates:
+            self.hidden.offset = max(self.hidden.offset, int(u["update_id"]))
+            self.hidden.changed = True
+            cq = u.get("callback_query")
+            if cq and str(cq.get("data", "")).startswith(HIDE_PREFIX):
+                key = cq["data"][len(HIDE_PREFIX):]
+                title = self.hide(key)
+                self.tg.api("answerCallbackQuery", callback_query_id=cq["id"], text="Hidden ✓")
+                msg = cq.get("message") or {}
+                if msg:
+                    self.tg.api("editMessageReplyMarkup", chat_id=msg["chat"]["id"], message_id=msg["message_id"],
+                                reply_markup={"inline_keyboard": [[{"text": "🚫 hidden", "callback_data": "noop"}]]})
+                continue
+            msg = u.get("message") or {}
+            reply_to = msg.get("reply_to_message") or {}
+            if not reply_to.get("from", {}).get("is_bot") or msg.get("text", "").strip().lower() not in REPLY_WORDS:
+                continue
+            for link in links_in(reply_to):
+                m = self.results.find_by_url(link)
+                if m:
+                    self.hide(m["id"].split("|", 1)[1])
+                    self.tg.api("setMessageReaction", chat_id=msg["chat"]["id"], message_id=msg["message_id"],
+                                reaction=[{"type": "emoji", "emoji": "👍"}])
+                    break
+        self.hidden.save()
 
     def recheck(self) -> None:
         """Visit stored matches that weren't on a result page this run: still online? price?"""
@@ -211,6 +257,7 @@ class Runner:
     # ---- whole run --------------------------------------------------------
     def run(self, topics: list[Topic]) -> None:
         self.topics_by_file = {t.file: t for t in topics if t.enabled}
+        self.process_telegram()
         for t in topics:
             if not t.enabled or (self.args.topic and self.args.topic not in (t.file, t.topic)):
                 continue
@@ -295,6 +342,7 @@ def main() -> None:
     p.add_argument("--settings", default="settings.json")
     p.add_argument("--searches", default="searches", help="directory with topic files (*.json)")
     p.add_argument("--state", default="state/seen.json")
+    p.add_argument("--hidden", default="state/hidden.json", help="listings hidden via Telegram")
     p.add_argument("--topics-state", default="state/topics.json", help="ids of auto-created Telegram topics")
     p.add_argument("--matches", default="state/matches.json", help="all matches (source of the web overview)")
     p.add_argument("--dry-run", action="store_true", help="don't send to Telegram, don't save state")

@@ -120,3 +120,6 @@ Put shared rules in the file's `defaults`; per-search `filters` override numeric
 - Python 3.12, only `beautifulsoup4`, `curl_cffi`, `requests`.
 - Keep requests polite: first page only, random delays, detail pages only for listings that passed the cheap checks.
 - Don't commit secrets; tokens live only in GitHub secrets.
+
+## Hidden listings
+- `state/hidden.json` holds listings the user hid via the Telegram "🚫 Hide" button or a reply `x`/`weg`/`hide` (processed by `Runner.process_telegram()` via `getUpdates` at the start of each run; offset stored in the same file). Hidden keys are `portal:id`, skipped for every search. To un-hide, delete the entry.

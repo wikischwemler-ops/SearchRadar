@@ -207,3 +207,11 @@ python -m pytest -q                               # tests
 3. add a test with a small HTML sample in `tests/`
 
 The Claude skill in `.claude/skills/searchradar/` describes these steps in detail.
+
+### Hiding a listing
+
+Every match message has a **🚫 Hide** button. Pressing it – or replying to any match message with
+`x`, `weg`, `hide` or `ausblenden` – removes the listing from the overview and it is never reported
+again. The bot is only online during a run, so the hide takes effect at the start of the next run
+(button presses are kept by Telegram for 24 h). Hidden listings are kept in `state/hidden.json`;
+delete a line there to un-hide.

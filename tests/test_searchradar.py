@@ -304,3 +304,42 @@ def test_idealo_product_page():
     it = items[0]
     assert it.id == "209644835" and it.price == 689 and it.title == "Garmin Rally RS210 Powermeter Pedale"
     assert it.url.endswith("209644835_-rally-rs210-powermeter-pedale-garmin.html")
+
+
+def test_hide_via_telegram_button_and_reply(tmp_path):
+    import json as _j
+    from types import SimpleNamespace
+    from searchradar.main import Runner
+    from searchradar.models import Listing
+    from searchradar.telegram import hide_button
+
+    args = SimpleNamespace(state=str(tmp_path / "seen.json"), matches=str(tmp_path / "m.json"),
+                           hidden=str(tmp_path / "hidden.json"), dry_run=False, verbose=False,
+                           topic=None, search=None)
+    settings = {"request_delay_seconds": [0, 0], "max_detail_checks_per_run": 1, "max_notifications_per_run": 5}
+    r = Runner(args, settings)
+    a = Listing("kleinanzeigen", "111", "https://www.kleinanzeigen.de/s-anzeige/a/111-160-1", "Terrex A", 50)
+    b = Listing("kleinanzeigen", "222", "https://www.kleinanzeigen.de/s-anzeige/b/222-160-1", "Terrex B", 60)
+    for l in (a, b):
+        r.results.add("clothing", "Clothing", "👕", "clothing/S", "S", l, [])
+    assert hide_button(a.key)[0][0]["callback_data"] == "hide:kleinanzeigen:111"
+
+    calls = []
+    def api(method, **p):
+        calls.append(method)
+        if method == "getUpdates":
+            return [
+                {"update_id": 7, "callback_query": {"id": "c1", "data": "hide:kleinanzeigen:111",
+                                                    "message": {"chat": {"id": -1}, "message_id": 5}}},
+                {"update_id": 8, "message": {"chat": {"id": -1}, "message_id": 9, "text": "x",
+                    "reply_to_message": {"from": {"is_bot": True}, "text": "Terrex B",
+                        "entities": [{"type": "text_link", "offset": 0, "length": 8, "url": b.url}]}}},
+            ]
+        return True
+    r.tg.api = api
+    r.process_telegram()
+    assert a.key in r.hidden and b.key in r.hidden
+    assert r.results.get("clothing/S", a.key) is None and r.results.get("clothing/S", b.key) is None
+    saved = _j.load(open(args.hidden))
+    assert saved["telegram_offset"] == 8 and set(saved["hidden"]) == {a.key, b.key}
+    assert "answerCallbackQuery" in calls and "setMessageReaction" in calls

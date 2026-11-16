@@ -39,13 +39,33 @@ class Telegram:
             print(f"Telegram createForumTopic error: {exc}")
         return None
 
-    def send(self, text: str, thread_id: int | None = None, chat_id: str | None = None) -> bool:
+    def api(self, method: str, **params):
+        """Plain Bot API call; returns `result` or None (errors are printed, never raised)."""
+        if self.dry_run or not self.token:
+            return None
+        req = urllib.request.Request(
+            f"https://api.telegram.org/bot{self.token}/{method}",
+            data=json.dumps(params).encode(), headers={"Content-Type": "application/json"})
+        try:
+            with urllib.request.urlopen(req, timeout=30) as r:
+                res = json.load(r)
+            return res.get("result") if res.get("ok") else None
+        except urllib.error.HTTPError as exc:
+            print(f"Telegram {method} error: {exc} {exc.read().decode(errors='replace')[:200]}")
+        except Exception as exc:  # noqa: BLE001
+            print(f"Telegram {method} error: {exc}")
+        return None
+
+    def send(self, text: str, thread_id: int | None = None, chat_id: str | None = None,
+             buttons: list[list[dict]] | None = None) -> bool:
         if self.dry_run:
             where = f" -> topic {thread_id}" if thread_id else ""
             print(f"---- Telegram (dry-run){where} ----\n{text}\n" + "-" * 30)
             return True
         body = {"chat_id": chat_id or self.chat_id, "text": text,
                 "parse_mode": "HTML", "disable_web_page_preview": False}
+        if buttons:
+            body["reply_markup"] = {"inline_keyboard": buttons}
         if thread_id:
             body["message_thread_id"] = int(thread_id)
         req = urllib.request.Request(
@@ -68,6 +88,14 @@ class Telegram:
                 print(f"Telegram error (attempt {attempt + 1}): {exc}")
                 time.sleep(3)
         return False
+
+
+HIDE_PREFIX = "hide:"
+
+
+def hide_button(listing_key: str) -> list[list[dict]]:
+    """Inline button under a match; pressing it hides the listing on the next run."""
+    return [[{"text": "🚫 Hide", "callback_data": (HIDE_PREFIX + listing_key)[:64]}]]
 
 
 def format_listing(topic: str, search_name: str, l: Listing, keywords: list[str], emoji: str = "📡",

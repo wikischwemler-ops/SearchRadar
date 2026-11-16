@@ -102,6 +102,17 @@ class Results:
     def sorted(self) -> list[dict]:
         return sorted(self.items.values(), key=lambda m: m["found"], reverse=True)
 
+    def remove_listing(self, listing_key: str) -> list[dict]:
+        """Drop every stored match of this listing (all searches). Returns the removed entries."""
+        gone = [m for mid, m in self.items.items() if mid.endswith("|" + listing_key)]
+        for m in gone:
+            del self.items[m["id"]]
+        return gone
+
+    def find_by_url(self, url: str) -> dict | None:
+        url = url.split("?")[0].rstrip("/")
+        return next((m for m in self.items.values() if m["url"].split("?")[0].rstrip("/") == url), None)
+
     def save(self) -> None:
         os.makedirs(os.path.dirname(self.path) or ".", exist_ok=True)
         with open(self.path, "w", encoding="utf-8") as fh:
