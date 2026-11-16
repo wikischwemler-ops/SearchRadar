@@ -112,6 +112,18 @@
    "t": "2026-11-16T02:02:12+00:00",
    "m": false
   },
+  "bikes/Garmin Rally RS210 power-meter pedals|kleinanzeigen:3573893586": {
+   "t": "2026-11-16T20:26:34+00:00",
+   "m": false
+  },
+  "bikes/Garmin Rally RS210 power-meter pedals|kleinanzeigen:3573926648": {
+   "t": "2026-11-16T20:26:34+00:00",
+   "m": false
+  },
+  "bikes/Garmin Rally RS210 power-meter pedals|kleinanzeigen:3573965604": {
+   "t": "2026-11-16T20:26:34+00:00",
+   "m": false
+  },
   "bikes/Garmin Rally RS210 – new price (idealo)|idealo:209644835": {
    "t": "2026-11-15T08:28:16+00:00",
    "m": true
@@ -196,6 +208,10 @@
    "t": "2026-11-16T09:37:20+00:00",
    "m": false
   },
+  "bikes/Zwift Ride + Wahoo KICKR CORE|kleinanzeigen:3573993895": {
+   "t": "2026-11-16T20:26:44+00:00",
+   "m": true
+  },
   "cars/VW Golf 7 – petrol, ≤ 10k €|autoscout24:0145826b-9a6b-43ec-a460-c6a80234e263": {
    "t": "2026-11-14T10:21:11+00:00",
    "m": false
@@ -210,6 +226,10 @@
   },
   "cars/VW Golf 7 – petrol, ≤ 10k €|autoscout24:1b897a3c-df34-4556-887a-084010724f2a": {
    "t": "2026-11-14T06:31:13+00:00",
+   "m": true
+  },
+  "cars/VW Golf 7 – petrol, ≤ 10k €|autoscout24:22ff9289-3520-420c-b88e-e9769e93ff2c": {
+   "t": "2026-11-16T20:26:54+00:00",
    "m": true
   },
   "cars/VW Golf 7 – petrol, ≤ 10k €|autoscout24:23c8b358-bb1a-4a9e-a986-6f2d6ef194a2": {
@@ -459,6 +479,14 @@
   "clothing/Adidas Terrex – men, size S|kleinanzeigen:3572762331": {
    "t": "2026-11-15T17:06:37+00:00",
    "m": false
+  },
+  "clothing/Adidas Terrex – men, size S|kleinanzeigen:3573607892": {
+   "t": "2026-11-16T20:27:05+00:00",
+   "m": true
+  },
+  "clothing/Adidas Terrex – men, size S|kleinanzeigen:3573698118": {
+   "t": "2026-11-16T20:27:03+00:00",
+   "m": true
   }
  },
  "errors": {
