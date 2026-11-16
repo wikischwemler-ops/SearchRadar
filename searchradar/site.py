@@ -78,6 +78,11 @@ def main() -> None:
     a = p.parse_args()
     data = load(a.matches)
     data.setdefault("updated", None)
+    try:
+        with open(os.path.join(ROOT, "settings.json"), encoding="utf-8") as fh:
+            data["bot"] = (json.load(fh).get("telegram_bot_username") or "").lstrip("@")
+    except (OSError, ValueError):
+        data["bot"] = ""
     data["built"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
     os.makedirs(a.out, exist_ok=True)
     with open(os.path.join(a.out, "index.html"), "w", encoding="utf-8") as fh:
@@ -165,8 +170,12 @@ TEMPLATE = r"""<!DOCTYPE html>
   .kw span { font-size: 12px; padding: 2px 8px; border-radius: 999px; background: rgba(45,212,191,.12); color: var(--teal); border: 1px solid rgba(45,212,191,.25); }
   .foot { margin-top: auto; display: flex; align-items: center; gap: 8px; padding-top: 6px; border-top: 1px dashed var(--line); font-size: 12.5px; color: var(--muted); }
   .portal { padding: 2px 8px; border-radius: 6px; background: rgba(56,189,248,.12); color: var(--cyan); }
-  .open {
-    margin-left: auto; text-decoration: none; font-weight: 600; font-size: 13px;
+  .hide {
+    margin-left: auto; background: none; border: 1px solid var(--line); border-radius: 8px;
+    padding: 4px 8px; cursor: pointer; font-size: 13px; opacity: .7;
+  }
+  .hide:hover { opacity: 1; border-color: #f87171; }
+  .open { text-decoration: none; font-weight: 600; font-size: 13px;
     color: #04202f; background: linear-gradient(135deg, var(--teal), var(--cyan));
     padding: 6px 12px; border-radius: 8px;
   }
@@ -233,6 +242,11 @@ TEMPLATE = r"""<!DOCTYPE html>
     return Math.round(d / 86400) + " d ago";
   };
 
+  // hide: removed at once in this browser, and the Telegram bot is told via a t.me deep link
+  const keyOf = m => String(m.id || "").split("|").pop();
+  let hidden = new Set(JSON.parse(store.get("hidden", "[]")));
+  const visible = () => all.filter(m => !hidden.has(keyOf(m)));
+
   let topic = store.get("topic", "all");
   const topics = [];
   for (const m of all) if (!topics.some(t => t.file === m.topic_file))
@@ -296,15 +310,17 @@ TEMPLATE = r"""<!DOCTYPE html>
   function chips() {
     const btn = (key, label, n) =>
       `<button class="chip" data-t="${esc(key)}" aria-pressed="${topic === key}">${label}<b>${n}</b></button>`;
-    $("chips").innerHTML = btn("all", "All", all.length) +
-      topics.map(t => btn(t.file, esc(t.emoji + " " + t.name), all.filter(m => m.topic_file === t.file).length)).join("");
+    const shown = visible();
+    $("chips").innerHTML = btn("all", "All", shown.length) +
+      topics.map(t => btn(t.file, esc(t.emoji + " " + t.name), shown.filter(m => m.topic_file === t.file).length)).join("");
   }
 
   function render() {
     const q = $("q").value.trim().toLowerCase();
     const onlyNew = $("onlyNew").checked;
     const sort = $("sort").value;
-    let list = all.filter(m =>
+    const shown = visible();
+    let list = shown.filter(m =>
       (topic === "all" || m.topic_file === topic) &&
       (!onlyNew || Date.now() - new Date(m.found) < DAY) &&
       (!q || [m.title, m.location, m.search, m.portal, ...(m.keywords || [])].join(" ").toLowerCase().includes(q)));
@@ -316,7 +332,7 @@ TEMPLATE = r"""<!DOCTYPE html>
         return dir * (a.price - b.price);
       });
     }
-    $("stats").textContent = `${list.length} of ${all.length} matches`;
+    $("stats").textContent = `${list.length} of ${shown.length} matches` + (hidden.size ? ` · ${hidden.size} hidden` : "");
     if (!list.length) {
       $("grid").innerHTML = `<div class="empty" style="grid-column:1/-1"><img src="logo.svg" alt=""><p>${
         all.length ? "Nothing matches this filter." : "No matches yet – the radar is still scanning."}</p></div>`;
@@ -333,6 +349,7 @@ TEMPLATE = r"""<!DOCTYPE html>
         ${facts ? `<div class="facts">${esc(facts)}</div>` : ""}
         ${(m.keywords || []).length ? `<div class="kw">${m.keywords.map(k => `<span>${esc(k)}</span>`).join("")}</div>` : ""}
         <div class="foot"><span class="portal">${esc(m.portal)}</span><span title="found ${esc(m.found)} · last checked ${esc(m.last_checked || m.found)}">found ${ago(m.found)}</span>
+          <button class="hide" data-k="${esc(keyOf(m))}" title="Hide this listing (also tells the bot via Telegram)">🚫</button>
           <a class="open" href="${esc(m.url)}" target="_blank" rel="noopener noreferrer">Open ↗</a></div>
       </article>`;
     }).join("");
@@ -341,6 +358,17 @@ TEMPLATE = r"""<!DOCTYPE html>
   $("chips").addEventListener("click", e => {
     const b = e.target.closest(".chip"); if (!b) return;
     topic = b.dataset.t; store.set("topic", topic); chips(); render();
+  });
+  $("grid").addEventListener("click", e => {
+    const b = e.target.closest("button.hide"); if (!b) return;
+    const k = b.dataset.k;
+    hidden.add(k); store.set("hidden", JSON.stringify([...hidden]));
+    if (data.bot) {
+      const [portal, ...rest] = k.split(":");
+      const start = ("h-" + portal + "-" + rest.join(":")).replace(/[^A-Za-z0-9_-]/g, "_").slice(0, 64);
+      window.open(`https://t.me/${encodeURIComponent(data.bot)}?start=${start}`, "_blank", "noopener");
+    }
+    chips(); render();
   });
   $("q").addEventListener("input", render);
   $("onlyNew").addEventListener("change", render);

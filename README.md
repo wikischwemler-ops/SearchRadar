@@ -215,3 +215,7 @@ Every match message has a **🚫 Hide** button. Pressing it – or replying to a
 again. The bot is only online during a run, so the hide takes effect at the start of the next run
 (button presses are kept by Telegram for 24 h). Hidden listings are kept in `state/hidden.json`;
 delete a line there to un-hide.
+
+On the overview page every card has a **🚫** button: it hides the card in that browser at once and
+opens `t.me/<bot>?start=h-<portal>-<id>` – tap *Start*/*Send* in Telegram and the bot hides it
+everywhere on the next run. Needs `telegram_bot_username` in `settings.json`.

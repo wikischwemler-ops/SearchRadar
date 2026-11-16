@@ -10,5 +10,6 @@
   "alerts_thread_id": null,
   "max_rechecks_per_run": 40,
   "notify_price_drops": true,
-  "overview_url": "https://htmlpreview.github.io/?https://github.com/wikischwemler-ops/SearchRadar/blob/main/site/index.html"
+  "overview_url": "https://htmlpreview.github.io/?https://github.com/wikischwemler-ops/SearchRadar/blob/main/site/index.html",
+  "telegram_bot_username": "Wikisch_bot"
 }

@@ -219,6 +219,14 @@ class Runner:
                                 reply_markup={"inline_keyboard": [[{"text": "🚫 hidden", "callback_data": "noop"}]]})
                 continue
             msg = u.get("message") or {}
+            text = msg.get("text", "").strip()
+            if text.startswith("/start h-"):  # 🚫 button on the overview page -> t.me/<bot>?start=h-<portal>-<id>
+                portal, _, lid = text.split(" ", 1)[1][2:].partition("-")
+                if portal and lid:
+                    title = self.hide(f"{portal}:{lid}")
+                    self.tg.api("sendMessage", chat_id=msg["chat"]["id"],
+                                text=f"🚫 Hidden: {title or portal + ':' + lid}")
+                continue
             reply_to = msg.get("reply_to_message") or {}
             if not reply_to.get("from", {}).get("is_bot") or msg.get("text", "").strip().lower() not in REPLY_WORDS:
                 continue
