@@ -2,7 +2,7 @@
 
 # SearchRadar – results
 
-Updated: 2026-11-17T13:21:34+00:00 (UTC) · 48 active listings
+Updated: 2026-11-17T22:20:47+00:00 (UTC) · 47 active listings
 
 
 ## 👕 Clothing (29)
@@ -56,13 +56,12 @@ Updated: 2026-11-17T13:21:34+00:00 (UTC) · 48 active listings
 | 2026-11-13 16:18 | [Volkswagen Golf 1.2 TSI Comfortline BlueMotion Tech *PDC*ALU*KLIMA](https://www.autoscout24.de/angebote/aca6938d-a083-48b3-9524-b277b58401c0) | 9.990 € | 91.889 km · 2016 · 70195 | VW Golf 7 – petrol, ≤ 10k € | AutoScout24 |
 | 2026-11-12 01:31 | [Volkswagen Golf VII 1.2 TSI Lim. Comfortline BMT](https://www.autoscout24.de/angebote/25304292-7231-4438-a78d-591e9af9dbbe) | 9.990 € | 103.000 km · 2016 · 88630 | VW Golf 7 – petrol, ≤ 10k € | AutoScout24 |
 
-## 🚲 Bikes (7)
+## 🚲 Bikes (6)
 
 | Found | Listing | Price | Details | Search | Portal |
 |---|---|---:|---|---|---|
-| 2026-11-16 20:26 | [Achtung Be-trug! Zwift Ride + Wahoo Kickr Core 2](https://www.kleinanzeigen.de/s-anzeige/achtung-be-trug-zwift-ride-wahoo-kickr-core-2/3573993895-230-8746) | 509 € | 77815 Bühl | Zwift Ride + Wahoo KICKR CORE | Kleinanzeigen |
 | 2026-11-15 17:06 | [Zwift Ride + Wahoo KICKR CORE 2 - WIE NEU, <100 km](https://www.kleinanzeigen.de/s-anzeige/zwift-ride-wahoo-kickr-core-2-wie-neu-100-km/3572468464-230-8889) | 1.099 € | 100 km · 70736 Fellbach | Zwift Ride + Wahoo KICKR CORE | Kleinanzeigen |
-| 2026-11-15 08:28 | [Garmin Rally RS210 Powermeter Pedale](https://www.idealo.de/preisvergleich/OffersOfProduct/209644835_-rally-rs210-powermeter-pedale-garmin.html) | 689 € |  | Garmin Rally RS210 – new price (idealo) | idealo |
+| 2026-11-15 08:28 | [Garmin Rally RS210 Powermeter Pedale](https://www.idealo.de/preisvergleich/OffersOfProduct/209644835_-rally-rs210-powermeter-pedale-garmin.html) | 685 € ▼ (was 689 €) |  | Garmin Rally RS210 – new price (idealo) | idealo |
 | 2026-11-15 07:40 | [Zwift Ride inklusive Wahoo KICKR CORE 2](https://www.kleinanzeigen.de/s-anzeige/zwift-ride-inklusive-wahoo-kickr-core-2/3540984818-217-8939) | 1.020 € ▼ (was 1.040 €) | 73329 Kuchen | Zwift Ride + Wahoo KICKR CORE | Kleinanzeigen |
 | 2026-11-15 07:40 | [Zwift Ride + Wahoo KICKR CORE 2 – wie neu](https://www.kleinanzeigen.de/s-anzeige/zwift-ride-wahoo-kickr-core-2-wie-neu/3570245993-230-9197) | 999 € | 76227 Karlsruhe | Zwift Ride + Wahoo KICKR CORE | Kleinanzeigen |
 | 2026-11-15 07:40 | [Garmin Rally RS210](https://www.kleinanzeigen.de/s-anzeige/garmin-rally-rs210/3567888226-217-5126) | 599 € | 55218 Ingelheim am Rhein | Garmin Rally RS210 power-meter pedals | Kleinanzeigen |
