@@ -2,21 +2,20 @@
 
 # SearchRadar – results
 
-Updated: 2026-11-18T13:09:30+00:00 (UTC) · 55 active listings
+Updated: 2026-11-18T21:27:19+00:00 (UTC) · 54 active listings
 
 
-## 👕 Clothing (35)
+## 👕 Clothing (34)
 
 | Found | Listing | Price | Details | Search | Portal |
 |---|---|---:|---|---|---|
 | 2026-11-18 13:08 | [Adidas, Terrex, Jacke, Primaloft, schwarz, Größe S, neu](https://www.kleinanzeigen.de/s-anzeige/adidas-terrex-jacke-primaloft-schwarz-groesse-s-neu/3575094316-160-26017) | 65 € | 09127 Gablenz | Adidas Terrex – men, size S | Kleinanzeigen |
 | 2026-11-18 13:08 | [DSV adidas Terrex Skihose](https://www.kleinanzeigen.de/s-anzeige/dsv-adidas-terrex-skihose/3575099812-160-6829) | 150 € | 90427 Nordstadt | Adidas Terrex – men, size S | Kleinanzeigen |
-| 2026-11-18 13:08 | [DSV adidas Terrex midlayer](https://www.kleinanzeigen.de/s-anzeige/dsv-adidas-terrex-midlayer/3575102640-160-6829) | 50 € | 90427 Nordstadt | Adidas Terrex – men, size S | Kleinanzeigen |
+| 2026-11-18 13:08 | [DSV adidas Terrex midlayer](https://www.kleinanzeigen.de/s-anzeige/dsv-adidas-terrex-midlayer/3575102640-160-6829) | 80 € ▲ (was 50 €) | 90427 Nordstadt | Adidas Terrex – men, size S | Kleinanzeigen |
 | 2026-11-18 13:07 | [DSV adidas Terrex Regenjacke](https://www.kleinanzeigen.de/s-anzeige/dsv-adidas-terrex-regenjacke/3575106625-160-6829) | 150 € | 90427 Nordstadt | Adidas Terrex – men, size S | Kleinanzeigen |
 | 2026-11-18 13:07 | [DSV adidas Terrex Laufweste](https://www.kleinanzeigen.de/s-anzeige/dsv-adidas-terrex-laufweste/3575108198-160-6829) | 80 € | 90427 Nordstadt | Adidas Terrex – men, size S | Kleinanzeigen |
 | 2026-11-18 13:07 | [Adidas Bundeswehr Terrex GORE-TEX Active Jacke – 34 / Herren S](https://www.kleinanzeigen.de/s-anzeige/adidas-bundeswehr-terrex-gore-tex-active-jacke-34-herren-s/3575316122-160-1858) | 90 € | 40723 Hilden | Adidas Terrex – men, size S | Kleinanzeigen |
 | 2026-11-17 13:20 | [Neues Adidas Terrex Funktionsshirt, hellblau 36](https://www.kleinanzeigen.de/s-anzeige/neues-adidas-terrex-funktionsshirt-hellblau-36/3574176361-160-6301) | 25 € | 91346 Wiesenttal | Adidas Terrex – men, size S | Kleinanzeigen |
-| 2026-11-17 13:20 | [Adidas Terrex Multi RAIN.RDY Regenjacke, Größe S](https://www.kleinanzeigen.de/s-anzeige/adidas-terrex-multi-rain-rdy-regenjacke-groesse-s/3574320499-160-6799) | 40 € | 91052 Erlangen | Adidas Terrex – men, size S | Kleinanzeigen |
 | 2026-11-16 20:27 | [Daunenweste von Adidas Terrex](https://www.kleinanzeigen.de/s-anzeige/daunenweste-von-adidas-terrex/3573607892-160-5538) | 80 € | 87509 Immenstadt | Adidas Terrex – men, size S | Kleinanzeigen |
 | 2026-11-16 20:27 | [Daunenjacke von Adidas Terrex](https://www.kleinanzeigen.de/s-anzeige/daunenjacke-von-adidas-terrex/3573698118-160-5538) | 110 € | 87509 Immenstadt | Adidas Terrex – men, size S | Kleinanzeigen |
 | 2026-11-15 17:06 | [Herren Adidas Terrex DSV Biathlon Gore-Tex Hardshell Regenjacke](https://www.kleinanzeigen.de/s-anzeige/herren-adidas-terrex-dsv-biathlon-gore-tex-hardshell-regenjacke/3572205536-160-3714) | 150 € | 99817 Eisenach | Adidas Terrex – men, size S | Kleinanzeigen |
@@ -53,10 +52,10 @@ Updated: 2026-11-18T13:09:30+00:00 (UTC) · 55 active listings
 | 2026-11-18 13:07 | [ZWIFT RIDE MIT KICKR CORE 2](https://www.kleinanzeigen.de/s-anzeige/zwift-ride-mit-kickr-core-2/3575267805-230-16913) | 999 € | 68723 Oftersheim | Zwift Ride + Wahoo KICKR CORE | Kleinanzeigen |
 | 2026-11-15 17:06 | [Zwift Ride + Wahoo KICKR CORE 2 - WIE NEU, <100 km](https://www.kleinanzeigen.de/s-anzeige/zwift-ride-wahoo-kickr-core-2-wie-neu-100-km/3572468464-230-8889) | 1.099 € | 100 km · 70736 Fellbach | Zwift Ride + Wahoo KICKR CORE | Kleinanzeigen |
 | 2026-11-15 08:28 | [Garmin Rally RS210 Powermeter Pedale](https://www.idealo.de/preisvergleich/OffersOfProduct/209644835_-rally-rs210-powermeter-pedale-garmin.html) | 685 € ▼ (was 689 €) |  | Garmin Rally RS210 – new price (idealo) | idealo |
-| 2026-11-15 07:40 | [Zwift Ride inklusive Wahoo KICKR CORE 2](https://www.kleinanzeigen.de/s-anzeige/zwift-ride-inklusive-wahoo-kickr-core-2/3540984818-217-8939) | 1.020 € ▼ (was 1.040 €) | 73329 Kuchen | Zwift Ride + Wahoo KICKR CORE | Kleinanzeigen |
+| 2026-11-15 07:40 | [Zwift Ride inklusive Wahoo KICKR CORE 2](https://www.kleinanzeigen.de/s-anzeige/zwift-ride-inklusive-wahoo-kickr-core-2/3540984818-217-8939) | 1.000 € ▼ (was 1.040 €) | 73329 Kuchen | Zwift Ride + Wahoo KICKR CORE | Kleinanzeigen |
 | 2026-11-15 07:40 | [Zwift Ride + Wahoo KICKR CORE 2 – wie neu](https://www.kleinanzeigen.de/s-anzeige/zwift-ride-wahoo-kickr-core-2-wie-neu/3570245993-230-9197) | 999 € | 76227 Karlsruhe | Zwift Ride + Wahoo KICKR CORE | Kleinanzeigen |
 | 2026-11-15 07:40 | [Garmin Rally RS210](https://www.kleinanzeigen.de/s-anzeige/garmin-rally-rs210/3567888226-217-5126) | 599 € | 55218 Ingelheim am Rhein | Garmin Rally RS210 power-meter pedals | Kleinanzeigen |
-| 2026-11-15 07:40 | [GARMIN Rally RS210 Wattmess-System beidseitige Messung Shimano](https://www.kleinanzeigen.de/s-anzeige/garmin-rally-rs210-wattmess-system-beidseitige-messung-shimano/3571191285-217-4506) | 585 € ▼ (was 600 €) | 64521 Groß-Gerau | Garmin Rally RS210 power-meter pedals | Kleinanzeigen |
+| 2026-11-15 07:40 | [GARMIN Rally RS210 Wattmess-System beidseitige Messung Shimano](https://www.kleinanzeigen.de/s-anzeige/garmin-rally-rs210-wattmess-system-beidseitige-messung-shimano/3571191285-217-4506) | 580 € ▼ (was 600 €) | 64521 Groß-Gerau | Garmin Rally RS210 power-meter pedals | Kleinanzeigen |
 
 ## 🚗 Cars (12)
 
