@@ -2,13 +2,16 @@
 
 # SearchRadar – results
 
-Updated: 2026-11-19T03:25:24+00:00 (UTC) · 54 active listings
+Updated: 2026-11-19T13:01:40+00:00 (UTC) · 56 active listings
 
 
-## 👕 Clothing (34)
+## 👕 Clothing (37)
 
 | Found | Listing | Price | Details | Search | Portal |
 |---|---|---:|---|---|---|
+| 2026-11-19 13:00 | [NEU: adidas Terrex Xploric Outdoot Shorts Herren Schwarz – Gr. XS](https://www.kleinanzeigen.de/s-anzeige/neu-adidas-terrex-xploric-outdoot-shorts-herren-schwarz-gr-xs/3575986342-160-4032) | 40 € | 09465 Sehmatal-Sehma | Adidas Terrex – men, size S | Kleinanzeigen |
+| 2026-11-19 13:00 | [NEU: adidas Terrex Multi Funktions Unterhose lang Tights Gr. XS](https://www.kleinanzeigen.de/s-anzeige/neu-adidas-terrex-multi-funktions-unterhose-lang-tights-gr-xs/3576024759-160-4032) | 25 € | 09465 Sehmatal-Sehma | Adidas Terrex – men, size S | Kleinanzeigen |
+| 2026-11-19 13:00 | [NEU: adidas Terrex Xperior Hybrid Weste PrimaLoft Herren Gr. XS](https://www.kleinanzeigen.de/s-anzeige/neu-adidas-terrex-xperior-hybrid-weste-primaloft-herren-gr-xs/3576034186-160-4032) | 60 € | 09465 Sehmatal-Sehma | Adidas Terrex – men, size S | Kleinanzeigen |
 | 2026-11-18 13:08 | [Adidas, Terrex, Jacke, Primaloft, schwarz, Größe S, neu](https://www.kleinanzeigen.de/s-anzeige/adidas-terrex-jacke-primaloft-schwarz-groesse-s-neu/3575094316-160-26017) | 65 € | 09127 Gablenz | Adidas Terrex – men, size S | Kleinanzeigen |
 | 2026-11-18 13:08 | [DSV adidas Terrex Skihose](https://www.kleinanzeigen.de/s-anzeige/dsv-adidas-terrex-skihose/3575099812-160-6829) | 150 € | 90427 Nordstadt | Adidas Terrex – men, size S | Kleinanzeigen |
 | 2026-11-18 13:08 | [DSV adidas Terrex midlayer](https://www.kleinanzeigen.de/s-anzeige/dsv-adidas-terrex-midlayer/3575102640-160-6829) | 80 € ▲ (was 50 €) | 90427 Nordstadt | Adidas Terrex – men, size S | Kleinanzeigen |
@@ -44,11 +47,10 @@ Updated: 2026-11-19T03:25:24+00:00 (UTC) · 54 active listings
 | 2026-11-14 08:05 | [ADIDAS Terrex Techrock Stretch PRIMALOFT Weste S](https://www.kleinanzeigen.de/s-anzeige/adidas-terrex-techrock-stretch-primaloft-weste-s/3569891819-160-7257) | 55 € | 86825 Bad Wörishofen | Adidas Terrex – men, size S | Kleinanzeigen |
 | 2026-11-14 08:05 | [Adidas Terrex My Shelter GoreTex Jacke](https://www.kleinanzeigen.de/s-anzeige/adidas-terrex-my-shelter-goretex-jacke/3570253418-160-5538) | 100 € | 87509 Immenstadt | Adidas Terrex – men, size S | Kleinanzeigen |
 
-## 🚲 Bikes (8)
+## 🚲 Bikes (7)
 
 | Found | Listing | Price | Details | Search | Portal |
 |---|---|---:|---|---|---|
-| 2026-11-18 13:07 | [Zwift Ride mit KICKR CORE 2](https://www.kleinanzeigen.de/s-anzeige/zwift-ride-mit-kickr-core-2/3575209683-230-8337) | 999 € | 68753 Waghäusel | Zwift Ride + Wahoo KICKR CORE | Kleinanzeigen |
 | 2026-11-18 13:07 | [ZWIFT RIDE MIT KICKR CORE 2](https://www.kleinanzeigen.de/s-anzeige/zwift-ride-mit-kickr-core-2/3575267805-230-16913) | 999 € | 68723 Oftersheim | Zwift Ride + Wahoo KICKR CORE | Kleinanzeigen |
 | 2026-11-15 17:06 | [Zwift Ride + Wahoo KICKR CORE 2 - WIE NEU, <100 km](https://www.kleinanzeigen.de/s-anzeige/zwift-ride-wahoo-kickr-core-2-wie-neu-100-km/3572468464-230-8889) | 1.099 € | 100 km · 70736 Fellbach | Zwift Ride + Wahoo KICKR CORE | Kleinanzeigen |
 | 2026-11-15 08:28 | [Garmin Rally RS210 Powermeter Pedale](https://www.idealo.de/preisvergleich/OffersOfProduct/209644835_-rally-rs210-powermeter-pedale-garmin.html) | 685 € ▼ (was 689 €) |  | Garmin Rally RS210 – new price (idealo) | idealo |
