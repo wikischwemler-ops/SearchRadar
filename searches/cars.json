@@ -53,6 +53,33 @@
           "re:(?<!\\w)türen\\W*(2/3|[23])(?![\\d/])"
         ]
       }
+    },
+    {
+      "name": "BMW 1er – petrol, ≤ 10k €",
+      "urls": [
+        "https://www.autoscout24.de/lst/bmw/1er?atype=C&cy=D&zip=73207&zipr=100&priceto=10000&fregfrom=2016&kmto=160000&fuel=B&sort=age&desc=1",
+        "https://www.kleinanzeigen.de/s-autos/bmw/73207/preis::10000/c216l8389r100+autos.ez_i:2016%2C+autos.fuel_s:benzin+autos.km_i:%2C160000+autos.marke_s:bmw"
+      ],
+      "filters": {
+        "min_price": 3000,
+        "max_price": 10000,
+        "max_mileage": 160000,
+        "min_year": 2016,
+        "title_must_contain": [
+          "re:(?<!\\w)(1er|1\\s?er|11[468]\\s?[id]?|12[05]\\s?[id]?|m1[34][05]\\s?i?)(?!\\w)"
+        ],
+        "must_not_contain": [
+          "re:(?<!\\w)3[- ]?(trg|türig|türer)",
+          "Cabrio",
+          "Coupé",
+          "Coupe",
+          "re:(?<!\\w)(2er|3er|x1)(?!\\w)"
+        ],
+        "detail_must_not_contain": [
+          "re:außenfarbe\\W*schwarz",
+          "re:(?<!\\w)türen\\W*(2/3|[23])(?![\\d/])"
+        ]
+      }
     }
   ]
 }
