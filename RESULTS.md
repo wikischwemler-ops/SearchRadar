@@ -2,13 +2,14 @@
 
 # SearchRadar – results
 
-Updated: 2026-11-21T23:15:03+00:00 (UTC) · 69 active listings
+Updated: 2026-11-22T03:10:53+00:00 (UTC) · 70 active listings
 
 
-## 🚗 Cars (22)
+## 🚗 Cars (23)
 
 | Found | Listing | Price | Details | Search | Portal |
 |---|---|---:|---|---|---|
+| 2026-11-22 03:09 | [BMW 116i -](https://www.kleinanzeigen.de/s-anzeige/bmw-116i-/3561059450-216-8123) | 7.850 € | 137.500 km · 2016 · 68723 Schwetzingen | BMW 1er – petrol, ≤ 10k € | Kleinanzeigen |
 | 2026-11-21 23:12 | [BMW 116i Sport Line/VOLLSHEFT/KLIMA/NAVI/PDC/RCAM/BT](https://www.kleinanzeigen.de/s-anzeige/bmw-116i-sport-line-vollsheft-klima-navi-pdc-rcam-bt/3553772472-216-4764) | 9.950 € | 132.900 km · 2018 · 68526 Ladenburg | BMW 1er – petrol, ≤ 10k € | Kleinanzeigen |
 | 2026-11-21 21:07 | [1er BMW zu verkaufen](https://www.kleinanzeigen.de/s-anzeige/1er-bmw-zu-verkaufen/3573269113-216-8958) | 9.500 € | 96.000 km · 2017 · 89537 Giengen an der Brenz | BMW 1er – petrol, ≤ 10k € | Kleinanzeigen |
 | 2026-11-21 21:07 | [Bmw 118i Automatik Tüv 11/28](https://www.kleinanzeigen.de/s-anzeige/bmw-118i-automatik-tuev-11-28/3577308635-216-9245) | 9.800 € | 116.270 km · 2016 · 74072 Heilbronn | BMW 1er – petrol, ≤ 10k € | Kleinanzeigen |
