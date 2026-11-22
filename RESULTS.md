@@ -2,14 +2,17 @@
 
 # SearchRadar – results
 
-Updated: 2026-11-22T11:19:12+00:00 (UTC) · 71 active listings
+Updated: 2026-11-22T18:35:51+00:00 (UTC) · 74 active listings
 
 
-## 👕 Clothing (42)
+## 👕 Clothing (45)
 
 | Found | Listing | Price | Details | Search | Portal |
 |---|---|---:|---|---|---|
-| 2026-11-22 11:17 | [Adidas Terrex Jacke schwarz Größe S Top!!!!](https://www.kleinanzeigen.de/s-anzeige/adidas-terrex-jacke-schwarz-groesse-s-top-/3578996766-160-1863) | 48 € | 40764 Langenfeld | Adidas Terrex – men, size S | Kleinanzeigen |
+| 2026-11-22 18:33 | [Adidas Terrex Weste S Wandern Skifahren Skilanglauf](https://www.kleinanzeigen.de/s-anzeige/adidas-terrex-weste-s-wandern-skifahren-skilanglauf/3579691958-160-404) | 40 € | 66538 Neunkirchen | Adidas Terrex – men, size S | Kleinanzeigen |
+| 2026-11-22 18:33 | [NEU - Adidas Terrex Skijacke blau](https://www.kleinanzeigen.de/s-anzeige/neu-adidas-terrex-skijacke-blau/3579726878-160-6798) | 100 € | 91056 Erlangen | Adidas Terrex – men, size S | Kleinanzeigen |
+| 2026-11-22 18:33 | [NEU - Adidas Terrex Skijacke gelb](https://www.kleinanzeigen.de/s-anzeige/neu-adidas-terrex-skijacke-gelb/3579729385-160-6798) | 100 € | 91056 Erlangen | Adidas Terrex – men, size S | Kleinanzeigen |
+| 2026-11-22 11:17 | [Adidas Terrex Jacke schwarz Größe S Top!!!!](https://www.kleinanzeigen.de/s-anzeige/adidas-terrex-jacke-schwarz-groesse-s-top-/3578996766-160-1863) | 44 € ▼ (was 48 €) | 40764 Langenfeld | Adidas Terrex – men, size S | Kleinanzeigen |
 | 2026-11-21 21:07 | [Adidas Terrex Hardshellhose Neu Snowboarden Skifahren Tourengehen](https://www.kleinanzeigen.de/s-anzeige/adidas-terrex-hardshellhose-neu-snowboarden-skifahren-tourengehen/3578571838-160-1015) | 150 € | 59955 Winterberg | Adidas Terrex – men, size S | Kleinanzeigen |
 | 2026-11-21 21:07 | [adidas Terrex Agravic Craphic Regen-Laufjacke Gr. S](https://www.kleinanzeigen.de/s-anzeige/adidas-terrex-agravic-craphic-regen-laufjacke-gr-s/3578646947-160-9684) | 49 € | 10317 Lichtenberg | Adidas Terrex – men, size S | Kleinanzeigen |
 | 2026-11-20 20:12 | [Adidas Terrex Softshell Weste Würth Audi DSV Blau Gr.S](https://www.kleinanzeigen.de/s-anzeige/adidas-terrex-softshell-weste-wuerth-audi-dsv-blau-gr-s/3577191773-160-5725) | 79 € | 83417 Kirchanschöring | Adidas Terrex – men, size S | Kleinanzeigen |
@@ -19,7 +22,7 @@ Updated: 2026-11-22T11:19:12+00:00 (UTC) · 71 active listings
 | 2026-11-19 13:00 | [NEU: adidas Terrex Xploric Outdoot Shorts Herren Schwarz – Gr. XS](https://www.kleinanzeigen.de/s-anzeige/neu-adidas-terrex-xploric-outdoot-shorts-herren-schwarz-gr-xs/3575986342-160-4032) | 40 € | 09465 Sehmatal-Sehma | Adidas Terrex – men, size S | Kleinanzeigen |
 | 2026-11-19 13:00 | [NEU: adidas Terrex Multi Funktions Unterhose lang Tights Gr. XS](https://www.kleinanzeigen.de/s-anzeige/neu-adidas-terrex-multi-funktions-unterhose-lang-tights-gr-xs/3576024759-160-4032) | 25 € | 09465 Sehmatal-Sehma | Adidas Terrex – men, size S | Kleinanzeigen |
 | 2026-11-19 13:00 | [NEU: adidas Terrex Xperior Hybrid Weste PrimaLoft Herren Gr. XS](https://www.kleinanzeigen.de/s-anzeige/neu-adidas-terrex-xperior-hybrid-weste-primaloft-herren-gr-xs/3576034186-160-4032) | 60 € | 09465 Sehmatal-Sehma | Adidas Terrex – men, size S | Kleinanzeigen |
-| 2026-11-18 13:08 | [Adidas, Terrex, Jacke, Primaloft, schwarz, Größe S, neu](https://www.kleinanzeigen.de/s-anzeige/adidas-terrex-jacke-primaloft-schwarz-groesse-s-neu/3575094316-160-26017) | 65 € | 09127 Gablenz | Adidas Terrex – men, size S | Kleinanzeigen |
+| 2026-11-18 13:08 | [Adidas, Terrex, Jacke, Primaloft, schwarz, Größe S, neu](https://www.kleinanzeigen.de/s-anzeige/adidas-terrex-jacke-primaloft-schwarz-groesse-s-neu/3575094316-160-26017) | 63 € ▼ (was 65 €) | 09127 Gablenz | Adidas Terrex – men, size S | Kleinanzeigen |
 | 2026-11-18 13:08 | [DSV adidas Terrex Skihose](https://www.kleinanzeigen.de/s-anzeige/dsv-adidas-terrex-skihose/3575099812-160-6829) | 150 € | 90427 Nordstadt | Adidas Terrex – men, size S | Kleinanzeigen |
 | 2026-11-18 13:08 | [DSV adidas Terrex midlayer](https://www.kleinanzeigen.de/s-anzeige/dsv-adidas-terrex-midlayer/3575102640-160-6829) | 80 € ▲ (was 50 €) | 90427 Nordstadt | Adidas Terrex – men, size S | Kleinanzeigen |
 | 2026-11-18 13:07 | [DSV adidas Terrex Regenjacke](https://www.kleinanzeigen.de/s-anzeige/dsv-adidas-terrex-regenjacke/3575106625-160-6829) | 150 € | 90427 Nordstadt | Adidas Terrex – men, size S | Kleinanzeigen |
@@ -52,6 +55,17 @@ Updated: 2026-11-22T11:19:12+00:00 (UTC) · 71 active listings
 | 2026-11-14 08:05 | [ADIDAS Terrex Techrock Stretch PRIMALOFT Weste S](https://www.kleinanzeigen.de/s-anzeige/adidas-terrex-techrock-stretch-primaloft-weste-s/3569891819-160-7257) | 55 € | 86825 Bad Wörishofen | Adidas Terrex – men, size S | Kleinanzeigen |
 | 2026-11-14 08:05 | [Adidas Terrex My Shelter GoreTex Jacke](https://www.kleinanzeigen.de/s-anzeige/adidas-terrex-my-shelter-goretex-jacke/3570253418-160-5538) | 100 € | 87509 Immenstadt | Adidas Terrex – men, size S | Kleinanzeigen |
 
+## 🚲 Bikes (6)
+
+| Found | Listing | Price | Details | Search | Portal |
+|---|---|---:|---|---|---|
+| 2026-11-22 18:33 | [Zwift Ride mit Wahoo KICKR CORE – nahezu unbenutzt](https://www.kleinanzeigen.de/s-anzeige/zwift-ride-mit-wahoo-kickr-core-nahezu-unbenutzt/3579249206-230-9080) | 950 € | 73453 Abtsgmünd | Zwift Ride + Wahoo KICKR CORE | Kleinanzeigen |
+| 2026-11-15 17:06 | [Zwift Ride + Wahoo KICKR CORE 2 - WIE NEU, <100 km](https://www.kleinanzeigen.de/s-anzeige/zwift-ride-wahoo-kickr-core-2-wie-neu-100-km/3572468464-230-8889) | 1.099 € | 100 km · 70736 Fellbach | Zwift Ride + Wahoo KICKR CORE | Kleinanzeigen |
+| 2026-11-15 08:28 | [Garmin Rally RS210 Powermeter Pedale](https://www.idealo.de/preisvergleich/OffersOfProduct/209644835_-rally-rs210-powermeter-pedale-garmin.html) | 685 € ▼ (was 689 €) |  | Garmin Rally RS210 – new price (idealo) | idealo |
+| 2026-11-15 07:40 | [Zwift Ride inklusive Wahoo KICKR CORE 2](https://www.kleinanzeigen.de/s-anzeige/zwift-ride-inklusive-wahoo-kickr-core-2/3540984818-217-8939) | 999 € ▼ (was 1.040 €) | 73329 Kuchen | Zwift Ride + Wahoo KICKR CORE | Kleinanzeigen |
+| 2026-11-15 07:40 | [Garmin Rally RS210](https://www.kleinanzeigen.de/s-anzeige/garmin-rally-rs210/3567888226-217-5126) | 599 € | 55218 Ingelheim am Rhein | Garmin Rally RS210 power-meter pedals | Kleinanzeigen |
+| 2026-11-15 07:40 | [GARMIN Rally RS210 Wattmess-System beidseitige Messung Shimano](https://www.kleinanzeigen.de/s-anzeige/garmin-rally-rs210-wattmess-system-beidseitige-messung-shimano/3571191285-217-4506) | 570 € ▼ (was 600 €) | 64521 Groß-Gerau | Garmin Rally RS210 power-meter pedals | Kleinanzeigen |
+
 ## 🚗 Cars (23)
 
 | Found | Listing | Price | Details | Search | Portal |
@@ -79,14 +93,3 @@ Updated: 2026-11-22T11:19:12+00:00 (UTC) · 71 active listings
 | 2026-11-13 16:18 | [Golf 7 (CL 1.2 TSI)](https://www.kleinanzeigen.de/s-anzeige/golf-7-cl-1-2-tsi-/3570217243-216-6687) | 7.500 € | 127.000 km · 2016 · 89269 Vöhringen | VW Golf 7 – petrol, ≤ 10k € | Kleinanzeigen |
 | 2026-11-13 16:18 | [Volkswagen Golf 1.2 TSI Comfortline BlueMotion Tech *PDC*ALU*KLIMA](https://www.autoscout24.de/angebote/aca6938d-a083-48b3-9524-b277b58401c0) | 9.990 € | 91.889 km · 2016 · 70195 | VW Golf 7 – petrol, ≤ 10k € | AutoScout24 |
 | 2026-11-12 01:31 | [Volkswagen Golf VII 1.2 TSI Lim. Comfortline BMT](https://www.autoscout24.de/angebote/25304292-7231-4438-a78d-591e9af9dbbe) | 9.990 € | 103.000 km · 2016 · 88630 | VW Golf 7 – petrol, ≤ 10k € | AutoScout24 |
-
-## 🚲 Bikes (6)
-
-| Found | Listing | Price | Details | Search | Portal |
-|---|---|---:|---|---|---|
-| 2026-11-21 17:28 | [ZWIFT RIDE MIT KICKR CORE Smart Bike](https://www.kleinanzeigen.de/s-anzeige/zwift-ride-mit-kickr-core-smart-bike/3577444814-230-8527) | 699 € | 78628 Rottweil | Zwift Ride + Wahoo KICKR CORE | Kleinanzeigen |
-| 2026-11-15 17:06 | [Zwift Ride + Wahoo KICKR CORE 2 - WIE NEU, <100 km](https://www.kleinanzeigen.de/s-anzeige/zwift-ride-wahoo-kickr-core-2-wie-neu-100-km/3572468464-230-8889) | 1.099 € | 100 km · 70736 Fellbach | Zwift Ride + Wahoo KICKR CORE | Kleinanzeigen |
-| 2026-11-15 08:28 | [Garmin Rally RS210 Powermeter Pedale](https://www.idealo.de/preisvergleich/OffersOfProduct/209644835_-rally-rs210-powermeter-pedale-garmin.html) | 685 € ▼ (was 689 €) |  | Garmin Rally RS210 – new price (idealo) | idealo |
-| 2026-11-15 07:40 | [Zwift Ride inklusive Wahoo KICKR CORE 2](https://www.kleinanzeigen.de/s-anzeige/zwift-ride-inklusive-wahoo-kickr-core-2/3540984818-217-8939) | 1.000 € ▼ (was 1.040 €) | 73329 Kuchen | Zwift Ride + Wahoo KICKR CORE | Kleinanzeigen |
-| 2026-11-15 07:40 | [Garmin Rally RS210](https://www.kleinanzeigen.de/s-anzeige/garmin-rally-rs210/3567888226-217-5126) | 599 € | 55218 Ingelheim am Rhein | Garmin Rally RS210 power-meter pedals | Kleinanzeigen |
-| 2026-11-15 07:40 | [GARMIN Rally RS210 Wattmess-System beidseitige Messung Shimano](https://www.kleinanzeigen.de/s-anzeige/garmin-rally-rs210-wattmess-system-beidseitige-messung-shimano/3571191285-217-4506) | 570 € ▼ (was 600 €) | 64521 Groß-Gerau | Garmin Rally RS210 power-meter pedals | Kleinanzeigen |

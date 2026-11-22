@@ -176,6 +176,14 @@
    "t": "2026-11-21T21:05:16+00:00",
    "m": false
   },
+  "bikes/Garmin Rally RS210 power-meter pedals|kleinanzeigen:3579431644": {
+   "t": "2026-11-22T18:32:58+00:00",
+   "m": false
+  },
+  "bikes/Garmin Rally RS210 power-meter pedals|kleinanzeigen:3579729308": {
+   "t": "2026-11-22T18:32:58+00:00",
+   "m": false
+  },
   "bikes/Garmin Rally RS210 – new price (idealo)|idealo:209644835": {
    "t": "2026-11-15T08:28:16+00:00",
    "m": true
@@ -214,6 +222,10 @@
   },
   "bikes/Zwift Ride + Wahoo KICKR CORE|kleinanzeigen:3541225916": {
    "t": "2026-11-15T07:40:48+00:00",
+   "m": false
+  },
+  "bikes/Zwift Ride + Wahoo KICKR CORE|kleinanzeigen:3547129263": {
+   "t": "2026-11-22T18:33:10+00:00",
    "m": false
   },
   "bikes/Zwift Ride + Wahoo KICKR CORE|kleinanzeigen:3550874588": {
@@ -283,6 +295,10 @@
   "bikes/Zwift Ride + Wahoo KICKR CORE|kleinanzeigen:3577870347": {
    "t": "2026-11-21T17:28:36+00:00",
    "m": false
+  },
+  "bikes/Zwift Ride + Wahoo KICKR CORE|kleinanzeigen:3579249206": {
+   "t": "2026-11-22T18:33:07+00:00",
+   "m": true
   },
   "cars/BMW 1er – petrol, ≤ 10k €|autoscout24:38b4a2e4-49da-49dc-ae3d-616570267883": {
    "t": "2026-11-21T21:06:26+00:00",
@@ -467,6 +483,10 @@
   "cars/BMW 1er – petrol, ≤ 10k €|kleinanzeigen:3578603074": {
    "t": "2026-11-21T21:06:56+00:00",
    "m": true
+  },
+  "cars/BMW 1er – petrol, ≤ 10k €|kleinanzeigen:3579791115": {
+   "t": "2026-11-22T18:33:30+00:00",
+   "m": false
   },
   "cars/VW Golf 7 – petrol, ≤ 10k €|autoscout24:0145826b-9a6b-43ec-a460-c6a80234e263": {
    "t": "2026-11-14T10:21:11+00:00",
@@ -842,6 +862,18 @@
   },
   "clothing/Adidas Terrex – men, size S|kleinanzeigen:3578996766": {
    "t": "2026-11-22T11:17:11+00:00",
+   "m": true
+  },
+  "clothing/Adidas Terrex – men, size S|kleinanzeigen:3579691958": {
+   "t": "2026-11-22T18:33:38+00:00",
+   "m": true
+  },
+  "clothing/Adidas Terrex – men, size S|kleinanzeigen:3579726878": {
+   "t": "2026-11-22T18:33:37+00:00",
+   "m": true
+  },
+  "clothing/Adidas Terrex – men, size S|kleinanzeigen:3579729385": {
+   "t": "2026-11-22T18:33:35+00:00",
    "m": true
   }
  },
