@@ -184,6 +184,10 @@
    "t": "2026-11-22T18:32:58+00:00",
    "m": false
   },
+  "bikes/Garmin Rally RS210 power-meter pedals|kleinanzeigen:3580556695": {
+   "t": "2026-11-23T21:17:29+00:00",
+   "m": false
+  },
   "bikes/Garmin Rally RS210 – new price (idealo)|idealo:209644835": {
    "t": "2026-11-15T08:28:16+00:00",
    "m": true
@@ -298,6 +302,10 @@
   },
   "bikes/Zwift Ride + Wahoo KICKR CORE|kleinanzeigen:3579249206": {
    "t": "2026-11-22T18:33:07+00:00",
+   "m": true
+  },
+  "bikes/Zwift Ride + Wahoo KICKR CORE|kleinanzeigen:3580481924": {
+   "t": "2026-11-23T21:17:40+00:00",
    "m": true
   },
   "cars/BMW 1er – petrol, ≤ 10k €|autoscout24:38b4a2e4-49da-49dc-ae3d-616570267883": {
@@ -495,6 +503,10 @@
   "cars/BMW 1er – petrol, ≤ 10k €|kleinanzeigen:3579941868": {
    "t": "2026-11-23T00:18:18+00:00",
    "m": false
+  },
+  "cars/BMW 1er – petrol, ≤ 10k €|kleinanzeigen:3580413321": {
+   "t": "2026-11-23T21:18:06+00:00",
+   "m": true
   },
   "cars/VW Golf 7 – petrol, ≤ 10k €|autoscout24:0145826b-9a6b-43ec-a460-c6a80234e263": {
    "t": "2026-11-14T10:21:11+00:00",
@@ -886,6 +898,10 @@
   },
   "clothing/Adidas Terrex – men, size S|kleinanzeigen:3579729385": {
    "t": "2026-11-22T18:33:35+00:00",
+   "m": true
+  },
+  "clothing/Adidas Terrex – men, size S|kleinanzeigen:3580776831": {
+   "t": "2026-11-23T21:18:10+00:00",
    "m": true
   }
  },
