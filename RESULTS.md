@@ -2,7 +2,7 @@
 
 # SearchRadar – results
 
-Updated: 2026-11-25T02:26:13+00:00 (UTC) · 73 active listings
+Updated: 2026-11-25T12:51:07+00:00 (UTC) · 73 active listings
 
 
 ## 🚗 Cars (23)
@@ -15,11 +15,11 @@ Updated: 2026-11-25T02:26:13+00:00 (UTC) · 73 active listings
 | 2026-11-21 23:12 | [BMW 116i Sport Line/VOLLSHEFT/KLIMA/NAVI/PDC/RCAM/BT](https://www.kleinanzeigen.de/s-anzeige/bmw-116i-sport-line-vollsheft-klima-navi-pdc-rcam-bt/3553772472-216-4764) | 9.950 € | 132.900 km · 2018 · 68526 Ladenburg | BMW 1er – petrol, ≤ 10k € | Kleinanzeigen |
 | 2026-11-21 21:07 | [1er BMW zu verkaufen](https://www.kleinanzeigen.de/s-anzeige/1er-bmw-zu-verkaufen/3573269113-216-8958) | 9.000 € ▼ (was 9.500 €) | 96.000 km · 2017 · 89537 Giengen an der Brenz | BMW 1er – petrol, ≤ 10k € | Kleinanzeigen |
 | 2026-11-21 21:07 | [Bmw 118i Automatik Tüv 11/28](https://www.kleinanzeigen.de/s-anzeige/bmw-118i-automatik-tuev-11-28/3577308635-216-9245) | 9.800 € | 116.270 km · 2016 · 74072 Heilbronn | BMW 1er – petrol, ≤ 10k € | Kleinanzeigen |
-| 2026-11-21 21:07 | [BMW 118i -](https://www.kleinanzeigen.de/s-anzeige/bmw-118i-/3578143386-216-8441) | 9.800 € | 148.519 km · 2017 · 71229 Leonberg | BMW 1er – petrol, ≤ 10k € | Kleinanzeigen |
-| 2026-11-21 21:06 | [BMW 118i Top](https://www.kleinanzeigen.de/s-anzeige/bmw-118i-top/3578242913-216-8441) | 9.800 € | 148.519 km · 2017 · 71229 Leonberg | BMW 1er – petrol, ≤ 10k € | Kleinanzeigen |
+| 2026-11-21 21:07 | [BMW 118i -](https://www.kleinanzeigen.de/s-anzeige/bmw-118i-/3578143386-216-8441) | 9.000 € ▼ (was 9.800 €) | 148.519 km · 2017 · 71229 Leonberg | BMW 1er – petrol, ≤ 10k € | Kleinanzeigen |
+| 2026-11-21 21:06 | [BMW 118i Top](https://www.kleinanzeigen.de/s-anzeige/bmw-118i-top/3578242913-216-8441) | 9.000 € ▼ (was 9.800 €) | 148.519 km · 2017 · 71229 Leonberg | BMW 1er – petrol, ≤ 10k € | Kleinanzeigen |
 | 2026-11-21 21:06 | [Bmw 118i, Klima, Navigation, Scheckheft](https://www.kleinanzeigen.de/s-anzeige/bmw-118i-klima-navigation-scheckheft/3578603074-216-8800) | 8.900 € | 158.000 km · 2017 · 75015 Bretten | BMW 1er – petrol, ≤ 10k € | Kleinanzeigen |
 | 2026-11-21 21:06 | [BMW 116 BMW 116 Problemlos](https://www.autoscout24.de/angebote/83b9068f-bf74-4529-8b7a-cc0a507fd373) | 6.599 € | 158.000 km · 2016 · 73630 | BMW 1er – petrol, ≤ 10k € | AutoScout24 |
-| 2026-11-21 21:06 | [BMW 118 118 i Advantage](https://www.autoscout24.de/angebote/cfb07cd9-645d-432f-ba8d-47a6d8c7762f) | 8.999 € | 146.000 km · 2016 · 76703 | BMW 1er – petrol, ≤ 10k € | AutoScout24 |
+| 2026-11-21 21:06 | [BMW 118 118 i Advantage](https://www.autoscout24.de/angebote/cfb07cd9-645d-432f-ba8d-47a6d8c7762f) | 8.700 € ▼ (was 8.999 €) | 146.000 km · 2016 · 76703 | BMW 1er – petrol, ≤ 10k € | AutoScout24 |
 | 2026-11-21 21:06 | [BMW 116 116i](https://www.autoscout24.de/angebote/4a5231f0-d936-4b18-b6e9-a6f373ac5e73) | 8.000 € | 128.000 km · 2016 · 74613 | BMW 1er – petrol, ≤ 10k € | AutoScout24 |
 | 2026-11-21 21:05 | [BMW 116 i Sport Line/VOLLSHEFT/KLIMA/NAVI/PDC/RCAM/BT](https://www.autoscout24.de/angebote/8e076a88-94c8-4969-b1c0-11ca49aedbf5) | 9.950 € | 132.900 km · 2018 · 68526 | BMW 1er – petrol, ≤ 10k € | AutoScout24 |
 | 2026-11-17 03:49 | [Volkswagen Golf VII Lim. Comfortline BMT/Start-Stop](https://www.autoscout24.de/angebote/2d8fc33e-af34-4154-a55a-8334f631052b) | 9.990 € | 112.692 km · 2017 · 74336 | VW Golf 7 – petrol, ≤ 10k € | AutoScout24 |
@@ -89,6 +89,6 @@ Updated: 2026-11-25T02:26:13+00:00 (UTC) · 73 active listings
 | 2026-11-14 08:05 | [Terrex XPL 2.5L Anorak / Windbraker](https://www.kleinanzeigen.de/s-anzeige/terrex-xpl-2-5l-anorak-windbraker/3567481893-160-9357) | 38 € | 79199 Kirchzarten | Adidas Terrex – men, size S | Kleinanzeigen |
 | 2026-11-14 08:05 | [Isolationsjacke Adidas Terrex](https://www.kleinanzeigen.de/s-anzeige/isolationsjacke-adidas-terrex/3568996312-160-7939) | 35 € | 14513 Teltow | Adidas Terrex – men, size S | Kleinanzeigen |
 | 2026-11-14 08:05 | [Adidas Terrex Hybrid Primaloft Isolationsweste Laufweste Gr. S](https://www.kleinanzeigen.de/s-anzeige/adidas-terrex-hybrid-primaloft-isolationsweste-laufweste-gr-s/3569276468-160-4296) | 49 € | 60311 Innenstadt | Adidas Terrex – men, size S | Kleinanzeigen |
-| 2026-11-14 08:05 | [Adidas Terrex Hoody neu Gr S](https://www.kleinanzeigen.de/s-anzeige/adidas-terrex-hoody-neu-gr-s/3569660553-160-1758) | 20 € ▼ (was 30 €) | 46286 Dorsten | Adidas Terrex – men, size S | Kleinanzeigen |
+| 2026-11-14 08:05 | [Adidas Terrex Hoody neu Gr S](https://www.kleinanzeigen.de/s-anzeige/adidas-terrex-hoody-neu-gr-s/3569660553-160-1758) | 18 € ▼ (was 30 €) | 46286 Dorsten | Adidas Terrex – men, size S | Kleinanzeigen |
 | 2026-11-14 08:05 | [ADIDAS Terrex Techrock Stretch PRIMALOFT Weste S](https://www.kleinanzeigen.de/s-anzeige/adidas-terrex-techrock-stretch-primaloft-weste-s/3569891819-160-7257) | 55 € | 86825 Bad Wörishofen | Adidas Terrex – men, size S | Kleinanzeigen |
 | 2026-11-14 08:05 | [Adidas Terrex My Shelter GoreTex Jacke](https://www.kleinanzeigen.de/s-anzeige/adidas-terrex-my-shelter-goretex-jacke/3570253418-160-5538) | 100 € | 87509 Immenstadt | Adidas Terrex – men, size S | Kleinanzeigen |
