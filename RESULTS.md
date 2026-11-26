@@ -2,7 +2,7 @@
 
 # SearchRadar – results
 
-Updated: 2026-11-25T22:32:10+00:00 (UTC) · 74 active listings
+Updated: 2026-11-26T05:02:36+00:00 (UTC) · 74 active listings
 
 
 ## 🚲 Bikes (8)
@@ -30,7 +30,7 @@ Updated: 2026-11-25T22:32:10+00:00 (UTC) · 74 active listings
 | 2026-11-21 21:07 | [Bmw 118i Automatik Tüv 11/28](https://www.kleinanzeigen.de/s-anzeige/bmw-118i-automatik-tuev-11-28/3577308635-216-9245) | 9.800 € | 116.270 km · 2016 · 74072 Heilbronn | BMW 1er – petrol, ≤ 10k € | Kleinanzeigen |
 | 2026-11-21 21:07 | [BMW 118i -](https://www.kleinanzeigen.de/s-anzeige/bmw-118i-/3578143386-216-8441) | 9.000 € ▼ (was 9.800 €) | 148.519 km · 2017 · 71229 Leonberg | BMW 1er – petrol, ≤ 10k € | Kleinanzeigen |
 | 2026-11-21 21:06 | [BMW 118i Top](https://www.kleinanzeigen.de/s-anzeige/bmw-118i-top/3578242913-216-8441) | 9.000 € ▼ (was 9.800 €) | 148.519 km · 2017 · 71229 Leonberg | BMW 1er – petrol, ≤ 10k € | Kleinanzeigen |
-| 2026-11-21 21:06 | [Bmw 118i, Klima, Navigation, Scheckheft](https://www.kleinanzeigen.de/s-anzeige/bmw-118i-klima-navigation-scheckheft/3578603074-216-8800) | 8.900 € | 158.000 km · 2017 · 75015 Bretten | BMW 1er – petrol, ≤ 10k € | Kleinanzeigen |
+| 2026-11-21 21:06 | [Bmw 118i, Klima, Navigation, Scheckheft](https://www.kleinanzeigen.de/s-anzeige/bmw-118i-klima-navigation-scheckheft/3578603074-216-8800) | 8.500 € ▼ (was 8.900 €) | 158.000 km · 2017 · 75015 Bretten | BMW 1er – petrol, ≤ 10k € | Kleinanzeigen |
 | 2026-11-21 21:06 | [BMW 116 BMW 116 Problemlos](https://www.autoscout24.de/angebote/83b9068f-bf74-4529-8b7a-cc0a507fd373) | 6.599 € | 158.000 km · 2016 · 73630 | BMW 1er – petrol, ≤ 10k € | AutoScout24 |
 | 2026-11-21 21:06 | [BMW 118 118 i Advantage](https://www.autoscout24.de/angebote/cfb07cd9-645d-432f-ba8d-47a6d8c7762f) | 8.700 € ▼ (was 8.999 €) | 146.000 km · 2016 · 76703 | BMW 1er – petrol, ≤ 10k € | AutoScout24 |
 | 2026-11-21 21:06 | [BMW 116 116i](https://www.autoscout24.de/angebote/4a5231f0-d936-4b18-b6e9-a6f373ac5e73) | 8.000 € | 128.000 km · 2016 · 74613 | BMW 1er – petrol, ≤ 10k € | AutoScout24 |
@@ -40,7 +40,7 @@ Updated: 2026-11-25T22:32:10+00:00 (UTC) · 74 active listings
 | 2026-11-14 17:04 | [Volkswagen Golf Trendline BMT/Start-Stop\| 1.Hand \| Top gepflegt \| VW-Scheckheft \| PDC \| Bluetooth \| Winter-Paket \| Front Assist](https://www.autoscout24.de/haendler/automobile-schelling-ellenberg) | 9.990 € | 118.600 km · 2018 · 73488 | VW Golf 7 – petrol, ≤ 10k € | AutoScout24 |
 | 2026-11-14 06:31 | [Volkswagen Golf VII DSG 1.4 TSI Comfort Navi ACC RFK PDC LM](https://www.autoscout24.de/angebote/fae7cd75-3cd4-4141-970b-b8a8bacdbf3f) | 9.685 € | 140.111 km · 2017 · 77855 | VW Golf 7 – petrol, ≤ 10k € | AutoScout24 |
 | 2026-11-14 06:31 | [Volkswagen Golf VW Golf 7 1.0 TSI Sondermodell Sound, AHK,ACC, APP connect](https://www.autoscout24.de/angebote/32b55f75-e520-4738-a73b-c2ad147fbf35) | 9.900 € | 77.000 km · 2017 · 73095 | VW Golf 7 – petrol, ≤ 10k € | AutoScout24 |
-| 2026-11-14 06:31 | [Volkswagen Golf Trendline BMT](https://www.autoscout24.de/angebote/23c8b358-bb1a-4a9e-a986-6f2d6ef194a2) | 7.500 € | 148.000 km · 2016 · 76646 | VW Golf 7 – petrol, ≤ 10k € | AutoScout24 |
+| 2026-11-14 06:31 | [Volkswagen Golf Trendline BMT](https://www.autoscout24.de/angebote/23c8b358-bb1a-4a9e-a986-6f2d6ef194a2) | 7.350 € ▼ (was 7.500 €) | 148.000 km · 2016 · 76646 | VW Golf 7 – petrol, ≤ 10k € | AutoScout24 |
 | 2026-11-14 06:31 | [Volkswagen Golf VII BMT Trendline](https://www.autoscout24.de/angebote/0b16c24e-059c-420b-ad76-231aae024506) | 8.490 € | 115.400 km · 2019 · 72622 | VW Golf 7 – petrol, ≤ 10k € | AutoScout24 |
 | 2026-11-13 16:18 | [Golf 7 (CL 1.2 TSI)](https://www.kleinanzeigen.de/s-anzeige/golf-7-cl-1-2-tsi-/3570217243-216-6687) | 7.500 € | 127.000 km · 2016 · 89269 Vöhringen | VW Golf 7 – petrol, ≤ 10k € | Kleinanzeigen |
 | 2026-11-13 16:18 | [Volkswagen Golf 1.2 TSI Comfortline BlueMotion Tech *PDC*ALU*KLIMA](https://www.autoscout24.de/angebote/aca6938d-a083-48b3-9524-b277b58401c0) | 9.990 € | 91.889 km · 2016 · 70195 | VW Golf 7 – petrol, ≤ 10k € | AutoScout24 |
