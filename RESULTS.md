@@ -2,60 +2,19 @@
 
 # SearchRadar – results
 
-Updated: 2026-11-26T15:13:21+00:00 (UTC) · 75 active listings
+Updated: 2026-11-26T23:52:33+00:00 (UTC) · 75 active listings
 
 
-## 🚗 Cars (24)
-
-| Found | Listing | Price | Details | Search | Portal |
-|---|---|---:|---|---|---|
-| 2026-11-26 15:10 | [Golf 7 / weiß](https://www.kleinanzeigen.de/s-anzeige/golf-7-weiss/3580567179-216-8700) | 9.900 € | 106.000 km · 2016 · 72336 Balingen | VW Golf 7 – petrol, ≤ 10k € | Kleinanzeigen |
-| 2026-11-25 02:23 | [BMW 118 1 Limousine 5-trg. 118 i Advantage](https://www.autoscout24.de/angebote/45937e0a-fcbf-4ffc-b986-3e0cca8e8ca9) | 9.990 € | 102.800 km · 2016 · 72581 | BMW 1er – petrol, ≤ 10k € | AutoScout24 |
-| 2026-11-23 21:18 | [BMW 118 I Advantage*LED*Tempomat*Navi*PDC*](https://www.kleinanzeigen.de/s-anzeige/bmw-118-i-advantage-led-tempomat-navi-pdc-/3580413321-216-7119) | 9.900 € | 139.000 km · 2018 · 86830 Schwabmünchen | BMW 1er – petrol, ≤ 10k € | Kleinanzeigen |
-| 2026-11-22 03:09 | [BMW 116i -](https://www.kleinanzeigen.de/s-anzeige/bmw-116i-/3561059450-216-8123) | 7.700 € ▼ (was 7.850 €) | 137.500 km · 2016 · 68723 Schwetzingen | BMW 1er – petrol, ≤ 10k € | Kleinanzeigen |
-| 2026-11-21 23:12 | [BMW 116i Sport Line/VOLLSHEFT/KLIMA/NAVI/PDC/RCAM/BT](https://www.kleinanzeigen.de/s-anzeige/bmw-116i-sport-line-vollsheft-klima-navi-pdc-rcam-bt/3553772472-216-4764) | 9.950 € | 132.900 km · 2018 · 68526 Ladenburg | BMW 1er – petrol, ≤ 10k € | Kleinanzeigen |
-| 2026-11-21 21:07 | [1er BMW zu verkaufen](https://www.kleinanzeigen.de/s-anzeige/1er-bmw-zu-verkaufen/3573269113-216-8958) | 9.000 € ▼ (was 9.500 €) | 96.000 km · 2017 · 89537 Giengen an der Brenz | BMW 1er – petrol, ≤ 10k € | Kleinanzeigen |
-| 2026-11-21 21:07 | [Bmw 118i Automatik Tüv 11/28](https://www.kleinanzeigen.de/s-anzeige/bmw-118i-automatik-tuev-11-28/3577308635-216-9245) | 9.800 € | 116.270 km · 2016 · 74072 Heilbronn | BMW 1er – petrol, ≤ 10k € | Kleinanzeigen |
-| 2026-11-21 21:07 | [BMW 118i -](https://www.kleinanzeigen.de/s-anzeige/bmw-118i-/3578143386-216-8441) | 9.000 € ▼ (was 9.800 €) | 148.519 km · 2017 · 71229 Leonberg | BMW 1er – petrol, ≤ 10k € | Kleinanzeigen |
-| 2026-11-21 21:06 | [BMW 118i Top](https://www.kleinanzeigen.de/s-anzeige/bmw-118i-top/3578242913-216-8441) | 9.000 € ▼ (was 9.800 €) | 148.519 km · 2017 · 71229 Leonberg | BMW 1er – petrol, ≤ 10k € | Kleinanzeigen |
-| 2026-11-21 21:06 | [Bmw 118i, Klima, Navigation, Scheckheft](https://www.kleinanzeigen.de/s-anzeige/bmw-118i-klima-navigation-scheckheft/3578603074-216-8800) | 8.500 € ▼ (was 8.900 €) | 158.000 km · 2017 · 75015 Bretten | BMW 1er – petrol, ≤ 10k € | Kleinanzeigen |
-| 2026-11-21 21:06 | [BMW 116 BMW 116 Problemlos](https://www.autoscout24.de/angebote/83b9068f-bf74-4529-8b7a-cc0a507fd373) | 6.599 € | 158.000 km · 2016 · 73630 | BMW 1er – petrol, ≤ 10k € | AutoScout24 |
-| 2026-11-21 21:06 | [BMW 118 118 i Advantage](https://www.autoscout24.de/angebote/cfb07cd9-645d-432f-ba8d-47a6d8c7762f) | 8.700 € ▼ (was 8.999 €) | 146.000 km · 2016 · 76703 | BMW 1er – petrol, ≤ 10k € | AutoScout24 |
-| 2026-11-21 21:06 | [BMW 116 116i](https://www.autoscout24.de/angebote/4a5231f0-d936-4b18-b6e9-a6f373ac5e73) | 8.000 € | 128.000 km · 2016 · 74613 | BMW 1er – petrol, ≤ 10k € | AutoScout24 |
-| 2026-11-21 21:05 | [BMW 116 i Sport Line/VOLLSHEFT/KLIMA/NAVI/PDC/RCAM/BT](https://www.autoscout24.de/angebote/8e076a88-94c8-4969-b1c0-11ca49aedbf5) | 9.950 € | 132.900 km · 2018 · 68526 | BMW 1er – petrol, ≤ 10k € | AutoScout24 |
-| 2026-11-17 03:49 | [Volkswagen Golf VII Lim. Comfortline BMT/Start-Stop](https://www.autoscout24.de/angebote/2d8fc33e-af34-4154-a55a-8334f631052b) | 9.990 € | 112.692 km · 2017 · 74336 | VW Golf 7 – petrol, ≤ 10k € | AutoScout24 |
-| 2026-11-16 20:26 | [Volkswagen Golf VII 1.0 TSI *1.HAND* *DYNAUDIO* *ACC*](https://www.autoscout24.de/angebote/22ff9289-3520-420c-b88e-e9769e93ff2c) | 9.300 € ▼ (was 9.500 €) | 141.300 km · 2018 · 68229 | VW Golf 7 – petrol, ≤ 10k € | AutoScout24 |
-| 2026-11-14 17:04 | [Volkswagen Golf Trendline BMT/Start-Stop\| 1.Hand \| Top gepflegt \| VW-Scheckheft \| PDC \| Bluetooth \| Winter-Paket \| Front Assist](https://www.autoscout24.de/haendler/automobile-schelling-ellenberg) | 9.990 € | 118.600 km · 2018 · 73488 | VW Golf 7 – petrol, ≤ 10k € | AutoScout24 |
-| 2026-11-14 06:31 | [Volkswagen Golf VII DSG 1.4 TSI Comfort Navi ACC RFK PDC LM](https://www.autoscout24.de/angebote/fae7cd75-3cd4-4141-970b-b8a8bacdbf3f) | 9.685 € | 140.111 km · 2017 · 77855 | VW Golf 7 – petrol, ≤ 10k € | AutoScout24 |
-| 2026-11-14 06:31 | [Volkswagen Golf VW Golf 7 1.0 TSI Sondermodell Sound, AHK,ACC, APP connect](https://www.autoscout24.de/angebote/32b55f75-e520-4738-a73b-c2ad147fbf35) | 9.900 € | 77.000 km · 2017 · 73095 | VW Golf 7 – petrol, ≤ 10k € | AutoScout24 |
-| 2026-11-14 06:31 | [Volkswagen Golf Trendline BMT](https://www.autoscout24.de/angebote/23c8b358-bb1a-4a9e-a986-6f2d6ef194a2) | 7.300 € ▼ (was 7.500 €) | 148.000 km · 2016 · 76646 | VW Golf 7 – petrol, ≤ 10k € | AutoScout24 |
-| 2026-11-14 06:31 | [Volkswagen Golf VII BMT Trendline](https://www.autoscout24.de/angebote/0b16c24e-059c-420b-ad76-231aae024506) | 8.490 € | 115.400 km · 2019 · 72622 | VW Golf 7 – petrol, ≤ 10k € | AutoScout24 |
-| 2026-11-13 16:18 | [Golf 7 (CL 1.2 TSI)](https://www.kleinanzeigen.de/s-anzeige/golf-7-cl-1-2-tsi-/3570217243-216-6687) | 7.500 € | 127.000 km · 2016 · 89269 Vöhringen | VW Golf 7 – petrol, ≤ 10k € | Kleinanzeigen |
-| 2026-11-13 16:18 | [Volkswagen Golf 1.2 TSI Comfortline BlueMotion Tech *PDC*ALU*KLIMA](https://www.autoscout24.de/angebote/aca6938d-a083-48b3-9524-b277b58401c0) | 9.780 € ▼ (was 9.990 €) | 91.889 km · 2016 · 70195 | VW Golf 7 – petrol, ≤ 10k € | AutoScout24 |
-| 2026-11-12 01:31 | [Volkswagen Golf VII 1.2 TSI Lim. Comfortline BMT](https://www.autoscout24.de/angebote/25304292-7231-4438-a78d-591e9af9dbbe) | 9.990 € | 103.000 km · 2016 · 88630 | VW Golf 7 – petrol, ≤ 10k € | AutoScout24 |
-
-## 🚲 Bikes (8)
+## 👕 Clothing (44)
 
 | Found | Listing | Price | Details | Search | Portal |
 |---|---|---:|---|---|---|
-| 2026-11-25 22:29 | [Zwift Ride Kickr Core V2](https://www.kleinanzeigen.de/s-anzeige/zwift-ride-kickr-core-v2/3582292849-230-5208) | 920 € | 76764 Rheinzabern | Zwift Ride + Wahoo KICKR CORE | Kleinanzeigen |
-| 2026-11-24 05:59 | [Zwift Ride Komplett-Set: Wahoo KICKR CORE 2 + Smart Frame, Lenker](https://www.kleinanzeigen.de/s-anzeige/zwift-ride-komplett-set-wahoo-kickr-core-2-smart-frame-lenker/3580977069-230-8799) | 850 € | 75038 Oberderdingen | Zwift Ride + Wahoo KICKR CORE | Kleinanzeigen |
-| 2026-11-23 21:17 | [Zwift Ride Smart Bike + Wahoo KICKR CORE](https://www.kleinanzeigen.de/s-anzeige/zwift-ride-smart-bike-wahoo-kickr-core/3580481924-230-8500) | 950 € | 78609 Tuningen | Zwift Ride + Wahoo KICKR CORE | Kleinanzeigen |
-| 2026-11-15 17:06 | [Zwift Ride + Wahoo KICKR CORE 2 - WIE NEU, <100 km](https://www.kleinanzeigen.de/s-anzeige/zwift-ride-wahoo-kickr-core-2-wie-neu-100-km/3572468464-230-8889) | 1.099 € | 100 km · 70736 Fellbach | Zwift Ride + Wahoo KICKR CORE | Kleinanzeigen |
-| 2026-11-15 08:28 | [Garmin Rally RS210 Powermeter Pedale](https://www.idealo.de/preisvergleich/OffersOfProduct/209644835_-rally-rs210-powermeter-pedale-garmin.html) | 685 € ▼ (was 689 €) |  | Garmin Rally RS210 – new price (idealo) | idealo |
-| 2026-11-15 07:40 | [Zwift Ride inklusive Wahoo KICKR CORE 2](https://www.kleinanzeigen.de/s-anzeige/zwift-ride-inklusive-wahoo-kickr-core-2/3540984818-217-8939) | 980 € ▼ (was 1.040 €) | 73329 Kuchen | Zwift Ride + Wahoo KICKR CORE | Kleinanzeigen |
-| 2026-11-15 07:40 | [Garmin Rally RS210](https://www.kleinanzeigen.de/s-anzeige/garmin-rally-rs210/3567888226-217-5126) | 599 € | 55218 Ingelheim am Rhein | Garmin Rally RS210 power-meter pedals | Kleinanzeigen |
-| 2026-11-15 07:40 | [GARMIN Rally RS210 Wattmess-System beidseitige Messung Shimano](https://www.kleinanzeigen.de/s-anzeige/garmin-rally-rs210-wattmess-system-beidseitige-messung-shimano/3571191285-217-4506) | 550 € ▼ (was 600 €) | 64521 Groß-Gerau | Garmin Rally RS210 power-meter pedals | Kleinanzeigen |
-
-## 👕 Clothing (43)
-
-| Found | Listing | Price | Details | Search | Portal |
-|---|---|---:|---|---|---|
+| 2026-11-26 23:49 | [adidas TERREX Xperior Light Pants - olive strata 46 S](https://www.kleinanzeigen.de/s-anzeige/adidas-terrex-xperior-light-pants-olive-strata-46-s/3583230966-160-7257) | 50 € | 86825 Bad Wörishofen | Adidas Terrex – men, size S | Kleinanzeigen |
 | 2026-11-23 21:18 | [Adidas Terrex Skihose Herren Gr. S,Primaloft](https://www.kleinanzeigen.de/s-anzeige/adidas-terrex-skihose-herren-gr-s-primaloft/3580776831-160-5670) | 55 € | 83536 Gars am Inn | Adidas Terrex – men, size S | Kleinanzeigen |
 | 2026-11-22 18:33 | [Adidas Terrex Weste S Wandern Skifahren Skilanglauf](https://www.kleinanzeigen.de/s-anzeige/adidas-terrex-weste-s-wandern-skifahren-skilanglauf/3579691958-160-404) | 40 € | 66538 Neunkirchen | Adidas Terrex – men, size S | Kleinanzeigen |
 | 2026-11-22 18:33 | [NEU - Adidas Terrex Skijacke blau](https://www.kleinanzeigen.de/s-anzeige/neu-adidas-terrex-skijacke-blau/3579726878-160-6798) | 100 € | 91056 Erlangen | Adidas Terrex – men, size S | Kleinanzeigen |
 | 2026-11-22 18:33 | [NEU - Adidas Terrex Skijacke gelb](https://www.kleinanzeigen.de/s-anzeige/neu-adidas-terrex-skijacke-gelb/3579729385-160-6798) | 100 € | 91056 Erlangen | Adidas Terrex – men, size S | Kleinanzeigen |
-| 2026-11-22 11:17 | [Adidas Terrex Jacke schwarz Größe S Top!!!!](https://www.kleinanzeigen.de/s-anzeige/adidas-terrex-jacke-schwarz-groesse-s-top-/3578996766-160-1863) | 40 € ▼ (was 48 €) | 40764 Langenfeld | Adidas Terrex – men, size S | Kleinanzeigen |
+| 2026-11-22 11:17 | [Adidas Terrex Jacke schwarz Größe S Top!!!!](https://www.kleinanzeigen.de/s-anzeige/adidas-terrex-jacke-schwarz-groesse-s-top-/3578996766-160-1863) | 36 € ▼ (was 48 €) | 40764 Langenfeld | Adidas Terrex – men, size S | Kleinanzeigen |
 | 2026-11-21 21:07 | [Adidas Terrex Hardshellhose Neu Snowboarden Skifahren Tourengehen](https://www.kleinanzeigen.de/s-anzeige/adidas-terrex-hardshellhose-neu-snowboarden-skifahren-tourengehen/3578571838-160-1015) | 100 € ▼ (was 150 €) | 59955 Winterberg | Adidas Terrex – men, size S | Kleinanzeigen |
 | 2026-11-21 21:07 | [adidas Terrex Agravic Craphic Regen-Laufjacke Gr. S](https://www.kleinanzeigen.de/s-anzeige/adidas-terrex-agravic-craphic-regen-laufjacke-gr-s/3578646947-160-9684) | 49 € | 10317 Lichtenberg | Adidas Terrex – men, size S | Kleinanzeigen |
 | 2026-11-19 21:29 | [Adidas Terrex Fleecejacke grau Herren](https://www.kleinanzeigen.de/s-anzeige/adidas-terrex-fleecejacke-grau-herren/3576309826-160-6891) | 25 € ▼ (was 30 €) | 96050 Bamberg | Adidas Terrex – men, size S | Kleinanzeigen |
@@ -94,3 +53,44 @@ Updated: 2026-11-26T15:13:21+00:00 (UTC) · 75 active listings
 | 2026-11-14 08:05 | [Adidas Terrex Hoody neu Gr S](https://www.kleinanzeigen.de/s-anzeige/adidas-terrex-hoody-neu-gr-s/3569660553-160-1758) | 18 € ▼ (was 30 €) | 46286 Dorsten | Adidas Terrex – men, size S | Kleinanzeigen |
 | 2026-11-14 08:05 | [ADIDAS Terrex Techrock Stretch PRIMALOFT Weste S](https://www.kleinanzeigen.de/s-anzeige/adidas-terrex-techrock-stretch-primaloft-weste-s/3569891819-160-7257) | 55 € | 86825 Bad Wörishofen | Adidas Terrex – men, size S | Kleinanzeigen |
 | 2026-11-14 08:05 | [Adidas Terrex My Shelter GoreTex Jacke](https://www.kleinanzeigen.de/s-anzeige/adidas-terrex-my-shelter-goretex-jacke/3570253418-160-5538) | 100 € | 87509 Immenstadt | Adidas Terrex – men, size S | Kleinanzeigen |
+
+## 🚗 Cars (23)
+
+| Found | Listing | Price | Details | Search | Portal |
+|---|---|---:|---|---|---|
+| 2026-11-26 23:49 | [VW GOLF VII 1.2TSI 110PS ALLSTAR •2HAND•TÜV 08/28•TEMP•MFA•](https://www.kleinanzeigen.de/s-anzeige/vw-golf-vii-1-2tsi-110ps-allstar-2hand-tuev-08-28-temp-mfa-/3583322935-216-18475) | 8.950 € | 94.800 km · 2017 · 72186 Empfingen | VW Golf 7 – petrol, ≤ 10k € | Kleinanzeigen |
+| 2026-11-26 15:10 | [Golf 7 / weiß](https://www.kleinanzeigen.de/s-anzeige/golf-7-weiss/3580567179-216-8700) | 9.900 € | 106.000 km · 2016 · 72336 Balingen | VW Golf 7 – petrol, ≤ 10k € | Kleinanzeigen |
+| 2026-11-25 02:23 | [BMW 118 1 Limousine 5-trg. 118 i Advantage](https://www.autoscout24.de/angebote/45937e0a-fcbf-4ffc-b986-3e0cca8e8ca9) | 9.990 € | 102.800 km · 2016 · 72581 | BMW 1er – petrol, ≤ 10k € | AutoScout24 |
+| 2026-11-23 21:18 | [BMW 118 I Advantage*LED*Tempomat*Navi*PDC*](https://www.kleinanzeigen.de/s-anzeige/bmw-118-i-advantage-led-tempomat-navi-pdc-/3580413321-216-7119) | 9.900 € | 139.000 km · 2018 · 86830 Schwabmünchen | BMW 1er – petrol, ≤ 10k € | Kleinanzeigen |
+| 2026-11-22 03:09 | [BMW 116i -](https://www.kleinanzeigen.de/s-anzeige/bmw-116i-/3561059450-216-8123) | 7.700 € ▼ (was 7.850 €) | 137.500 km · 2016 · 68723 Schwetzingen | BMW 1er – petrol, ≤ 10k € | Kleinanzeigen |
+| 2026-11-21 23:12 | [BMW 116i Sport Line/VOLLSHEFT/KLIMA/NAVI/PDC/RCAM/BT](https://www.kleinanzeigen.de/s-anzeige/bmw-116i-sport-line-vollsheft-klima-navi-pdc-rcam-bt/3553772472-216-4764) | 9.950 € | 132.900 km · 2018 · 68526 Ladenburg | BMW 1er – petrol, ≤ 10k € | Kleinanzeigen |
+| 2026-11-21 21:07 | [Bmw 118i Automatik Tüv 11/28](https://www.kleinanzeigen.de/s-anzeige/bmw-118i-automatik-tuev-11-28/3577308635-216-9245) | 9.800 € | 116.270 km · 2016 · 74072 Heilbronn | BMW 1er – petrol, ≤ 10k € | Kleinanzeigen |
+| 2026-11-21 21:07 | [BMW 118i -](https://www.kleinanzeigen.de/s-anzeige/bmw-118i-/3578143386-216-8441) | 9.000 € ▼ (was 9.800 €) | 148.519 km · 2017 · 71229 Leonberg | BMW 1er – petrol, ≤ 10k € | Kleinanzeigen |
+| 2026-11-21 21:06 | [BMW 118i Top](https://www.kleinanzeigen.de/s-anzeige/bmw-118i-top/3578242913-216-8441) | 9.000 € ▼ (was 9.800 €) | 148.519 km · 2017 · 71229 Leonberg | BMW 1er – petrol, ≤ 10k € | Kleinanzeigen |
+| 2026-11-21 21:06 | [Bmw 118i, Klima, Navigation, Scheckheft](https://www.kleinanzeigen.de/s-anzeige/bmw-118i-klima-navigation-scheckheft/3578603074-216-8800) | 8.500 € ▼ (was 8.900 €) | 158.000 km · 2017 · 75015 Bretten | BMW 1er – petrol, ≤ 10k € | Kleinanzeigen |
+| 2026-11-21 21:06 | [BMW 116 BMW 116 Problemlos](https://www.autoscout24.de/angebote/83b9068f-bf74-4529-8b7a-cc0a507fd373) | 6.599 € | 158.000 km · 2016 · 73630 | BMW 1er – petrol, ≤ 10k € | AutoScout24 |
+| 2026-11-21 21:06 | [BMW 118 118 i Advantage](https://www.autoscout24.de/angebote/cfb07cd9-645d-432f-ba8d-47a6d8c7762f) | 8.700 € ▼ (was 8.999 €) | 146.000 km · 2016 · 76703 | BMW 1er – petrol, ≤ 10k € | AutoScout24 |
+| 2026-11-21 21:06 | [BMW 116 116i](https://www.autoscout24.de/angebote/4a5231f0-d936-4b18-b6e9-a6f373ac5e73) | 8.000 € | 128.000 km · 2016 · 74613 | BMW 1er – petrol, ≤ 10k € | AutoScout24 |
+| 2026-11-21 21:05 | [BMW 116 i Sport Line/VOLLSHEFT/KLIMA/NAVI/PDC/RCAM/BT](https://www.autoscout24.de/angebote/8e076a88-94c8-4969-b1c0-11ca49aedbf5) | 9.950 € | 132.900 km · 2018 · 68526 | BMW 1er – petrol, ≤ 10k € | AutoScout24 |
+| 2026-11-17 03:49 | [Volkswagen Golf VII Lim. Comfortline BMT/Start-Stop](https://www.autoscout24.de/angebote/2d8fc33e-af34-4154-a55a-8334f631052b) | 9.990 € | 112.692 km · 2017 · 74336 | VW Golf 7 – petrol, ≤ 10k € | AutoScout24 |
+| 2026-11-14 17:04 | [Volkswagen Golf Trendline BMT/Start-Stop\| 1.Hand \| Top gepflegt \| VW-Scheckheft \| PDC \| Bluetooth \| Winter-Paket \| Front Assist](https://www.autoscout24.de/haendler/automobile-schelling-ellenberg) | 9.990 € | 118.600 km · 2018 · 73488 | VW Golf 7 – petrol, ≤ 10k € | AutoScout24 |
+| 2026-11-14 06:31 | [Volkswagen Golf VII DSG 1.4 TSI Comfort Navi ACC RFK PDC LM](https://www.autoscout24.de/angebote/fae7cd75-3cd4-4141-970b-b8a8bacdbf3f) | 9.685 € | 140.111 km · 2017 · 77855 | VW Golf 7 – petrol, ≤ 10k € | AutoScout24 |
+| 2026-11-14 06:31 | [Volkswagen Golf VW Golf 7 1.0 TSI Sondermodell Sound, AHK,ACC, APP connect](https://www.autoscout24.de/angebote/32b55f75-e520-4738-a73b-c2ad147fbf35) | 9.900 € | 77.000 km · 2017 · 73095 | VW Golf 7 – petrol, ≤ 10k € | AutoScout24 |
+| 2026-11-14 06:31 | [Volkswagen Golf Trendline BMT](https://www.autoscout24.de/angebote/23c8b358-bb1a-4a9e-a986-6f2d6ef194a2) | 7.300 € ▼ (was 7.500 €) | 148.000 km · 2016 · 76646 | VW Golf 7 – petrol, ≤ 10k € | AutoScout24 |
+| 2026-11-14 06:31 | [Volkswagen Golf VII BMT Trendline](https://www.autoscout24.de/angebote/0b16c24e-059c-420b-ad76-231aae024506) | 8.490 € | 115.400 km · 2019 · 72622 | VW Golf 7 – petrol, ≤ 10k € | AutoScout24 |
+| 2026-11-13 16:18 | [Golf 7 (CL 1.2 TSI)](https://www.kleinanzeigen.de/s-anzeige/golf-7-cl-1-2-tsi-/3570217243-216-6687) | 7.500 € | 127.000 km · 2016 · 89269 Vöhringen | VW Golf 7 – petrol, ≤ 10k € | Kleinanzeigen |
+| 2026-11-13 16:18 | [Volkswagen Golf 1.2 TSI Comfortline BlueMotion Tech *PDC*ALU*KLIMA](https://www.autoscout24.de/angebote/aca6938d-a083-48b3-9524-b277b58401c0) | 9.780 € ▼ (was 9.990 €) | 91.889 km · 2016 · 70195 | VW Golf 7 – petrol, ≤ 10k € | AutoScout24 |
+| 2026-11-12 01:31 | [Volkswagen Golf VII 1.2 TSI Lim. Comfortline BMT](https://www.autoscout24.de/angebote/25304292-7231-4438-a78d-591e9af9dbbe) | 9.990 € | 103.000 km · 2016 · 88630 | VW Golf 7 – petrol, ≤ 10k € | AutoScout24 |
+
+## 🚲 Bikes (8)
+
+| Found | Listing | Price | Details | Search | Portal |
+|---|---|---:|---|---|---|
+| 2026-11-25 22:29 | [Zwift Ride Kickr Core V2](https://www.kleinanzeigen.de/s-anzeige/zwift-ride-kickr-core-v2/3582292849-230-5208) | 920 € | 76764 Rheinzabern | Zwift Ride + Wahoo KICKR CORE | Kleinanzeigen |
+| 2026-11-24 05:59 | [Zwift Ride Komplett-Set: Wahoo KICKR CORE 2 + Smart Frame, Lenker](https://www.kleinanzeigen.de/s-anzeige/zwift-ride-komplett-set-wahoo-kickr-core-2-smart-frame-lenker/3580977069-230-8799) | 850 € | 75038 Oberderdingen | Zwift Ride + Wahoo KICKR CORE | Kleinanzeigen |
+| 2026-11-23 21:17 | [Zwift Ride Smart Bike + Wahoo KICKR CORE](https://www.kleinanzeigen.de/s-anzeige/zwift-ride-smart-bike-wahoo-kickr-core/3580481924-230-8500) | 950 € | 78609 Tuningen | Zwift Ride + Wahoo KICKR CORE | Kleinanzeigen |
+| 2026-11-15 17:06 | [Zwift Ride + Wahoo KICKR CORE 2 - WIE NEU, <100 km](https://www.kleinanzeigen.de/s-anzeige/zwift-ride-wahoo-kickr-core-2-wie-neu-100-km/3572468464-230-8889) | 1.099 € | 100 km · 70736 Fellbach | Zwift Ride + Wahoo KICKR CORE | Kleinanzeigen |
+| 2026-11-15 08:28 | [Garmin Rally RS210 Powermeter Pedale](https://www.idealo.de/preisvergleich/OffersOfProduct/209644835_-rally-rs210-powermeter-pedale-garmin.html) | 685 € ▼ (was 689 €) |  | Garmin Rally RS210 – new price (idealo) | idealo |
+| 2026-11-15 07:40 | [Zwift Ride inklusive Wahoo KICKR CORE 2](https://www.kleinanzeigen.de/s-anzeige/zwift-ride-inklusive-wahoo-kickr-core-2/3540984818-217-8939) | 980 € ▼ (was 1.040 €) | 73329 Kuchen | Zwift Ride + Wahoo KICKR CORE | Kleinanzeigen |
+| 2026-11-15 07:40 | [Garmin Rally RS210](https://www.kleinanzeigen.de/s-anzeige/garmin-rally-rs210/3567888226-217-5126) | 599 € | 55218 Ingelheim am Rhein | Garmin Rally RS210 power-meter pedals | Kleinanzeigen |
+| 2026-11-15 07:40 | [GARMIN Rally RS210 Wattmess-System beidseitige Messung Shimano](https://www.kleinanzeigen.de/s-anzeige/garmin-rally-rs210-wattmess-system-beidseitige-messung-shimano/3571191285-217-4506) | 550 € ▼ (was 600 €) | 64521 Groß-Gerau | Garmin Rally RS210 power-meter pedals | Kleinanzeigen |
