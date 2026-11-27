@@ -2,7 +2,7 @@
 
 # SearchRadar – results
 
-Updated: 2026-11-26T23:52:33+00:00 (UTC) · 75 active listings
+Updated: 2026-11-27T08:26:45+00:00 (UTC) · 74 active listings
 
 
 ## 👕 Clothing (44)
@@ -82,11 +82,10 @@ Updated: 2026-11-26T23:52:33+00:00 (UTC) · 75 active listings
 | 2026-11-13 16:18 | [Volkswagen Golf 1.2 TSI Comfortline BlueMotion Tech *PDC*ALU*KLIMA](https://www.autoscout24.de/angebote/aca6938d-a083-48b3-9524-b277b58401c0) | 9.780 € ▼ (was 9.990 €) | 91.889 km · 2016 · 70195 | VW Golf 7 – petrol, ≤ 10k € | AutoScout24 |
 | 2026-11-12 01:31 | [Volkswagen Golf VII 1.2 TSI Lim. Comfortline BMT](https://www.autoscout24.de/angebote/25304292-7231-4438-a78d-591e9af9dbbe) | 9.990 € | 103.000 km · 2016 · 88630 | VW Golf 7 – petrol, ≤ 10k € | AutoScout24 |
 
-## 🚲 Bikes (8)
+## 🚲 Bikes (7)
 
 | Found | Listing | Price | Details | Search | Portal |
 |---|---|---:|---|---|---|
-| 2026-11-25 22:29 | [Zwift Ride Kickr Core V2](https://www.kleinanzeigen.de/s-anzeige/zwift-ride-kickr-core-v2/3582292849-230-5208) | 920 € | 76764 Rheinzabern | Zwift Ride + Wahoo KICKR CORE | Kleinanzeigen |
 | 2026-11-24 05:59 | [Zwift Ride Komplett-Set: Wahoo KICKR CORE 2 + Smart Frame, Lenker](https://www.kleinanzeigen.de/s-anzeige/zwift-ride-komplett-set-wahoo-kickr-core-2-smart-frame-lenker/3580977069-230-8799) | 850 € | 75038 Oberderdingen | Zwift Ride + Wahoo KICKR CORE | Kleinanzeigen |
 | 2026-11-23 21:17 | [Zwift Ride Smart Bike + Wahoo KICKR CORE](https://www.kleinanzeigen.de/s-anzeige/zwift-ride-smart-bike-wahoo-kickr-core/3580481924-230-8500) | 950 € | 78609 Tuningen | Zwift Ride + Wahoo KICKR CORE | Kleinanzeigen |
 | 2026-11-15 17:06 | [Zwift Ride + Wahoo KICKR CORE 2 - WIE NEU, <100 km](https://www.kleinanzeigen.de/s-anzeige/zwift-ride-wahoo-kickr-core-2-wie-neu-100-km/3572468464-230-8889) | 1.099 € | 100 km · 70736 Fellbach | Zwift Ride + Wahoo KICKR CORE | Kleinanzeigen |
