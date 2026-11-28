@@ -2,13 +2,15 @@
 
 # SearchRadar – results
 
-Updated: 2026-11-28T02:00:26+00:00 (UTC) · 70 active listings
+Updated: 2026-11-28T10:24:40+00:00 (UTC) · 72 active listings
 
 
-## 🚗 Cars (22)
+## 🚗 Cars (24)
 
 | Found | Listing | Price | Details | Search | Portal |
 |---|---|---:|---|---|---|
+| 2026-11-28 10:22 | [Bmw 118i Tüv 11/28 Automatik](https://www.kleinanzeigen.de/s-anzeige/bmw-118i-tuev-11-28-automatik/3584282862-216-9240) | 9.600 € | 116.280 km · 2016 · 74076 Heilbronn | BMW 1er – petrol, ≤ 10k € | Kleinanzeigen |
+| 2026-11-28 10:22 | [BMW 116 1 Limousine 5-trg. 116 i Advantage](https://www.kleinanzeigen.de/s-anzeige/bmw-116-1-limousine-5-trg-116-i-advantage/3584333489-216-9054) | 8.999 € | 96.000 km · 2017 · 89564 Nattheim | BMW 1er – petrol, ≤ 10k € | Kleinanzeigen |
 | 2026-11-28 01:57 | [Volkswagen Golf VII Lim. Allstar BMT 7 /SHZ/TEMP/PDC/TÜV/](https://www.autoscout24.de/angebote/e282ed59-24b1-4577-94e5-5584086ef41c) | 9.999 € | 89.000 km · 2016 · 76448 | VW Golf 7 – petrol, ≤ 10k € | AutoScout24 |
 | 2026-11-26 23:49 | [VW GOLF VII 1.2TSI 110PS ALLSTAR •2HAND•TÜV 08/28•TEMP•MFA•](https://www.kleinanzeigen.de/s-anzeige/vw-golf-vii-1-2tsi-110ps-allstar-2hand-tuev-08-28-temp-mfa-/3583322935-216-18475) | 8.950 € | 94.800 km · 2017 · 72186 Empfingen | VW Golf 7 – petrol, ≤ 10k € | Kleinanzeigen |
 | 2026-11-26 15:10 | [Golf 7 / weiß](https://www.kleinanzeigen.de/s-anzeige/golf-7-weiss/3580567179-216-8700) | 9.900 € | 106.000 km · 2016 · 72336 Balingen | VW Golf 7 – petrol, ≤ 10k € | Kleinanzeigen |
@@ -21,7 +23,7 @@ Updated: 2026-11-28T02:00:26+00:00 (UTC) · 70 active listings
 | 2026-11-21 21:06 | [BMW 118i Top](https://www.kleinanzeigen.de/s-anzeige/bmw-118i-top/3578242913-216-8441) | 9.000 € ▼ (was 9.800 €) | 148.519 km · 2017 · 71229 Leonberg | BMW 1er – petrol, ≤ 10k € | Kleinanzeigen |
 | 2026-11-21 21:06 | [Bmw 118i, Klima, Navigation, Scheckheft](https://www.kleinanzeigen.de/s-anzeige/bmw-118i-klima-navigation-scheckheft/3578603074-216-8800) | 8.500 € ▼ (was 8.900 €) | 158.000 km · 2017 · 75015 Bretten | BMW 1er – petrol, ≤ 10k € | Kleinanzeigen |
 | 2026-11-21 21:06 | [BMW 116 BMW 116 Problemlos](https://www.autoscout24.de/angebote/83b9068f-bf74-4529-8b7a-cc0a507fd373) | 6.599 € | 158.000 km · 2016 · 73630 | BMW 1er – petrol, ≤ 10k € | AutoScout24 |
-| 2026-11-21 21:06 | [BMW 118 118 i Advantage](https://www.autoscout24.de/angebote/cfb07cd9-645d-432f-ba8d-47a6d8c7762f) | 8.700 € ▼ (was 8.999 €) | 146.000 km · 2016 · 76703 | BMW 1er – petrol, ≤ 10k € | AutoScout24 |
+| 2026-11-21 21:06 | [BMW 118 118 i Advantage](https://www.autoscout24.de/angebote/cfb07cd9-645d-432f-ba8d-47a6d8c7762f) | 8.300 € ▼ (was 8.999 €) | 146.000 km · 2016 · 76703 | BMW 1er – petrol, ≤ 10k € | AutoScout24 |
 | 2026-11-21 21:06 | [BMW 116 116i](https://www.autoscout24.de/angebote/4a5231f0-d936-4b18-b6e9-a6f373ac5e73) | 8.000 € | 128.000 km · 2016 · 74613 | BMW 1er – petrol, ≤ 10k € | AutoScout24 |
 | 2026-11-21 21:05 | [BMW 116 i Sport Line/VOLLSHEFT/KLIMA/NAVI/PDC/RCAM/BT](https://www.autoscout24.de/angebote/8e076a88-94c8-4969-b1c0-11ca49aedbf5) | 9.950 € | 132.900 km · 2018 · 68526 | BMW 1er – petrol, ≤ 10k € | AutoScout24 |
 | 2026-11-17 03:49 | [Volkswagen Golf VII Lim. Comfortline BMT/Start-Stop](https://www.autoscout24.de/angebote/2d8fc33e-af34-4154-a55a-8334f631052b) | 9.990 € | 112.692 km · 2017 · 74336 | VW Golf 7 – petrol, ≤ 10k € | AutoScout24 |
@@ -32,6 +34,17 @@ Updated: 2026-11-28T02:00:26+00:00 (UTC) · 70 active listings
 | 2026-11-13 16:18 | [Volkswagen Golf 1.2 TSI Comfortline BlueMotion Tech *PDC*ALU*KLIMA](https://www.autoscout24.de/angebote/aca6938d-a083-48b3-9524-b277b58401c0) | 9.780 € ▼ (was 9.990 €) | 91.889 km · 2016 · 70195 | VW Golf 7 – petrol, ≤ 10k € | AutoScout24 |
 | 2026-11-12 01:31 | [Volkswagen Golf VII 1.2 TSI Lim. Comfortline BMT](https://www.autoscout24.de/angebote/25304292-7231-4438-a78d-591e9af9dbbe) | 9.990 € | 103.000 km · 2016 · 88630 | VW Golf 7 – petrol, ≤ 10k € | AutoScout24 |
 
+## 🚲 Bikes (6)
+
+| Found | Listing | Price | Details | Search | Portal |
+|---|---|---:|---|---|---|
+| 2026-11-28 10:21 | [ZWIFT RIDE MIT KICKR CORE 2 (optl. Speditionsversand möglich)](https://www.kleinanzeigen.de/s-anzeige/zwift-ride-mit-kickr-core-2-optl-speditionsversand-moeglich-/3584419418-230-9042) | 930 € | 71336 Waiblingen | Zwift Ride + Wahoo KICKR CORE | Kleinanzeigen |
+| 2026-11-15 17:06 | [Zwift Ride + Wahoo KICKR CORE 2 - WIE NEU, <100 km](https://www.kleinanzeigen.de/s-anzeige/zwift-ride-wahoo-kickr-core-2-wie-neu-100-km/3572468464-230-8889) | 1.099 € | 100 km · 70736 Fellbach | Zwift Ride + Wahoo KICKR CORE | Kleinanzeigen |
+| 2026-11-15 08:28 | [Garmin Rally RS210 Powermeter Pedale](https://www.idealo.de/preisvergleich/OffersOfProduct/209644835_-rally-rs210-powermeter-pedale-garmin.html) | 685 € ▼ (was 689 €) |  | Garmin Rally RS210 – new price (idealo) | idealo |
+| 2026-11-15 07:40 | [Zwift Ride inklusive Wahoo KICKR CORE 2](https://www.kleinanzeigen.de/s-anzeige/zwift-ride-inklusive-wahoo-kickr-core-2/3540984818-217-8939) | 980 € ▼ (was 1.040 €) | 73329 Kuchen | Zwift Ride + Wahoo KICKR CORE | Kleinanzeigen |
+| 2026-11-15 07:40 | [Garmin Rally RS210](https://www.kleinanzeigen.de/s-anzeige/garmin-rally-rs210/3567888226-217-5126) | 599 € | 55218 Ingelheim am Rhein | Garmin Rally RS210 power-meter pedals | Kleinanzeigen |
+| 2026-11-15 07:40 | [GARMIN Rally RS210 Wattmess-System beidseitige Messung Shimano](https://www.kleinanzeigen.de/s-anzeige/garmin-rally-rs210-wattmess-system-beidseitige-messung-shimano/3571191285-217-4506) | 550 € ▼ (was 600 €) | 64521 Groß-Gerau | Garmin Rally RS210 power-meter pedals | Kleinanzeigen |
+
 ## 👕 Clothing (42)
 
 | Found | Listing | Price | Details | Search | Portal |
@@ -41,7 +54,7 @@ Updated: 2026-11-28T02:00:26+00:00 (UTC) · 70 active listings
 | 2026-11-22 18:33 | [Adidas Terrex Weste S Wandern Skifahren Skilanglauf](https://www.kleinanzeigen.de/s-anzeige/adidas-terrex-weste-s-wandern-skifahren-skilanglauf/3579691958-160-404) | 40 € | 66538 Neunkirchen | Adidas Terrex – men, size S | Kleinanzeigen |
 | 2026-11-22 18:33 | [NEU - Adidas Terrex Skijacke blau](https://www.kleinanzeigen.de/s-anzeige/neu-adidas-terrex-skijacke-blau/3579726878-160-6798) | 100 € | 91056 Erlangen | Adidas Terrex – men, size S | Kleinanzeigen |
 | 2026-11-22 18:33 | [NEU - Adidas Terrex Skijacke gelb](https://www.kleinanzeigen.de/s-anzeige/neu-adidas-terrex-skijacke-gelb/3579729385-160-6798) | 100 € | 91056 Erlangen | Adidas Terrex – men, size S | Kleinanzeigen |
-| 2026-11-22 11:17 | [Adidas Terrex Jacke schwarz Größe S Top!!!!](https://www.kleinanzeigen.de/s-anzeige/adidas-terrex-jacke-schwarz-groesse-s-top-/3578996766-160-1863) | 36 € ▼ (was 48 €) | 40764 Langenfeld | Adidas Terrex – men, size S | Kleinanzeigen |
+| 2026-11-22 11:17 | [Adidas Terrex Jacke schwarz Größe S Top!!!!](https://www.kleinanzeigen.de/s-anzeige/adidas-terrex-jacke-schwarz-groesse-s-top-/3578996766-160-1863) | 30 € ▼ (was 48 €) | 40764 Langenfeld | Adidas Terrex – men, size S | Kleinanzeigen |
 | 2026-11-21 21:07 | [Adidas Terrex Hardshellhose Neu Snowboarden Skifahren Tourengehen](https://www.kleinanzeigen.de/s-anzeige/adidas-terrex-hardshellhose-neu-snowboarden-skifahren-tourengehen/3578571838-160-1015) | 100 € ▼ (was 150 €) | 59955 Winterberg | Adidas Terrex – men, size S | Kleinanzeigen |
 | 2026-11-21 21:07 | [adidas Terrex Agravic Craphic Regen-Laufjacke Gr. S](https://www.kleinanzeigen.de/s-anzeige/adidas-terrex-agravic-craphic-regen-laufjacke-gr-s/3578646947-160-9684) | 49 € | 10317 Lichtenberg | Adidas Terrex – men, size S | Kleinanzeigen |
 | 2026-11-19 21:29 | [Adidas Terrex Fleecejacke grau Herren](https://www.kleinanzeigen.de/s-anzeige/adidas-terrex-fleecejacke-grau-herren/3576309826-160-6891) | 25 € ▼ (was 30 €) | 96050 Bamberg | Adidas Terrex – men, size S | Kleinanzeigen |
@@ -78,14 +91,3 @@ Updated: 2026-11-28T02:00:26+00:00 (UTC) · 70 active listings
 | 2026-11-14 08:05 | [Adidas Terrex Hoody neu Gr S](https://www.kleinanzeigen.de/s-anzeige/adidas-terrex-hoody-neu-gr-s/3569660553-160-1758) | 18 € ▼ (was 30 €) | 46286 Dorsten | Adidas Terrex – men, size S | Kleinanzeigen |
 | 2026-11-14 08:05 | [ADIDAS Terrex Techrock Stretch PRIMALOFT Weste S](https://www.kleinanzeigen.de/s-anzeige/adidas-terrex-techrock-stretch-primaloft-weste-s/3569891819-160-7257) | 55 € | 86825 Bad Wörishofen | Adidas Terrex – men, size S | Kleinanzeigen |
 | 2026-11-14 08:05 | [Adidas Terrex My Shelter GoreTex Jacke](https://www.kleinanzeigen.de/s-anzeige/adidas-terrex-my-shelter-goretex-jacke/3570253418-160-5538) | 100 € | 87509 Immenstadt | Adidas Terrex – men, size S | Kleinanzeigen |
-
-## 🚲 Bikes (6)
-
-| Found | Listing | Price | Details | Search | Portal |
-|---|---|---:|---|---|---|
-| 2026-11-24 05:59 | [Zwift Ride Komplett-Set: Wahoo KICKR CORE 2 + Smart Frame, Lenker](https://www.kleinanzeigen.de/s-anzeige/zwift-ride-komplett-set-wahoo-kickr-core-2-smart-frame-lenker/3580977069-230-8799) | 850 € | 75038 Oberderdingen | Zwift Ride + Wahoo KICKR CORE | Kleinanzeigen |
-| 2026-11-15 17:06 | [Zwift Ride + Wahoo KICKR CORE 2 - WIE NEU, <100 km](https://www.kleinanzeigen.de/s-anzeige/zwift-ride-wahoo-kickr-core-2-wie-neu-100-km/3572468464-230-8889) | 1.099 € | 100 km · 70736 Fellbach | Zwift Ride + Wahoo KICKR CORE | Kleinanzeigen |
-| 2026-11-15 08:28 | [Garmin Rally RS210 Powermeter Pedale](https://www.idealo.de/preisvergleich/OffersOfProduct/209644835_-rally-rs210-powermeter-pedale-garmin.html) | 685 € ▼ (was 689 €) |  | Garmin Rally RS210 – new price (idealo) | idealo |
-| 2026-11-15 07:40 | [Zwift Ride inklusive Wahoo KICKR CORE 2](https://www.kleinanzeigen.de/s-anzeige/zwift-ride-inklusive-wahoo-kickr-core-2/3540984818-217-8939) | 980 € ▼ (was 1.040 €) | 73329 Kuchen | Zwift Ride + Wahoo KICKR CORE | Kleinanzeigen |
-| 2026-11-15 07:40 | [Garmin Rally RS210](https://www.kleinanzeigen.de/s-anzeige/garmin-rally-rs210/3567888226-217-5126) | 599 € | 55218 Ingelheim am Rhein | Garmin Rally RS210 power-meter pedals | Kleinanzeigen |
-| 2026-11-15 07:40 | [GARMIN Rally RS210 Wattmess-System beidseitige Messung Shimano](https://www.kleinanzeigen.de/s-anzeige/garmin-rally-rs210-wattmess-system-beidseitige-messung-shimano/3571191285-217-4506) | 550 € ▼ (was 600 €) | 64521 Groß-Gerau | Garmin Rally RS210 power-meter pedals | Kleinanzeigen |

@@ -352,6 +352,18 @@
    "t": "2026-11-27T18:56:03+00:00",
    "m": false
   },
+  "bikes/Zwift Ride + Wahoo KICKR CORE|kleinanzeigen:3584419418": {
+   "t": "2026-11-28T10:21:47+00:00",
+   "m": true
+  },
+  "bikes/Zwift Ride + Wahoo KICKR CORE|kleinanzeigen:3584452416": {
+   "t": "2026-11-28T10:21:46+00:00",
+   "m": false
+  },
+  "bikes/Zwift Ride + Wahoo KICKR CORE|kleinanzeigen:3584458116": {
+   "t": "2026-11-28T10:21:46+00:00",
+   "m": false
+  },
   "cars/BMW 1er – petrol, ≤ 10k €|autoscout24:38b4a2e4-49da-49dc-ae3d-616570267883": {
    "t": "2026-11-21T21:06:26+00:00",
    "m": false
@@ -575,6 +587,14 @@
   "cars/BMW 1er – petrol, ≤ 10k €|kleinanzeigen:3583028969": {
    "t": "2026-11-26T15:10:37+00:00",
    "m": false
+  },
+  "cars/BMW 1er – petrol, ≤ 10k €|kleinanzeigen:3584282862": {
+   "t": "2026-11-28T10:22:20+00:00",
+   "m": true
+  },
+  "cars/BMW 1er – petrol, ≤ 10k €|kleinanzeigen:3584333489": {
+   "t": "2026-11-28T10:22:13+00:00",
+   "m": true
   },
   "cars/VW Golf 7 – petrol, ≤ 10k €|autoscout24:0145826b-9a6b-43ec-a460-c6a80234e263": {
    "t": "2026-11-14T10:21:11+00:00",
